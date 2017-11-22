@@ -1,0 +1,9 @@
+# Version:1.0 MMMC View Definition File
+# Do Not Remove Above Line
+create_rc_corner -name tt -T {27} -preRoute_res {1.0} -preRoute_cap {1.0} -preRoute_clkres {0.0} -preRoute_clkcap {0.0} -postRoute_res {1.0} -postRoute_cap {1.0} -postRoute_xcap {1.0} -postRoute_clkres {0.0} -postRoute_clkcap {0.0}
+create_op_cond -name tt -library_file {../OSU/cadence/lib/ami05/lib/osu05_stdcells.lib} -P {1} -V {5} -T {27}
+create_library_set -name tt -timing {../OSU/cadence/lib/ami05/lib/osu05_stdcells.lib}
+create_constraint_mode -name adc8_v4 -sdc_files {adc8_v4-gate.sdc}
+create_delay_corner -name tt -library_set {tt} -opcond_library {../OSU/cadence/lib/ami05/lib/osu05_stdcells.lib} -opcond {tt} -rc_corner {tt}
+create_analysis_view -name tt -constraint_mode {adc8_v4} -delay_corner {tt}
+set_analysis_view -setup {tt} -hold {tt}
