@@ -22,11 +22,11 @@ set fp_core_to_right 60.0000
 set fp_core_to_top 60.0000
 set fp_core_width 600.750000
 set init_gnd_net {gnd}
-set init_lef_file {../OSU/cadence/lib/ami05/lib/osu05_stdcells.stacks.lef}
+set init_lef_file {../../OSU/cadence/lib/ami05/lib/osu05_stdcells.stacks.lef}
 set init_mmmc_file {enc_load_settings2.view}
 set init_pwr_net {vdd}
-set init_top_cell {adc8_v4}
-set init_verilog {adc8_v4-gate.v}
+set init_top_cell {i2cSlaveTop_v8_s}
+set init_verilog {i2cSlaveTop_v8_s-gate.v}
 set lsgOCPGainMult 1.000000
 set pegDefaultResScaleFactor 1.000000
 set pegDetailResScaleFactor 1.000000
