@@ -1,7 +1,4 @@
-# chip_1217
-
-Order in which to run:
-1) set_rtl_libs.sh
-2) load_modules.sh
-3) set_timing_constraints.sh
-4) export_syn.sh
+# chip_1217_v1
+Two options:
+1) Use the already synthesized gate-level verilog files (i2cSlaveTop_v8-gate) directly in Encounter
+2) Run the RTL again using the source verilog files
