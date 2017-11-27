@@ -94,6 +94,7 @@ reg startEdgeDet;
 assign sda = (sdaOut == 1'b0) ? 1'b0 : 1'bz;
 assign sdaIn = sda;
 
+assign ack_received = startStopDetState[1];
 // sync rst rsing edge to clk
 always @(posedge clk) begin
   if (rst == 1'b1)
@@ -189,7 +190,7 @@ serialInterface_v2 u_serialInterface (
   .sdaOut(sdaOut), 
   .startStopDetState(startStopDetState),
   .clearStartStopDet(clearStartStopDet),
-  .ack_received(ack_received),
+  .ack_received(),
   .statusLED(statusLED)
 );
 
