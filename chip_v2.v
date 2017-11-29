@@ -34,7 +34,7 @@ module chip_v2(
 	
 	i2cSlaveTop_v8 theDigitalBlock (
 		.clk(clk),
-		.clk_px(),
+		.clk_px(clk_px),
 		.rst(rst),
 		.sda(sda),
 		.scl(scl),
