@@ -24,13 +24,13 @@ module chip_v2(
 	inout sda,
 	input scl,
 	input testSig,
-	output drdy
+	output drdy,
     );
 	
 	wire [4:0] stop_osc;
 	wire [19:0] clk_px;
 	
-	assign clk_px[16] = testSig;
+	assign clk_px[19] = testSig;
 	
 	i2cSlaveTop_v8 theDigitalBlock (
 		.clk(clk),
@@ -44,7 +44,7 @@ module chip_v2(
 	);
 	
 	analogPxArray theAnalogBlock (
-		.clk_px(clk_px[15:0]),
+		.clk_px(clk_px[18:0]),
 		.stop_osc(stop_osc)
     );
 
