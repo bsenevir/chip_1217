@@ -1,0 +1,178 @@
+VERSION 5.7 ;
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+
+PROPERTYDEFINITIONS
+   MACRO drcSignature INTEGER ;
+END PROPERTYDEFINITIONS
+
+MACRO analogPxArray
+  CLASS  CORE ;
+  FOREIGN analogPxArray 0.000 0.000 ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 510.000 BY 450.000 ;
+  SITE core ;
+  PIN clk_px[0]
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal1 ;
+        RECT 0 367.05 1.2 368.25 ;
+    END
+  END clk_px[0]
+  PIN clk_px[1]
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal1 ;
+        RECT 0 370.05 1.2 371.25 ;
+    END
+  END clk_px[1]
+  PIN clk_px[2]
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal1 ;
+        RECT 0 373.05 1.2 374.25 ;
+    END
+  END clk_px[2]
+  PIN clk_px[3]
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal1 ;
+        RECT 0 376.05 1.2 377.25 ;
+    END
+  END clk_px[3]
+  PIN clk_px[4]
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal1 ;
+        RECT 0 276.15 1.2 277.35 ;
+    END
+  END clk_px[4]
+  PIN clk_px[5]
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal1 ;
+        RECT 0 279.15 1.2 280.35 ;
+    END
+  END clk_px[5]
+  PIN clk_px[6]
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal1 ;
+        RECT 0 282.15 1.2 283.35 ;
+    END
+  END clk_px[6]
+  PIN clk_px[7]
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal1 ;
+        RECT 0 285.15 1.2 286.35 ;
+    END
+  END clk_px[7]
+  PIN clk_px[8]
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal1 ;
+        RECT 0 184.5 1.2 185.7 ;
+    END
+  END clk_px[8]
+  PIN clk_px[9]
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal1 ;
+        RECT 0 187.5 1.2 188.7 ;
+    END
+  END clk_px[9]
+  PIN clk_px[10]
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal1 ;
+        RECT 0 190.5 1.2 191.7 ;
+    END
+  END clk_px[10]
+  PIN clk_px[11]
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal1 ;
+        RECT 0 193.5 1.2 194.7 ;
+    END
+  END clk_px[11]
+  PIN clk_px[12]
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal1 ;
+        RECT 0 93.75 1.2 94.95 ;
+    END
+  END clk_px[12]
+  PIN clk_px[15]
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal1 ;
+        RECT 0 102.75 1.2 103.95 ;
+    END
+  END clk_px[15]
+  PIN clk_px[13]
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal1 ;
+        RECT 0 96.75 1.2 97.95 ;
+    END
+  END clk_px[13]
+  PIN clk_px[14]
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal1 ;
+        RECT 0 99.75 1.2 100.95 ;
+    END
+  END clk_px[14]
+  PIN stop_osc[0]
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal2 ;
+        RECT 465.15 0 468.9 3.75 ;
+    END
+  END stop_osc[0]
+  PIN stop_osc[1]
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal2 ;
+        RECT 472.95 0 476.7 3.75 ;
+    END
+  END stop_osc[1]
+  PIN stop_osc[2]
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal2 ;
+        RECT 480.75 0 484.5 3.75 ;
+    END
+  END stop_osc[2]
+  PIN stop_osc[3]
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER metal2 ;
+        RECT 488.55 0 492.3 3.75 ;
+    END
+  END stop_osc[3]
+  PROPERTY drcSignature 143847558 ;
+END analogPxArray
+
+END LIBRARY
