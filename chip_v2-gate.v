@@ -5,9 +5,9 @@
 
 module analogPxArray(clk_px, stop_osc);
   input [4:0] stop_osc;
-  output [15:0] clk_px;
+  output [18:0] clk_px;
   wire [4:0] stop_osc;
-  wire [15:0] clk_px;
+  wire [18:0] clk_px;
 endmodule
 
 module increment_unsigned_53_54_442(A, CI, Z);
@@ -839,48 +839,43 @@ module chipBusController_p4(clk, rst, counter_val1, counter_val2,
        counterAccumulation_n_183, counterAccumulation_n_184,
        counterAccumulation_n_185, counterAccumulation_n_186,
        counterAccumulation_n_187, loadedVal;
-  wire n_0, n_1, n_2, n_3, n_4, n_5, n_7, n_8;
-  wire n_10, n_11, n_12, n_13, n_14, n_15, n_16, n_17;
-  wire n_18, n_19, n_20, n_21, n_22, n_23, n_24, n_25;
-  wire n_26, n_27, n_28, n_29, n_30, n_31, n_32, n_33;
-  wire n_34, n_35, n_36, n_37, n_38, n_39, n_40, n_41;
-  wire n_42, n_43, n_44, n_45, n_46, n_47, n_48, n_49;
-  wire n_50, n_51, n_52, n_53, n_55, n_56, n_57, n_59;
-  wire n_60, n_61, n_62, n_63, n_64, n_65, n_66, n_67;
-  wire n_68, n_69, n_70, n_72, n_73, n_74, n_75, n_76;
-  wire n_77, n_78, n_79, n_80, n_81, n_83, n_84, n_85;
-  wire n_86, n_87, n_88, n_89, n_90, n_91, n_92, n_93;
-  wire n_94, n_96, n_97, n_98, n_99, n_100, n_101, n_102;
-  wire n_103, n_104, n_105, n_107, n_108, n_109, n_110, n_111;
-  wire n_112, n_113, n_114, n_115, n_116, n_117, n_118, n_119;
-  wire n_120, n_121, n_122, n_123, n_124, n_125, n_126, n_127;
-  wire n_128, n_129, n_130, n_131, n_132, n_133, n_134, n_135;
-  wire n_136, n_137, n_138, n_139, n_140, n_141, n_142, n_143;
-  wire n_144, n_145, n_146, n_147, n_148, n_149, n_150, n_151;
-  wire n_152, n_153, n_154, n_155, n_156, n_157, n_158, n_159;
-  wire n_160, n_161, n_162, n_163, n_164, n_165, n_166, n_167;
-  wire n_168, n_169, n_170, n_171, n_172, n_173, n_174, n_175;
-  wire n_176, n_177, n_178, n_179, n_180, n_181, n_182, n_183;
-  wire n_184, n_185, n_186, n_187, n_188, n_189, n_190, n_191;
-  wire n_192, n_193, n_194, n_196, n_197, n_198, n_199, n_200;
-  wire n_201, n_202, n_203, n_204, n_205, n_206, n_207, n_208;
-  wire n_209, n_210, n_211, n_212, n_213, n_215, n_216, n_217;
-  wire n_218, n_219, n_220, n_221, n_222, n_223, n_224, n_225;
-  wire n_226, n_227, n_228, n_229, n_230, n_231, n_232, n_233;
-  wire n_234, n_235, n_236, n_237, n_238, n_239, n_240, n_241;
-  wire n_242, n_243, n_244, n_245, n_246, n_247, n_248, n_249;
-  wire n_250, n_251, n_252, n_253, n_254, n_255, n_256, n_257;
-  wire n_258, n_259, n_260, n_261, n_262, n_263, n_264, n_265;
-  wire n_266, n_267, n_268, n_269, n_270, n_271, n_272, n_273;
-  wire n_274, n_275, n_276, n_277, n_278, n_279, n_280, n_281;
-  wire n_282, n_283, n_284, n_285, n_286, n_287, n_288, n_289;
-  wire n_290, n_291, n_292, n_293, n_294, n_295, n_296, n_297;
-  wire n_298, n_299, n_300, n_301, n_302, n_303, n_304, n_305;
-  wire n_306, n_307, n_308, n_309, n_310, n_311, n_312, n_313;
-  wire n_314, n_315, n_316, n_317, n_318, n_319, n_320, n_321;
-  wire n_322, n_324, n_326, n_327, n_328, n_329, n_330, n_331;
-  wire n_332, n_333, n_334, n_335, n_336, n_337, n_338, n_386;
-  wire n_388, n_389, n_390, n_391, n_392, sentAddr;
+  wire n_0, n_1, n_2, n_3, n_4, n_5, n_6, n_7;
+  wire n_8, n_10, n_11, n_12, n_13, n_14, n_15, n_16;
+  wire n_17, n_18, n_19, n_20, n_21, n_22, n_23, n_24;
+  wire n_25, n_26, n_27, n_28, n_29, n_30, n_31, n_32;
+  wire n_33, n_34, n_35, n_36, n_37, n_38, n_39, n_40;
+  wire n_41, n_42, n_43, n_44, n_45, n_46, n_47, n_48;
+  wire n_49, n_50, n_51, n_52, n_53, n_54, n_55, n_56;
+  wire n_57, n_58, n_59, n_60, n_61, n_62, n_63, n_64;
+  wire n_65, n_66, n_67, n_68, n_69, n_70, n_71, n_73;
+  wire n_74, n_76, n_77, n_78, n_79, n_80, n_82, n_83;
+  wire n_85, n_86, n_87, n_88, n_89, n_90, n_91, n_92;
+  wire n_93, n_94, n_95, n_97, n_98, n_99, n_100, n_101;
+  wire n_102, n_103, n_104, n_105, n_106, n_107, n_108, n_109;
+  wire n_110, n_111, n_112, n_113, n_114, n_116, n_117, n_119;
+  wire n_120, n_121, n_122, n_124, n_125, n_126, n_127, n_128;
+  wire n_129, n_131, n_132, n_133, n_134, n_135, n_136, n_137;
+  wire n_138, n_139, n_140, n_141, n_142, n_143, n_144, n_145;
+  wire n_146, n_147, n_148, n_149, n_150, n_151, n_152, n_153;
+  wire n_154, n_155, n_156, n_157, n_158, n_159, n_160, n_161;
+  wire n_162, n_163, n_164, n_165, n_166, n_167, n_168, n_169;
+  wire n_170, n_171, n_172, n_173, n_174, n_175, n_176, n_177;
+  wire n_178, n_179, n_180, n_181, n_182, n_183, n_184, n_185;
+  wire n_186, n_187, n_188, n_189, n_190, n_191, n_192, n_193;
+  wire n_194, n_195, n_196, n_197, n_198, n_199, n_200, n_201;
+  wire n_202, n_203, n_204, n_205, n_207, n_208, n_209, n_210;
+  wire n_211, n_212, n_213, n_214, n_215, n_216, n_217, n_218;
+  wire n_219, n_220, n_221, n_222, n_223, n_224, n_225, n_226;
+  wire n_227, n_228, n_229, n_230, n_231, n_232, n_233, n_234;
+  wire n_235, n_236, n_237, n_238, n_239, n_240, n_241, n_242;
+  wire n_243, n_244, n_245, n_246, n_247, n_248, n_249, n_250;
+  wire n_251, n_252, n_253, n_254, n_255, n_256, n_257, n_258;
+  wire n_259, n_260, n_261, n_262, n_263, n_264, n_265, n_266;
+  wire n_267, n_268, n_269, n_270, n_271, n_272, n_273, n_274;
+  wire n_275, n_276, n_277, n_278, n_279, n_280, n_284, n_285;
+  wire n_286, n_287, n_288, n_289, n_290, n_291, n_292, n_293;
+  wire n_294, n_295, n_296, n_346, n_347, n_348, n_349, n_350;
+  wire sentAddr;
   assign stop_osc[4] = 1'b1;
   increment_unsigned_51_52 counterAccumulation_inc_add_34_11_1(.A
        ({timingCounterVal[22], counterAccumulation_n_187,
@@ -907,619 +902,583 @@ module chipBusController_p4(clk, rst, counter_val1, counter_val2,
        counterAccumulation_n_36, counterAccumulation_n_34,
        counterAccumulation_n_32, counterAccumulation_n_30,
        UNCONNECTED}));
-  INVX1 g2656(.A (clr_cntAcc), .Y (n_328));
-  OR2X2 g2809(.A (n_338), .B (rst), .Y (clr_counter));
-  NAND3X1 g2810(.A (n_336), .B (n_337), .C (n_333), .Y (n_338));
-  AOI22X1 g2811(.A (startupWaitReg[2]), .B (n_335), .C (n_330), .D
-       (startupWaitReg[3]), .Y (n_337));
-  AOI22X1 g2812(.A (startupWaitReg[4]), .B (n_334), .C
-       (startupWaitReg[1]), .D (n_332), .Y (n_336));
-  INVX1 g2813(.A (startupWaitReg[4]), .Y (n_335));
-  DFFSR \startupWaitReg_reg[4] (.R (n_328), .S (1'b1), .CLK (clk), .D
+  INVX1 g2656(.A (clr_cntAcc), .Y (n_286));
+  OR2X2 g2810(.A (n_296), .B (rst), .Y (clr_counter));
+  NAND3X1 g2811(.A (n_294), .B (n_295), .C (n_291), .Y (n_296));
+  AOI22X1 g2812(.A (startupWaitReg[2]), .B (n_293), .C (n_288), .D
+       (startupWaitReg[3]), .Y (n_295));
+  AOI22X1 g2813(.A (startupWaitReg[4]), .B (n_292), .C
+       (startupWaitReg[1]), .D (n_290), .Y (n_294));
+  INVX1 g2814(.A (startupWaitReg[4]), .Y (n_293));
+  DFFSR \startupWaitReg_reg[4] (.R (n_286), .S (1'b1), .CLK (clk), .D
        (startupWaitReg[3]), .Q (startupWaitReg[4]));
-  INVX1 g2815(.A (startupWaitReg[3]), .Y (n_334));
-  DFFSR \startupWaitReg_reg[3] (.R (n_328), .S (1'b1), .CLK (clk), .D
+  INVX1 g2816(.A (startupWaitReg[3]), .Y (n_292));
+  DFFSR \startupWaitReg_reg[3] (.R (n_286), .S (1'b1), .CLK (clk), .D
        (startupWaitReg[2]), .Q (startupWaitReg[3]));
-  AOI21X1 g2817(.A (startupWaitReg[0]), .B (n_331), .C
-       (clr_counter_reg), .Y (n_333));
-  INVX1 g2818(.A (startupWaitReg[2]), .Y (n_332));
-  DFFSR \startupWaitReg_reg[2] (.R (n_328), .S (1'b1), .CLK (clk), .D
+  AOI21X1 g2818(.A (startupWaitReg[0]), .B (n_289), .C
+       (clr_counter_reg), .Y (n_291));
+  INVX1 g2819(.A (startupWaitReg[2]), .Y (n_290));
+  DFFSR \startupWaitReg_reg[2] (.R (n_286), .S (1'b1), .CLK (clk), .D
        (startupWaitReg[1]), .Q (startupWaitReg[2]));
-  INVX1 g2820(.A (startupWaitReg[1]), .Y (n_331));
-  DFFSR \startupWaitReg_reg[1] (.R (n_328), .S (1'b1), .CLK (clk), .D
+  INVX1 g2821(.A (startupWaitReg[1]), .Y (n_289));
+  DFFSR \startupWaitReg_reg[1] (.R (n_286), .S (1'b1), .CLK (clk), .D
        (startupWaitReg[0]), .Q (startupWaitReg[1]));
-  INVX1 g2822(.A (startupWaitReg[0]), .Y (n_330));
-  DFFSR \startupWaitReg_reg[0] (.R (n_328), .S (1'b1), .CLK (clk), .D
+  INVX1 g2823(.A (startupWaitReg[0]), .Y (n_288));
+  DFFSR \startupWaitReg_reg[0] (.R (n_286), .S (1'b1), .CLK (clk), .D
        (1'b1), .Q (startupWaitReg[0]));
-  NAND2X1 g2824(.A (px_addr[1]), .B (n_327), .Y (stop_osc[3]));
-  OR2X1 g2825(.A (n_329), .B (px_addr[1]), .Y (stop_osc[0]));
-  NAND2X1 g2826(.A (n_326), .B (n_327), .Y (stop_osc[1]));
-  OR2X1 g2827(.A (n_329), .B (n_326), .Y (stop_osc[2]));
-  NAND2X1 g2828(.A (n_324), .B (en_osc_out), .Y (n_329));
-  NAND2X1 g2830(.A (n_7), .B (en_osc_out), .Y (clr_cntAcc));
-  AND2X2 g2832(.A (en_osc_out), .B (px_addr[0]), .Y (n_327));
-  INVX2 g2833(.A (px_addr[1]), .Y (n_326));
-  INVX2 g2834(.A (rst), .Y (n_7));
-  INVX1 g2835(.A (px_addr[0]), .Y (n_324));
-  DFFSR ack_received2_reg(.R (n_7), .S (1'b1), .CLK (clk), .D
+  NAND2X1 g2825(.A (px_addr[1]), .B (n_285), .Y (stop_osc[3]));
+  OR2X1 g2826(.A (n_287), .B (px_addr[1]), .Y (stop_osc[0]));
+  NAND2X1 g2827(.A (n_284), .B (n_285), .Y (stop_osc[1]));
+  OR2X1 g2828(.A (n_287), .B (n_284), .Y (stop_osc[2]));
+  NAND2X1 g2829(.A (n_18), .B (en_osc_out), .Y (n_287));
+  NAND2X1 g2831(.A (n_11), .B (en_osc_out), .Y (clr_cntAcc));
+  AND2X2 g2833(.A (en_osc_out), .B (px_addr[0]), .Y (n_285));
+  INVX2 g2834(.A (px_addr[1]), .Y (n_284));
+  INVX2 g2835(.A (rst), .Y (n_11));
+  DFFSR ack_received2_reg(.R (n_11), .S (1'b1), .CLK (clk), .D
        (ack_received), .Q (ack_received2));
-  DFFPOSX1 clr_counter_reg_reg(.CLK (clk), .D (n_194), .Q
+  DFFPOSX1 clr_counter_reg_reg(.CLK (clk), .D (n_136), .Q
        (clr_counter_reg));
-  DFFSR \counterAccumulation_q_reg[0] (.R (n_328), .S (1'b1), .CLK
-       (clk), .D (n_17), .Q (counterAccumulation_n_166));
-  DFFSR \counterAccumulation_q_reg[10] (.R (n_328), .S (1'b1), .CLK
+  DFFSR \counterAccumulation_q_reg[0] (.R (n_286), .S (1'b1), .CLK
+       (clk), .D (n_25), .Q (counterAccumulation_n_166));
+  DFFSR \counterAccumulation_q_reg[10] (.R (n_286), .S (1'b1), .CLK
        (clk), .D (counterAccumulation_n_48), .Q
        (counterAccumulation_n_176));
-  DFFSR \counterAccumulation_q_reg[11] (.R (n_328), .S (1'b1), .CLK
+  DFFSR \counterAccumulation_q_reg[11] (.R (n_286), .S (1'b1), .CLK
        (clk), .D (counterAccumulation_n_50), .Q
        (counterAccumulation_n_177));
-  DFFSR \counterAccumulation_q_reg[12] (.R (n_328), .S (1'b1), .CLK
+  DFFSR \counterAccumulation_q_reg[12] (.R (n_286), .S (1'b1), .CLK
        (clk), .D (counterAccumulation_n_52), .Q
        (counterAccumulation_n_178));
-  DFFSR \counterAccumulation_q_reg[13] (.R (n_328), .S (1'b1), .CLK
+  DFFSR \counterAccumulation_q_reg[13] (.R (n_286), .S (1'b1), .CLK
        (clk), .D (counterAccumulation_n_54), .Q
        (counterAccumulation_n_179));
-  DFFSR \counterAccumulation_q_reg[14] (.R (n_328), .S (1'b1), .CLK
+  DFFSR \counterAccumulation_q_reg[14] (.R (n_286), .S (1'b1), .CLK
        (clk), .D (counterAccumulation_n_56), .Q
        (counterAccumulation_n_180));
-  DFFSR \counterAccumulation_q_reg[15] (.R (n_328), .S (1'b1), .CLK
+  DFFSR \counterAccumulation_q_reg[15] (.R (n_286), .S (1'b1), .CLK
        (clk), .D (counterAccumulation_n_58), .Q
        (counterAccumulation_n_181));
-  DFFSR \counterAccumulation_q_reg[16] (.R (n_328), .S (1'b1), .CLK
+  DFFSR \counterAccumulation_q_reg[16] (.R (n_286), .S (1'b1), .CLK
        (clk), .D (counterAccumulation_n_60), .Q
        (counterAccumulation_n_182));
-  DFFSR \counterAccumulation_q_reg[17] (.R (n_328), .S (1'b1), .CLK
+  DFFSR \counterAccumulation_q_reg[17] (.R (n_286), .S (1'b1), .CLK
        (clk), .D (counterAccumulation_n_62), .Q
        (counterAccumulation_n_183));
-  DFFSR \counterAccumulation_q_reg[18] (.R (n_328), .S (1'b1), .CLK
+  DFFSR \counterAccumulation_q_reg[18] (.R (n_286), .S (1'b1), .CLK
        (clk), .D (counterAccumulation_n_64), .Q
        (counterAccumulation_n_184));
-  DFFSR \counterAccumulation_q_reg[19] (.R (n_328), .S (1'b1), .CLK
+  DFFSR \counterAccumulation_q_reg[19] (.R (n_286), .S (1'b1), .CLK
        (clk), .D (counterAccumulation_n_66), .Q
        (counterAccumulation_n_185));
-  DFFSR \counterAccumulation_q_reg[1] (.R (n_328), .S (1'b1), .CLK
+  DFFSR \counterAccumulation_q_reg[1] (.R (n_286), .S (1'b1), .CLK
        (clk), .D (counterAccumulation_n_30), .Q
        (counterAccumulation_n_167));
-  DFFSR \counterAccumulation_q_reg[20] (.R (n_328), .S (1'b1), .CLK
+  DFFSR \counterAccumulation_q_reg[20] (.R (n_286), .S (1'b1), .CLK
        (clk), .D (counterAccumulation_n_68), .Q
        (counterAccumulation_n_186));
-  DFFSR \counterAccumulation_q_reg[21] (.R (n_328), .S (1'b1), .CLK
+  DFFSR \counterAccumulation_q_reg[21] (.R (n_286), .S (1'b1), .CLK
        (clk), .D (counterAccumulation_n_70), .Q
        (counterAccumulation_n_187));
-  DFFSR \counterAccumulation_q_reg[22] (.R (n_328), .S (1'b1), .CLK
+  DFFSR \counterAccumulation_q_reg[22] (.R (n_286), .S (1'b1), .CLK
        (clk), .D (counterAccumulation_n_72), .Q (timingCounterVal[22]));
-  DFFSR \counterAccumulation_q_reg[2] (.R (n_328), .S (1'b1), .CLK
+  DFFSR \counterAccumulation_q_reg[2] (.R (n_286), .S (1'b1), .CLK
        (clk), .D (counterAccumulation_n_32), .Q
        (counterAccumulation_n_168));
-  DFFSR \counterAccumulation_q_reg[3] (.R (n_328), .S (1'b1), .CLK
+  DFFSR \counterAccumulation_q_reg[3] (.R (n_286), .S (1'b1), .CLK
        (clk), .D (counterAccumulation_n_34), .Q
        (counterAccumulation_n_169));
-  DFFSR \counterAccumulation_q_reg[4] (.R (n_328), .S (1'b1), .CLK
+  DFFSR \counterAccumulation_q_reg[4] (.R (n_286), .S (1'b1), .CLK
        (clk), .D (counterAccumulation_n_36), .Q
        (counterAccumulation_n_170));
-  DFFSR \counterAccumulation_q_reg[5] (.R (n_328), .S (1'b1), .CLK
+  DFFSR \counterAccumulation_q_reg[5] (.R (n_286), .S (1'b1), .CLK
        (clk), .D (counterAccumulation_n_38), .Q
        (counterAccumulation_n_171));
-  DFFSR \counterAccumulation_q_reg[6] (.R (n_328), .S (1'b1), .CLK
+  DFFSR \counterAccumulation_q_reg[6] (.R (n_286), .S (1'b1), .CLK
        (clk), .D (counterAccumulation_n_40), .Q (timingCounterVal[6]));
-  DFFSR \counterAccumulation_q_reg[7] (.R (n_328), .S (1'b1), .CLK
+  DFFSR \counterAccumulation_q_reg[7] (.R (n_286), .S (1'b1), .CLK
        (clk), .D (counterAccumulation_n_42), .Q
        (counterAccumulation_n_173));
-  DFFSR \counterAccumulation_q_reg[8] (.R (n_328), .S (1'b1), .CLK
+  DFFSR \counterAccumulation_q_reg[8] (.R (n_286), .S (1'b1), .CLK
        (clk), .D (counterAccumulation_n_44), .Q
        (counterAccumulation_n_174));
-  DFFSR \counterAccumulation_q_reg[9] (.R (n_328), .S (1'b1), .CLK
+  DFFSR \counterAccumulation_q_reg[9] (.R (n_286), .S (1'b1), .CLK
        (clk), .D (counterAccumulation_n_46), .Q
        (counterAccumulation_n_175));
-  DFFSR \current_state_reg[0] (.R (n_7), .S (1'b1), .CLK (clk), .D
-       (n_322), .Q (current_state[0]));
-  DFFSR \current_state_reg[1] (.R (n_7), .S (1'b1), .CLK (clk), .D
-       (n_279), .Q (current_state[1]));
-  DFFSR \current_state_reg[2] (.R (n_7), .S (1'b1), .CLK (clk), .D
-       (n_250), .Q (current_state[2]));
-  DFFSR \current_state_reg[3] (.R (n_7), .S (1'b1), .CLK (clk), .D
-       (n_247), .Q (current_state[3]));
-  DFFSR \doneAccumulatingRegAddr_reg[0] (.R (n_7), .S (1'b1), .CLK
+  DFFSR \current_state_reg[0] (.R (n_11), .S (1'b1), .CLK (clk), .D
+       (n_244), .Q (current_state[0]));
+  DFFSR \current_state_reg[1] (.R (n_11), .S (1'b1), .CLK (clk), .D
+       (n_243), .Q (current_state[1]));
+  DFFSR \current_state_reg[2] (.R (n_11), .S (1'b1), .CLK (clk), .D
+       (n_348), .Q (current_state[2]));
+  DFFSR \current_state_reg[3] (.R (n_11), .S (1'b1), .CLK (clk), .D
+       (n_204), .Q (current_state[3]));
+  DFFSR \doneAccumulatingRegAddr_reg[0] (.R (n_11), .S (1'b1), .CLK
        (clk), .D (timingCounterVal[6]), .Q
        (doneAccumulatingRegAddr[0]));
-  DFFSR \doneAccumulatingRegAddr_reg[1] (.R (n_7), .S (1'b1), .CLK
+  DFFSR \doneAccumulatingRegAddr_reg[1] (.R (n_11), .S (1'b1), .CLK
        (clk), .D (doneAccumulatingRegAddr[0]), .Q
        (doneAccumulatingRegAddr[1]));
-  DFFSR \doneAccumulatingReg_reg[0] (.R (n_7), .S (1'b1), .CLK (clk),
+  DFFSR \doneAccumulatingReg_reg[0] (.R (n_11), .S (1'b1), .CLK (clk),
        .D (timingCounterVal[22]), .Q (doneAccumulatingReg[0]));
-  DFFSR \doneAccumulatingReg_reg[1] (.R (n_7), .S (1'b1), .CLK (clk),
+  DFFSR \doneAccumulatingReg_reg[1] (.R (n_11), .S (1'b1), .CLK (clk),
        .D (doneAccumulatingReg[0]), .Q (doneAccumulatingReg[1]));
-  DFFPOSX1 drdy_reg_reg(.CLK (clk), .D (n_392), .Q (drdy));
-  DFFPOSX1 en_osc_reg(.CLK (clk), .D (n_217), .Q (en_osc_out));
-  DFFPOSX1 loadedVal_reg(.CLK (clk), .D (n_249), .Q (loadedVal));
-  DFFPOSX1 \px_addr_reg_reg[0] (.CLK (clk), .D (n_107), .Q
+  DFFPOSX1 drdy_reg_reg(.CLK (clk), .D (n_205), .Q (drdy));
+  DFFPOSX1 en_osc_reg(.CLK (clk), .D (n_129), .Q (en_osc_out));
+  DFFPOSX1 loadedVal_reg(.CLK (clk), .D (n_242), .Q (loadedVal));
+  DFFPOSX1 \px_addr_reg_reg[0] (.CLK (clk), .D (n_122), .Q
        (px_addr[0]));
-  DFFPOSX1 \px_addr_reg_reg[1] (.CLK (clk), .D (n_213), .Q
+  DFFPOSX1 \px_addr_reg_reg[1] (.CLK (clk), .D (n_201), .Q
        (px_addr[1]));
-  DFFPOSX1 \samp_track_reg[0] (.CLK (clk), .D (n_211), .Q
+  DFFPOSX1 \samp_track_reg[0] (.CLK (clk), .D (n_346), .Q
        (samp_track[0]));
-  DFFPOSX1 \samp_track_reg[1] (.CLK (clk), .D (n_212), .Q
+  DFFPOSX1 \samp_track_reg[1] (.CLK (clk), .D (n_135), .Q
        (samp_track[1]));
-  DFFPOSX1 \samp_track_reg[2] (.CLK (clk), .D (n_285), .Q
+  DFFPOSX1 \samp_track_reg[2] (.CLK (clk), .D (n_208), .Q
        (samp_track[2]));
-  DFFPOSX1 \sampleOut_reg[0] (.CLK (clk), .D (n_293), .Q
+  DFFPOSX1 \sampleOut_reg[0] (.CLK (clk), .D (n_252), .Q
        (sampleOut[0]));
-  DFFPOSX1 \sampleOut_reg[10] (.CLK (clk), .D (n_288), .Q
+  DFFPOSX1 \sampleOut_reg[10] (.CLK (clk), .D (n_250), .Q
        (sampleOut[10]));
-  DFFPOSX1 \sampleOut_reg[11] (.CLK (clk), .D (n_289), .Q
+  DFFPOSX1 \sampleOut_reg[11] (.CLK (clk), .D (n_251), .Q
        (sampleOut[11]));
-  DFFPOSX1 \sampleOut_reg[12] (.CLK (clk), .D (n_318), .Q
+  DFFPOSX1 \sampleOut_reg[12] (.CLK (clk), .D (n_277), .Q
        (sampleOut[12]));
-  DFFPOSX1 \sampleOut_reg[13] (.CLK (clk), .D (n_287), .Q
+  DFFPOSX1 \sampleOut_reg[13] (.CLK (clk), .D (n_249), .Q
        (sampleOut[13]));
-  DFFPOSX1 \sampleOut_reg[14] (.CLK (clk), .D (n_286), .Q
+  DFFPOSX1 \sampleOut_reg[14] (.CLK (clk), .D (n_276), .Q
        (sampleOut[14]));
-  DFFPOSX1 \sampleOut_reg[15] (.CLK (clk), .D (n_313), .Q
+  DFFPOSX1 \sampleOut_reg[15] (.CLK (clk), .D (n_275), .Q
        (sampleOut[15]));
-  DFFPOSX1 \sampleOut_reg[16] (.CLK (clk), .D (n_312), .Q
+  DFFPOSX1 \sampleOut_reg[16] (.CLK (clk), .D (n_274), .Q
        (sampleOut[16]));
-  DFFPOSX1 \sampleOut_reg[17] (.CLK (clk), .D (n_311), .Q
+  DFFPOSX1 \sampleOut_reg[17] (.CLK (clk), .D (n_273), .Q
        (sampleOut[17]));
-  DFFPOSX1 \sampleOut_reg[18] (.CLK (clk), .D (n_310), .Q
+  DFFPOSX1 \sampleOut_reg[18] (.CLK (clk), .D (n_272), .Q
        (sampleOut[18]));
-  DFFPOSX1 \sampleOut_reg[19] (.CLK (clk), .D (n_309), .Q
+  DFFPOSX1 \sampleOut_reg[19] (.CLK (clk), .D (n_271), .Q
        (sampleOut[19]));
-  DFFPOSX1 \sampleOut_reg[1] (.CLK (clk), .D (n_308), .Q
+  DFFPOSX1 \sampleOut_reg[1] (.CLK (clk), .D (n_270), .Q
        (sampleOut[1]));
-  DFFPOSX1 \sampleOut_reg[20] (.CLK (clk), .D (n_321), .Q
+  DFFPOSX1 \sampleOut_reg[20] (.CLK (clk), .D (n_280), .Q
        (sampleOut[20]));
-  DFFPOSX1 \sampleOut_reg[21] (.CLK (clk), .D (n_307), .Q
+  DFFPOSX1 \sampleOut_reg[21] (.CLK (clk), .D (n_269), .Q
        (sampleOut[21]));
-  DFFPOSX1 \sampleOut_reg[22] (.CLK (clk), .D (n_306), .Q
+  DFFPOSX1 \sampleOut_reg[22] (.CLK (clk), .D (n_268), .Q
        (sampleOut[22]));
-  DFFPOSX1 \sampleOut_reg[23] (.CLK (clk), .D (n_305), .Q
+  DFFPOSX1 \sampleOut_reg[23] (.CLK (clk), .D (n_267), .Q
        (sampleOut[23]));
-  DFFPOSX1 \sampleOut_reg[24] (.CLK (clk), .D (n_304), .Q
+  DFFPOSX1 \sampleOut_reg[24] (.CLK (clk), .D (n_266), .Q
        (sampleOut[24]));
-  DFFPOSX1 \sampleOut_reg[25] (.CLK (clk), .D (n_303), .Q
+  DFFPOSX1 \sampleOut_reg[25] (.CLK (clk), .D (n_265), .Q
        (sampleOut[25]));
-  DFFPOSX1 \sampleOut_reg[26] (.CLK (clk), .D (n_302), .Q
+  DFFPOSX1 \sampleOut_reg[26] (.CLK (clk), .D (n_264), .Q
        (sampleOut[26]));
-  DFFPOSX1 \sampleOut_reg[27] (.CLK (clk), .D (n_301), .Q
+  DFFPOSX1 \sampleOut_reg[27] (.CLK (clk), .D (n_263), .Q
        (sampleOut[27]));
-  DFFPOSX1 \sampleOut_reg[28] (.CLK (clk), .D (n_320), .Q
+  DFFPOSX1 \sampleOut_reg[28] (.CLK (clk), .D (n_279), .Q
        (sampleOut[28]));
-  DFFPOSX1 \sampleOut_reg[29] (.CLK (clk), .D (n_300), .Q
+  DFFPOSX1 \sampleOut_reg[29] (.CLK (clk), .D (n_262), .Q
        (sampleOut[29]));
-  DFFPOSX1 \sampleOut_reg[2] (.CLK (clk), .D (n_298), .Q
+  DFFPOSX1 \sampleOut_reg[2] (.CLK (clk), .D (n_261), .Q
        (sampleOut[2]));
-  DFFPOSX1 \sampleOut_reg[30] (.CLK (clk), .D (n_299), .Q
+  DFFPOSX1 \sampleOut_reg[30] (.CLK (clk), .D (n_260), .Q
        (sampleOut[30]));
-  DFFPOSX1 \sampleOut_reg[31] (.CLK (clk), .D (n_297), .Q
+  DFFPOSX1 \sampleOut_reg[31] (.CLK (clk), .D (n_259), .Q
        (sampleOut[31]));
-  DFFPOSX1 \sampleOut_reg[3] (.CLK (clk), .D (n_296), .Q
+  DFFPOSX1 \sampleOut_reg[3] (.CLK (clk), .D (n_258), .Q
        (sampleOut[3]));
-  DFFPOSX1 \sampleOut_reg[4] (.CLK (clk), .D (n_319), .Q
+  DFFPOSX1 \sampleOut_reg[4] (.CLK (clk), .D (n_278), .Q
        (sampleOut[4]));
-  DFFPOSX1 \sampleOut_reg[5] (.CLK (clk), .D (n_295), .Q
+  DFFPOSX1 \sampleOut_reg[5] (.CLK (clk), .D (n_257), .Q
        (sampleOut[5]));
-  DFFPOSX1 \sampleOut_reg[6] (.CLK (clk), .D (n_294), .Q
+  DFFPOSX1 \sampleOut_reg[6] (.CLK (clk), .D (n_256), .Q
        (sampleOut[6]));
-  DFFPOSX1 \sampleOut_reg[7] (.CLK (clk), .D (n_292), .Q
+  DFFPOSX1 \sampleOut_reg[7] (.CLK (clk), .D (n_255), .Q
        (sampleOut[7]));
-  DFFPOSX1 \sampleOut_reg[8] (.CLK (clk), .D (n_291), .Q
+  DFFPOSX1 \sampleOut_reg[8] (.CLK (clk), .D (n_254), .Q
        (sampleOut[8]));
-  DFFPOSX1 \sampleOut_reg[9] (.CLK (clk), .D (n_290), .Q
+  DFFPOSX1 \sampleOut_reg[9] (.CLK (clk), .D (n_253), .Q
        (sampleOut[9]));
-  DFFPOSX1 sentAddr_reg(.CLK (clk), .D (n_92), .Q (sentAddr));
-  OAI21X1 g5786(.A (n_88), .B (n_280), .C (n_246), .Y (n_322));
-  INVX1 g5787(.A (n_317), .Y (n_321));
-  INVX1 g5788(.A (n_316), .Y (n_320));
-  INVX1 g5789(.A (n_315), .Y (n_319));
-  INVX1 g5790(.A (n_314), .Y (n_318));
-  AOI21X1 g5792(.A (sampleOut[20]), .B (n_210), .C (n_284), .Y (n_317));
-  AOI21X1 g5793(.A (sampleOut[28]), .B (n_210), .C (n_283), .Y (n_316));
-  AOI21X1 g5794(.A (sampleOut[4]), .B (n_210), .C (n_282), .Y (n_315));
-  AOI21X1 g5795(.A (sampleOut[12]), .B (n_210), .C (n_281), .Y (n_314));
-  NAND3X1 g5796(.A (n_187), .B (n_245), .C (n_278), .Y (n_313));
-  NAND3X1 g5797(.A (n_185), .B (n_244), .C (n_277), .Y (n_312));
-  NAND3X1 g5798(.A (n_183), .B (n_243), .C (n_276), .Y (n_311));
-  NAND3X1 g5799(.A (n_181), .B (n_242), .C (n_275), .Y (n_310));
-  NAND3X1 g5800(.A (n_179), .B (n_241), .C (n_274), .Y (n_309));
-  NAND3X1 g5801(.A (n_177), .B (n_240), .C (n_273), .Y (n_308));
-  NAND3X1 g5802(.A (n_173), .B (n_239), .C (n_272), .Y (n_307));
-  NAND3X1 g5803(.A (n_171), .B (n_238), .C (n_271), .Y (n_306));
-  NAND3X1 g5804(.A (n_169), .B (n_237), .C (n_270), .Y (n_305));
-  NAND3X1 g5805(.A (n_166), .B (n_236), .C (n_269), .Y (n_304));
-  NAND3X1 g5806(.A (n_165), .B (n_235), .C (n_268), .Y (n_303));
-  NAND3X1 g5807(.A (n_163), .B (n_234), .C (n_267), .Y (n_302));
-  NAND3X1 g5808(.A (n_161), .B (n_233), .C (n_266), .Y (n_301));
-  NAND3X1 g5809(.A (n_141), .B (n_232), .C (n_265), .Y (n_300));
-  NAND3X1 g5810(.A (n_137), .B (n_230), .C (n_263), .Y (n_299));
-  NAND3X1 g5811(.A (n_139), .B (n_231), .C (n_264), .Y (n_298));
-  NAND3X1 g5812(.A (n_135), .B (n_229), .C (n_262), .Y (n_297));
-  NAND3X1 g5813(.A (n_133), .B (n_228), .C (n_261), .Y (n_296));
-  NAND3X1 g5814(.A (n_129), .B (n_227), .C (n_260), .Y (n_295));
-  NAND3X1 g5815(.A (n_127), .B (n_226), .C (n_259), .Y (n_294));
-  NAND3X1 g5816(.A (n_119), .B (n_222), .C (n_255), .Y (n_293));
-  NAND3X1 g5817(.A (n_125), .B (n_225), .C (n_258), .Y (n_292));
-  NAND3X1 g5818(.A (n_123), .B (n_224), .C (n_257), .Y (n_291));
-  NAND3X1 g5819(.A (n_121), .B (n_223), .C (n_256), .Y (n_290));
-  NAND3X1 g5820(.A (n_115), .B (n_220), .C (n_253), .Y (n_289));
-  NAND3X1 g5821(.A (n_117), .B (n_221), .C (n_254), .Y (n_288));
-  NAND3X1 g5822(.A (n_111), .B (n_219), .C (n_252), .Y (n_287));
-  NAND3X1 g5823(.A (n_109), .B (n_218), .C (n_251), .Y (n_286));
-  OAI22X1 g5824(.A (n_36), .B (n_216), .C (n_10), .D (n_96), .Y
-       (n_285));
-  NAND3X1 g5833(.A (n_193), .B (n_175), .C (n_174), .Y (n_284));
-  NAND3X1 g5834(.A (n_192), .B (n_143), .C (n_142), .Y (n_283));
-  NAND3X1 g5835(.A (n_191), .B (n_131), .C (n_130), .Y (n_282));
-  NAND3X1 g5836(.A (n_190), .B (n_113), .C (n_112), .Y (n_281));
-  NAND3X1 g5837(.A (n_145), .B (n_103), .C (n_97), .Y (n_280));
-  NAND2X1 g5838(.A (n_86), .B (n_248), .Y (n_279));
-  NAND2X1 g5841(.A (sampleOut[15]), .B (n_210), .Y (n_278));
-  NAND2X1 g5842(.A (sampleOut[16]), .B (n_210), .Y (n_277));
-  NAND2X1 g5843(.A (sampleOut[17]), .B (n_210), .Y (n_276));
-  NAND2X1 g5844(.A (sampleOut[18]), .B (n_210), .Y (n_275));
-  NAND2X1 g5845(.A (sampleOut[19]), .B (n_210), .Y (n_274));
-  NAND2X1 g5846(.A (sampleOut[1]), .B (n_210), .Y (n_273));
-  NAND2X1 g5847(.A (sampleOut[21]), .B (n_210), .Y (n_272));
-  NAND2X1 g5848(.A (sampleOut[22]), .B (n_210), .Y (n_271));
-  NAND2X1 g5849(.A (sampleOut[23]), .B (n_210), .Y (n_270));
-  NAND2X1 g5850(.A (sampleOut[24]), .B (n_210), .Y (n_269));
-  NAND2X1 g5851(.A (sampleOut[25]), .B (n_210), .Y (n_268));
-  NAND2X1 g5852(.A (sampleOut[26]), .B (n_210), .Y (n_267));
-  NAND2X1 g5853(.A (sampleOut[27]), .B (n_210), .Y (n_266));
-  NAND2X1 g5854(.A (sampleOut[29]), .B (n_210), .Y (n_265));
-  NAND2X1 g5855(.A (sampleOut[2]), .B (n_210), .Y (n_264));
-  NAND2X1 g5856(.A (sampleOut[30]), .B (n_210), .Y (n_263));
-  NAND2X1 g5857(.A (sampleOut[31]), .B (n_210), .Y (n_262));
-  NAND2X1 g5858(.A (sampleOut[3]), .B (n_210), .Y (n_261));
-  NAND2X1 g5859(.A (sampleOut[5]), .B (n_210), .Y (n_260));
-  NAND2X1 g5860(.A (sampleOut[6]), .B (n_210), .Y (n_259));
-  NAND2X1 g5861(.A (sampleOut[7]), .B (n_210), .Y (n_258));
-  NAND2X1 g5862(.A (sampleOut[8]), .B (n_210), .Y (n_257));
-  NAND2X1 g5863(.A (sampleOut[9]), .B (n_210), .Y (n_256));
-  NAND2X1 g5864(.A (sampleOut[0]), .B (n_210), .Y (n_255));
-  NAND2X1 g5865(.A (sampleOut[10]), .B (n_210), .Y (n_254));
-  NAND2X1 g5866(.A (sampleOut[11]), .B (n_210), .Y (n_253));
-  NAND2X1 g5867(.A (sampleOut[13]), .B (n_210), .Y (n_252));
-  NAND2X1 g5868(.A (sampleOut[14]), .B (n_210), .Y (n_251));
-  NAND3X1 g5869(.A (n_94), .B (n_100), .C (n_189), .Y (n_250));
-  OAI21X1 g5870(.A (n_65), .B (n_104), .C (n_59), .Y (n_249));
-  NAND3X1 g5871(.A (n_37), .B (n_103), .C (n_97), .Y (n_248));
-  NAND3X1 g5872(.A (n_87), .B (n_93), .C (n_103), .Y (n_247));
-  INVX1 g5873(.A (n_215), .Y (n_246));
-  AOI21X1 g5874(.A (counter_val2[15]), .B (n_2), .C (n_208), .Y
+  DFFPOSX1 sentAddr_reg(.CLK (clk), .D (n_103), .Q (sentAddr));
+  NAND3X1 g5935(.A (n_246), .B (n_185), .C (n_186), .Y (n_280));
+  NAND3X1 g5936(.A (n_248), .B (n_169), .C (n_170), .Y (n_279));
+  NAND3X1 g5937(.A (n_247), .B (n_157), .C (n_158), .Y (n_278));
+  NAND3X1 g5938(.A (n_245), .B (n_139), .C (n_140), .Y (n_277));
+  NAND3X1 g5940(.A (n_199), .B (n_200), .C (n_236), .Y (n_276));
+  NAND3X1 g5941(.A (n_197), .B (n_198), .C (n_235), .Y (n_275));
+  NAND3X1 g5942(.A (n_195), .B (n_196), .C (n_234), .Y (n_274));
+  NAND3X1 g5943(.A (n_193), .B (n_194), .C (n_233), .Y (n_273));
+  NAND3X1 g5944(.A (n_191), .B (n_192), .C (n_232), .Y (n_272));
+  NAND3X1 g5945(.A (n_189), .B (n_190), .C (n_231), .Y (n_271));
+  NAND3X1 g5946(.A (n_187), .B (n_188), .C (n_230), .Y (n_270));
+  NAND3X1 g5947(.A (n_183), .B (n_184), .C (n_229), .Y (n_269));
+  NAND3X1 g5948(.A (n_181), .B (n_182), .C (n_228), .Y (n_268));
+  NAND3X1 g5949(.A (n_179), .B (n_180), .C (n_227), .Y (n_267));
+  NAND3X1 g5950(.A (n_177), .B (n_178), .C (n_226), .Y (n_266));
+  NAND3X1 g5951(.A (n_175), .B (n_176), .C (n_225), .Y (n_265));
+  NAND3X1 g5952(.A (n_173), .B (n_174), .C (n_224), .Y (n_264));
+  NAND3X1 g5953(.A (n_171), .B (n_172), .C (n_223), .Y (n_263));
+  NAND3X1 g5954(.A (n_167), .B (n_168), .C (n_222), .Y (n_262));
+  NAND3X1 g5955(.A (n_165), .B (n_166), .C (n_221), .Y (n_261));
+  NAND3X1 g5956(.A (n_163), .B (n_164), .C (n_220), .Y (n_260));
+  NAND3X1 g5957(.A (n_161), .B (n_162), .C (n_219), .Y (n_259));
+  NAND3X1 g5958(.A (n_159), .B (n_160), .C (n_218), .Y (n_258));
+  NAND3X1 g5959(.A (n_155), .B (n_156), .C (n_217), .Y (n_257));
+  NAND3X1 g5960(.A (n_153), .B (n_154), .C (n_216), .Y (n_256));
+  NAND3X1 g5961(.A (n_151), .B (n_152), .C (n_215), .Y (n_255));
+  NAND3X1 g5962(.A (n_149), .B (n_150), .C (n_214), .Y (n_254));
+  NAND3X1 g5963(.A (n_147), .B (n_148), .C (n_213), .Y (n_253));
+  NAND3X1 g5964(.A (n_145), .B (n_146), .C (n_212), .Y (n_252));
+  NAND3X1 g5965(.A (n_141), .B (n_142), .C (n_210), .Y (n_251));
+  NAND3X1 g5966(.A (n_143), .B (n_144), .C (n_211), .Y (n_250));
+  NAND3X1 g5967(.A (n_137), .B (n_138), .C (n_209), .Y (n_249));
+  AOI21X1 g5971(.A (counter_val4[28]), .B (n_120), .C (n_239), .Y
+       (n_248));
+  AOI21X1 g5972(.A (counter_val4[4]), .B (n_120), .C (n_238), .Y
+       (n_247));
+  AOI21X1 g5973(.A (counter_val3[20]), .B (n_3), .C (n_240), .Y
+       (n_246));
+  AOI21X1 g5974(.A (counter_val3[12]), .B (n_111), .C (n_237), .Y
        (n_245));
-  AOI21X1 g5875(.A (counter_val4[16]), .B (n_3), .C (n_207), .Y
-       (n_244));
-  AOI21X1 g5876(.A (counter_val4[17]), .B (n_81), .C (n_206), .Y
-       (n_243));
-  AOI21X1 g5877(.A (counter_val4[18]), .B (n_81), .C (n_205), .Y
-       (n_242));
-  AOI21X1 g5878(.A (counter_val4[19]), .B (n_81), .C (n_204), .Y
-       (n_241));
-  AOI21X1 g5879(.A (counter_val2[1]), .B (n_2), .C (n_203), .Y (n_240));
-  AOI21X1 g5880(.A (counter_val2[21]), .B (n_80), .C (n_202), .Y
-       (n_239));
-  AOI21X1 g5881(.A (counter_val2[22]), .B (n_80), .C (n_201), .Y
-       (n_238));
-  AOI21X1 g5882(.A (counter_val4[23]), .B (n_81), .C (n_200), .Y
-       (n_237));
-  AOI21X1 g5883(.A (counter_val4[24]), .B (n_81), .C (n_199), .Y
-       (n_236));
-  AOI21X1 g5884(.A (counter_val4[25]), .B (n_3), .C (n_198), .Y
-       (n_235));
-  AOI21X1 g5885(.A (counter_val2[26]), .B (n_2), .C (n_197), .Y
-       (n_234));
-  AOI21X1 g5886(.A (counter_val4[27]), .B (n_3), .C (n_160), .Y
-       (n_233));
-  AOI21X1 g5887(.A (counter_val2[29]), .B (n_2), .C (n_159), .Y
-       (n_232));
-  AOI21X1 g5888(.A (counter_val4[2]), .B (n_3), .C (n_158), .Y (n_231));
-  AOI21X1 g5889(.A (counter_val2[30]), .B (n_2), .C (n_157), .Y
-       (n_230));
-  AOI21X1 g5890(.A (counter_val4[31]), .B (n_3), .C (n_156), .Y
-       (n_229));
-  AOI21X1 g5891(.A (counter_val2[3]), .B (n_2), .C (n_155), .Y (n_228));
-  AOI21X1 g5892(.A (counter_val2[5]), .B (n_2), .C (n_154), .Y (n_227));
-  AOI21X1 g5893(.A (counter_val2[6]), .B (n_2), .C (n_153), .Y (n_226));
-  AOI21X1 g5894(.A (counter_val4[7]), .B (n_3), .C (n_152), .Y (n_225));
-  AOI21X1 g5895(.A (counter_val4[8]), .B (n_3), .C (n_151), .Y (n_224));
-  AOI21X1 g5896(.A (counter_val4[9]), .B (n_81), .C (n_150), .Y
-       (n_223));
-  AOI21X1 g5897(.A (counter_val4[0]), .B (n_3), .C (n_149), .Y (n_222));
-  AOI21X1 g5898(.A (counter_val2[10]), .B (n_80), .C (n_148), .Y
-       (n_221));
-  AOI21X1 g5899(.A (counter_val4[11]), .B (n_81), .C (n_147), .Y
-       (n_220));
-  AOI21X1 g5900(.A (counter_val4[13]), .B (n_81), .C (n_146), .Y
-       (n_219));
-  AOI21X1 g5901(.A (counter_val2[14]), .B (n_80), .C (n_209), .Y
-       (n_218));
-  OAI21X1 g5902(.A (n_72), .B (n_389), .C (n_89), .Y (n_217));
-  MUX2X1 g5903(.A (n_10), .B (samp_track[2]), .S (n_57), .Y (n_216));
-  OAI21X1 g5904(.A (current_state[1]), .B (n_21), .C (n_196), .Y
-       (n_215));
-  OAI21X1 g5906(.A (n_78), .B (n_84), .C (n_101), .Y (n_213));
-  OAI22X1 g5907(.A (n_36), .B (n_78), .C (n_11), .D (n_96), .Y (n_212));
-  OAI22X1 g5908(.A (n_12), .B (n_96), .C (n_32), .D (n_36), .Y (n_211));
-  INVX2 g5909(.A (n_188), .Y (n_209));
-  INVX2 g5910(.A (n_186), .Y (n_208));
-  INVX2 g5911(.A (n_184), .Y (n_207));
-  INVX2 g5912(.A (n_182), .Y (n_206));
-  INVX2 g5913(.A (n_180), .Y (n_205));
-  INVX2 g5914(.A (n_178), .Y (n_204));
-  INVX2 g5915(.A (n_176), .Y (n_203));
-  INVX2 g5916(.A (n_172), .Y (n_202));
-  INVX2 g5917(.A (n_170), .Y (n_201));
-  INVX2 g5918(.A (n_168), .Y (n_200));
-  INVX2 g5919(.A (n_167), .Y (n_199));
-  INVX2 g5920(.A (n_164), .Y (n_198));
-  INVX2 g5921(.A (n_162), .Y (n_197));
-  OR2X2 g5923(.A (n_105), .B (n_91), .Y (n_210));
-  NAND3X1 g5924(.A (n_15), .B (n_14), .C (n_98), .Y (n_196));
-  OAI21X1 g5926(.A (n_83), .B (n_72), .C (n_63), .Y (n_194));
-  AOI21X1 g5927(.A (counter_val4[20]), .B (n_81), .C (n_61), .Y
-       (n_193));
-  AOI21X1 g5928(.A (counter_val4[28]), .B (n_81), .C (n_61), .Y
-       (n_192));
-  AOI21X1 g5929(.A (counter_val4[4]), .B (n_81), .C (n_61), .Y (n_191));
-  AOI21X1 g5930(.A (counter_val4[12]), .B (n_81), .C (n_61), .Y
-       (n_190));
-  OAI21X1 g5931(.A (n_25), .B (n_23), .C (n_98), .Y (n_189));
-  AOI22X1 g5932(.A (counter_val3[14]), .B (n_4), .C (counter_val4[14]),
-       .D (n_81), .Y (n_188));
-  AOI22X1 g5933(.A (counter_val1[15]), .B (n_1), .C (counter_val5[15]),
-       .D (n_5), .Y (n_187));
-  AOI22X1 g5934(.A (counter_val3[15]), .B (n_4), .C (counter_val4[15]),
-       .D (n_81), .Y (n_186));
-  AOI22X1 g5935(.A (counter_val3[16]), .B (n_4), .C (counter_val5[16]),
-       .D (n_5), .Y (n_185));
-  AOI22X1 g5936(.A (counter_val1[16]), .B (n_1), .C (counter_val2[16]),
-       .D (n_80), .Y (n_184));
-  AOI22X1 g5937(.A (counter_val3[17]), .B (n_4), .C (counter_val5[17]),
-       .D (n_5), .Y (n_183));
-  AOI22X1 g5938(.A (counter_val1[17]), .B (n_1), .C (counter_val2[17]),
-       .D (n_80), .Y (n_182));
-  AOI22X1 g5939(.A (counter_val3[18]), .B (n_4), .C (counter_val5[18]),
-       .D (n_5), .Y (n_181));
-  AOI22X1 g5940(.A (counter_val1[18]), .B (n_1), .C (counter_val2[18]),
-       .D (n_80), .Y (n_180));
-  AOI22X1 g5941(.A (counter_val3[19]), .B (n_4), .C (counter_val5[19]),
-       .D (n_5), .Y (n_179));
-  AOI22X1 g5942(.A (counter_val1[19]), .B (n_1), .C (counter_val2[19]),
-       .D (n_80), .Y (n_178));
-  AOI22X1 g5943(.A (counter_val1[1]), .B (n_1), .C (counter_val5[1]),
-       .D (n_5), .Y (n_177));
-  AOI22X1 g5944(.A (counter_val3[1]), .B (n_4), .C (counter_val4[1]),
-       .D (n_81), .Y (n_176));
-  AOI22X1 g5945(.A (counter_val2[20]), .B (n_80), .C
-       (counter_val3[20]), .D (n_4), .Y (n_175));
-  AOI22X1 g5946(.A (counter_val1[20]), .B (n_1), .C (counter_val5[20]),
-       .D (n_5), .Y (n_174));
-  AOI22X1 g5947(.A (counter_val1[21]), .B (n_1), .C (counter_val5[21]),
-       .D (n_5), .Y (n_173));
-  AOI22X1 g5948(.A (counter_val3[21]), .B (n_4), .C (counter_val4[21]),
-       .D (n_81), .Y (n_172));
-  AOI22X1 g5949(.A (counter_val1[22]), .B (n_0), .C (counter_val5[22]),
-       .D (n_5), .Y (n_171));
-  AOI22X1 g5950(.A (counter_val3[22]), .B (n_4), .C (counter_val4[22]),
-       .D (n_81), .Y (n_170));
-  AOI22X1 g5951(.A (counter_val3[23]), .B (n_4), .C (counter_val5[23]),
-       .D (n_5), .Y (n_169));
-  AOI22X1 g5952(.A (counter_val1[23]), .B (n_1), .C (counter_val2[23]),
-       .D (n_80), .Y (n_168));
-  AOI22X1 g5953(.A (counter_val1[24]), .B (n_1), .C (counter_val2[24]),
-       .D (n_80), .Y (n_167));
-  AOI22X1 g5954(.A (counter_val3[24]), .B (n_4), .C (counter_val5[24]),
-       .D (n_5), .Y (n_166));
-  AOI22X1 g5955(.A (counter_val3[25]), .B (n_4), .C (counter_val5[25]),
-       .D (n_5), .Y (n_165));
-  AOI22X1 g5956(.A (counter_val1[25]), .B (n_1), .C (counter_val2[25]),
-       .D (n_80), .Y (n_164));
-  AOI22X1 g5957(.A (counter_val1[26]), .B (n_0), .C (counter_val5[26]),
-       .D (n_5), .Y (n_163));
-  AOI22X1 g5958(.A (counter_val3[26]), .B (n_4), .C (counter_val4[26]),
-       .D (n_81), .Y (n_162));
-  AOI22X1 g5959(.A (counter_val3[27]), .B (n_4), .C (counter_val5[27]),
-       .D (n_5), .Y (n_161));
-  INVX2 g5960(.A (n_144), .Y (n_160));
-  INVX2 g5961(.A (n_140), .Y (n_159));
-  INVX2 g5962(.A (n_138), .Y (n_158));
-  INVX2 g5963(.A (n_136), .Y (n_157));
-  INVX2 g5964(.A (n_134), .Y (n_156));
-  INVX2 g5965(.A (n_132), .Y (n_155));
-  INVX2 g5966(.A (n_128), .Y (n_154));
-  INVX2 g5967(.A (n_126), .Y (n_153));
-  INVX2 g5968(.A (n_124), .Y (n_152));
-  INVX2 g5969(.A (n_122), .Y (n_151));
-  INVX2 g5970(.A (n_120), .Y (n_150));
-  INVX2 g5971(.A (n_118), .Y (n_149));
-  INVX2 g5972(.A (n_116), .Y (n_148));
-  INVX2 g5973(.A (n_114), .Y (n_147));
-  INVX2 g5974(.A (n_110), .Y (n_146));
-  INVX1 g5975(.A (n_108), .Y (n_145));
-  AOI22X1 g5976(.A (counter_val1[27]), .B (n_1), .C (counter_val2[27]),
-       .D (n_80), .Y (n_144));
-  AOI22X1 g5977(.A (counter_val2[28]), .B (n_80), .C
-       (counter_val3[28]), .D (n_4), .Y (n_143));
-  AOI22X1 g5978(.A (counter_val1[28]), .B (n_1), .C (counter_val5[28]),
-       .D (n_5), .Y (n_142));
-  AOI22X1 g5979(.A (counter_val1[29]), .B (n_0), .C (counter_val5[29]),
-       .D (n_5), .Y (n_141));
-  AOI22X1 g5980(.A (counter_val3[29]), .B (n_4), .C (counter_val4[29]),
-       .D (n_81), .Y (n_140));
-  AOI22X1 g5981(.A (counter_val3[2]), .B (n_4), .C (counter_val5[2]),
-       .D (n_5), .Y (n_139));
-  AOI22X1 g5982(.A (counter_val1[2]), .B (n_1), .C (counter_val2[2]),
-       .D (n_80), .Y (n_138));
-  AOI22X1 g5983(.A (counter_val1[30]), .B (n_1), .C (counter_val5[30]),
-       .D (n_5), .Y (n_137));
-  AOI22X1 g5984(.A (counter_val3[30]), .B (n_4), .C (counter_val4[30]),
-       .D (n_81), .Y (n_136));
-  AOI22X1 g5985(.A (counter_val3[31]), .B (n_4), .C (counter_val5[31]),
-       .D (n_5), .Y (n_135));
-  AOI22X1 g5986(.A (counter_val1[31]), .B (n_1), .C (counter_val2[31]),
-       .D (n_80), .Y (n_134));
-  AOI22X1 g5987(.A (counter_val1[3]), .B (n_0), .C (counter_val5[3]),
-       .D (n_5), .Y (n_133));
-  AOI22X1 g5988(.A (counter_val3[3]), .B (n_4), .C (counter_val4[3]),
-       .D (n_81), .Y (n_132));
-  AOI22X1 g5989(.A (counter_val2[4]), .B (n_80), .C (counter_val3[4]),
-       .D (n_4), .Y (n_131));
-  AOI22X1 g5990(.A (counter_val1[4]), .B (n_1), .C (counter_val5[4]),
-       .D (n_5), .Y (n_130));
-  AOI22X1 g5991(.A (counter_val1[5]), .B (n_0), .C (counter_val5[5]),
-       .D (n_5), .Y (n_129));
-  AOI22X1 g5992(.A (counter_val3[5]), .B (n_4), .C (counter_val4[5]),
-       .D (n_81), .Y (n_128));
-  AOI22X1 g5993(.A (counter_val1[6]), .B (n_0), .C (counter_val5[6]),
-       .D (n_5), .Y (n_127));
-  AOI22X1 g5994(.A (counter_val3[6]), .B (n_4), .C (counter_val4[6]),
-       .D (n_81), .Y (n_126));
-  AOI22X1 g5995(.A (counter_val3[7]), .B (n_4), .C (counter_val5[7]),
-       .D (n_5), .Y (n_125));
-  AOI22X1 g5996(.A (counter_val1[7]), .B (n_1), .C (counter_val2[7]),
-       .D (n_80), .Y (n_124));
-  AOI22X1 g5997(.A (counter_val3[8]), .B (n_4), .C (counter_val5[8]),
-       .D (n_5), .Y (n_123));
-  AOI22X1 g5998(.A (counter_val1[8]), .B (n_1), .C (counter_val2[8]),
-       .D (n_80), .Y (n_122));
-  AOI22X1 g5999(.A (counter_val3[9]), .B (n_4), .C (counter_val5[9]),
-       .D (n_5), .Y (n_121));
-  AOI22X1 g6000(.A (counter_val1[9]), .B (n_1), .C (counter_val2[9]),
-       .D (n_80), .Y (n_120));
-  AOI22X1 g6001(.A (counter_val3[0]), .B (n_4), .C (counter_val5[0]),
-       .D (n_5), .Y (n_119));
-  AOI22X1 g6002(.A (counter_val1[0]), .B (n_1), .C (counter_val2[0]),
-       .D (n_80), .Y (n_118));
-  AOI22X1 g6003(.A (counter_val1[10]), .B (n_0), .C (counter_val5[10]),
-       .D (n_5), .Y (n_117));
-  AOI22X1 g6004(.A (counter_val3[10]), .B (n_4), .C (counter_val4[10]),
-       .D (n_81), .Y (n_116));
-  AOI22X1 g6005(.A (counter_val3[11]), .B (n_4), .C (counter_val5[11]),
-       .D (n_5), .Y (n_115));
-  AOI22X1 g6006(.A (counter_val1[11]), .B (n_1), .C (counter_val2[11]),
-       .D (n_80), .Y (n_114));
-  AOI22X1 g6007(.A (counter_val2[12]), .B (n_80), .C
-       (counter_val3[12]), .D (n_4), .Y (n_113));
-  AOI22X1 g6008(.A (counter_val1[12]), .B (n_1), .C (counter_val5[12]),
-       .D (n_5), .Y (n_112));
-  AOI22X1 g6009(.A (counter_val3[13]), .B (n_4), .C (counter_val5[13]),
-       .D (n_5), .Y (n_111));
-  AOI22X1 g6010(.A (counter_val1[13]), .B (n_1), .C (counter_val2[13]),
-       .D (n_80), .Y (n_110));
-  AOI22X1 g6011(.A (counter_val1[14]), .B (n_0), .C (counter_val5[14]),
-       .D (n_5), .Y (n_109));
-  OAI21X1 g6012(.A (n_51), .B (n_63), .C (n_99), .Y (n_108));
-  OAI21X1 g6013(.A (n_32), .B (n_84), .C (n_102), .Y (n_107));
-  INVX2 g6014(.A (n_104), .Y (n_105));
-  NAND2X1 g6015(.A (px_addr[0]), .B (n_86), .Y (n_102));
-  NAND2X1 g6016(.A (px_addr[1]), .B (n_86), .Y (n_101));
-  NAND3X1 g6018(.A (n_67), .B (n_89), .C (n_59), .Y (n_104));
-  NAND3X1 g6019(.A (n_43), .B (n_69), .C (n_90), .Y (n_100));
-  NAND3X1 g6020(.A (n_44), .B (n_69), .C (n_90), .Y (n_103));
-  NOR2X1 g6021(.A (n_46), .B (n_76), .Y (n_99));
-  INVX2 g6022(.A (n_98), .Y (n_97));
-  NOR2X1 g6024(.A (n_90), .B (n_77), .Y (n_98));
-  NAND3X1 g6025(.A (n_36), .B (n_45), .C (n_86), .Y (n_96));
-  AOI21X1 g6026(.A (n_51), .B (n_62), .C (n_52), .Y (n_94));
-  AOI21X1 g6027(.A (n_31), .B (n_35), .C (n_74), .Y (n_93));
-  OAI21X1 g6028(.A (n_66), .B (n_70), .C (n_38), .Y (n_92));
-  OAI21X1 g6029(.A (n_8), .B (n_59), .C (n_41), .Y (n_91));
-  INVX2 g6030(.A (n_90), .Y (n_89));
-  INVX2 g6031(.A (n_87), .Y (n_88));
-  INVX4 g6034(.A (n_85), .Y (n_5));
-  NAND2X1 g6035(.A (clr_counter_reg), .B (n_60), .Y (n_83));
-  NAND2X1 g6036(.A (n_50), .B (n_60), .Y (n_90));
-  NAND2X1 g6038(.A (ack_received), .B (n_68), .Y (n_87));
-  NOR2X1 g6039(.A (n_48), .B (n_73), .Y (n_86));
-  NAND2X1 g6040(.A (samp_track[2]), .B (n_64), .Y (n_85));
-  INVX4 g6047(.A (n_75), .Y (n_4));
-  BUFX2 g6051(.A (n_81), .Y (n_3));
-  BUFX2 g6053(.A (n_80), .Y (n_2));
-  INVX2 g6056(.A (n_79), .Y (n_0));
-  INVX2 g6057(.A (n_1), .Y (n_79));
-  OR2X1 g6058(.A (n_69), .B (n_53), .Y (n_77));
-  AOI21X1 g6059(.A (doneAccumulatingReg[1]), .B
-       (doneAccumulatingReg[0]), .C (n_50), .Y (n_76));
-  NAND3X1 g6060(.A (n_12), .B (samp_track[1]), .C (n_64), .Y (n_75));
-  AND2X2 g6061(.A (n_64), .B (n_20), .Y (n_81));
-  AND2X2 g6062(.A (n_64), .B (n_18), .Y (n_80));
-  AND2X2 g6063(.A (n_64), .B (n_42), .Y (n_1));
-  OAI21X1 g6064(.A (sentAddr), .B (n_47), .C (n_38), .Y (n_74));
-  MUX2X1 g6065(.A (n_32), .B (n_33), .S (n_34), .Y (n_78));
-  NOR2X1 g6067(.A (n_15), .B (n_39), .Y (n_73));
-  NAND2X1 g6068(.A (n_50), .B (n_49), .Y (n_72));
-  NOR2X1 g6069(.A (current_state[3]), .B (n_39), .Y (n_70));
-  NOR2X1 g6070(.A (ack_received2), .B (n_37), .Y (n_68));
-  NAND2X1 g6071(.A (n_40), .B (n_36), .Y (n_69));
-  AND2X2 g6072(.A (n_45), .B (n_41), .Y (n_67));
-  NAND2X1 g6073(.A (sentAddr), .B (n_49), .Y (n_66));
-  NAND2X1 g6074(.A (loadedVal), .B (n_36), .Y (n_65));
-  INVX2 g6075(.A (n_56), .Y (n_64));
-  INVX2 g6076(.A (n_62), .Y (n_63));
-  INVX2 g6077(.A (n_55), .Y (n_61));
-  NOR2X1 g6079(.A (n_34), .B (n_33), .Y (n_57));
-  NAND3X1 g6080(.A (n_8), .B (n_27), .C (n_23), .Y (n_56));
-  NOR2X1 g6081(.A (current_state[0]), .B (n_40), .Y (n_62));
-  NAND3X1 g6082(.A (n_8), .B (n_24), .C (n_22), .Y (n_55));
-  OR2X2 g6083(.A (n_40), .B (n_14), .Y (n_60));
-  NAND2X1 g6085(.A (n_47), .B (n_37), .Y (n_53));
-  OAI21X1 g6086(.A (n_14), .B (n_21), .C (n_37), .Y (n_52));
-  AOI22X1 g6087(.A (n_27), .B (n_23), .C (n_22), .D (n_24), .Y (n_59));
-  INVX1 g6088(.A (n_49), .Y (n_48));
-  INVX2 g6089(.A (n_46), .Y (n_47));
-  INVX2 g6090(.A (n_43), .Y (n_44));
-  NOR2X1 g6092(.A (px_addr[1]), .B (n_19), .Y (n_51));
-  NAND3X1 g6093(.A (n_13), .B (n_14), .C (n_25), .Y (n_50));
-  NAND2X1 g6094(.A (n_29), .B (n_24), .Y (n_49));
-  NOR2X1 g6095(.A (n_28), .B (n_26), .Y (n_46));
-  NAND2X1 g6096(.A (n_29), .B (n_27), .Y (n_45));
-  NAND2X1 g6097(.A (doneAccumulatingRegAddr[1]), .B
-       (doneAccumulatingRegAddr[0]), .Y (n_43));
-  AND2X1 g6098(.A (n_30), .B (n_10), .Y (n_42));
-  INVX1 g6099(.A (n_36), .Y (n_35));
-  INVX2 g6100(.A (n_33), .Y (n_32));
-  NOR2X1 g6101(.A (n_10), .B (n_30), .Y (n_31));
-  OR2X2 g6102(.A (n_27), .B (n_28), .Y (n_41));
-  NAND2X1 g6103(.A (current_state[2]), .B (n_25), .Y (n_40));
-  NAND3X1 g6104(.A (current_state[1]), .B (n_13), .C
-       (current_state[0]), .Y (n_39));
-  NAND2X1 g6105(.A (n_22), .B (n_27), .Y (n_38));
-  NAND2X1 g6106(.A (n_24), .B (n_23), .Y (n_37));
-  NAND3X1 g6107(.A (current_state[1]), .B (n_14), .C (n_22), .Y (n_36));
-  AOI22X1 g6108(.A (samp_track[1]), .B (n_14), .C (px_addr[1]), .D
-       (current_state[0]), .Y (n_34));
-  AOI22X1 g6109(.A (samp_track[0]), .B (n_14), .C (px_addr[0]), .D
-       (current_state[0]), .Y (n_33));
-  INVX1 g6129(.A (n_27), .Y (n_26));
-  INVX2 g6130(.A (n_22), .Y (n_21));
-  NOR2X1 g6139(.A (samp_track[0]), .B (samp_track[1]), .Y (n_30));
-  NOR2X1 g6140(.A (current_state[3]), .B (current_state[2]), .Y (n_29));
-  NAND2X1 g6141(.A (current_state[3]), .B (current_state[2]), .Y
-       (n_28));
-  NOR2X1 g6142(.A (current_state[1]), .B (current_state[0]), .Y (n_27));
-  NOR2X1 g6143(.A (n_11), .B (n_12), .Y (n_20));
-  OR2X1 g6144(.A (px_addr[0]), .B (sentAddr), .Y (n_19));
-  NOR2X1 g6145(.A (current_state[3]), .B (n_16), .Y (n_25));
-  NOR2X1 g6146(.A (current_state[1]), .B (n_14), .Y (n_24));
-  NOR2X1 g6147(.A (samp_track[1]), .B (n_12), .Y (n_18));
-  NOR2X1 g6148(.A (current_state[3]), .B (n_13), .Y (n_23));
-  NOR2X1 g6149(.A (n_15), .B (current_state[2]), .Y (n_22));
-  INVX1 g6150(.A (counterAccumulation_n_166), .Y (n_17));
-  INVX1 g6151(.A (current_state[1]), .Y (n_16));
-  INVX2 g6152(.A (current_state[3]), .Y (n_15));
-  INVX2 g6153(.A (current_state[0]), .Y (n_14));
-  INVX2 g6154(.A (current_state[2]), .Y (n_13));
-  INVX2 g6158(.A (samp_track[0]), .Y (n_12));
-  INVX2 g6162(.A (samp_track[1]), .Y (n_11));
-  INVX2 g6163(.A (samp_track[2]), .Y (n_10));
-  INVX2 g6165(.A (loadedVal), .Y (n_8));
-  INVX1 g6167(.A (n_73), .Y (n_84));
-  NAND3X1 g3(.A (n_59), .B (n_36), .C (n_60), .Y (n_386));
-  OR2X1 g6168(.A (n_388), .B (n_70), .Y (n_389));
-  NAND3X1 g6169(.A (n_38), .B (n_37), .C (en_osc_out), .Y (n_388));
-  INVX1 g4(.A (n_391), .Y (n_392));
-  MUX2X1 g6170(.A (drdy), .B (n_59), .S (n_390), .Y (n_391));
-  NOR2X1 g6171(.A (n_386), .B (n_72), .Y (n_390));
+  OAI21X1 g5975(.A (n_70), .B (n_51), .C (n_241), .Y (n_244));
+  NAND3X1 g5982(.A (n_87), .B (n_90), .C (n_125), .Y (n_243));
+  NAND2X1 g5983(.A (n_101), .B (n_202), .Y (n_242));
+  AOI21X1 g5984(.A (n_78), .B (n_77), .C (n_207), .Y (n_241));
+  OAI21X1 g5985(.A (n_12), .B (n_133), .C (n_97), .Y (n_240));
+  OAI21X1 g5986(.A (n_17), .B (n_133), .C (n_97), .Y (n_239));
+  OAI21X1 g5987(.A (n_20), .B (n_133), .C (n_97), .Y (n_238));
+  OAI21X1 g5988(.A (n_16), .B (n_133), .C (n_97), .Y (n_237));
+  AOI22X1 g5989(.A (sampleOut[14]), .B (n_134), .C (counter_val1[14]),
+       .D (n_5), .Y (n_236));
+  AOI22X1 g5990(.A (sampleOut[15]), .B (n_134), .C (counter_val2[15]),
+       .D (n_119), .Y (n_235));
+  AOI22X1 g5991(.A (sampleOut[16]), .B (n_134), .C (counter_val1[16]),
+       .D (n_5), .Y (n_234));
+  AOI22X1 g5992(.A (sampleOut[17]), .B (n_134), .C (counter_val1[17]),
+       .D (n_110), .Y (n_233));
+  AOI22X1 g5993(.A (sampleOut[18]), .B (n_134), .C (counter_val1[18]),
+       .D (n_110), .Y (n_232));
+  AOI22X1 g5994(.A (sampleOut[19]), .B (n_134), .C (counter_val1[19]),
+       .D (n_110), .Y (n_231));
+  AOI22X1 g5995(.A (sampleOut[1]), .B (n_134), .C (counter_val1[1]), .D
+       (n_110), .Y (n_230));
+  AOI22X1 g5996(.A (sampleOut[21]), .B (n_134), .C (counter_val1[21]),
+       .D (n_5), .Y (n_229));
+  AOI22X1 g5997(.A (sampleOut[22]), .B (n_134), .C (counter_val2[22]),
+       .D (n_119), .Y (n_228));
+  AOI22X1 g5998(.A (sampleOut[23]), .B (n_134), .C (counter_val2[23]),
+       .D (n_1), .Y (n_227));
+  AOI22X1 g5999(.A (sampleOut[24]), .B (n_134), .C (counter_val1[24]),
+       .D (n_110), .Y (n_226));
+  AOI22X1 g6000(.A (sampleOut[25]), .B (n_134), .C (counter_val2[25]),
+       .D (n_1), .Y (n_225));
+  AOI22X1 g6001(.A (sampleOut[26]), .B (n_134), .C (counter_val1[26]),
+       .D (n_110), .Y (n_224));
+  AOI22X1 g6002(.A (sampleOut[27]), .B (n_134), .C (counter_val2[27]),
+       .D (n_119), .Y (n_223));
+  AOI22X1 g6003(.A (sampleOut[29]), .B (n_134), .C (counter_val1[29]),
+       .D (n_110), .Y (n_222));
+  AOI22X1 g6004(.A (sampleOut[2]), .B (n_134), .C (counter_val1[2]), .D
+       (n_5), .Y (n_221));
+  AOI22X1 g6005(.A (sampleOut[30]), .B (n_134), .C (counter_val1[30]),
+       .D (n_5), .Y (n_220));
+  AOI22X1 g6006(.A (sampleOut[31]), .B (n_134), .C (counter_val1[31]),
+       .D (n_5), .Y (n_219));
+  AOI22X1 g6007(.A (sampleOut[3]), .B (n_134), .C (counter_val1[3]), .D
+       (n_110), .Y (n_218));
+  AOI22X1 g6008(.A (sampleOut[5]), .B (n_134), .C (counter_val1[5]), .D
+       (n_5), .Y (n_217));
+  AOI22X1 g6009(.A (sampleOut[6]), .B (n_134), .C (counter_val1[6]), .D
+       (n_110), .Y (n_216));
+  AOI22X1 g6010(.A (sampleOut[7]), .B (n_134), .C (counter_val1[7]), .D
+       (n_110), .Y (n_215));
+  AOI22X1 g6011(.A (sampleOut[8]), .B (n_134), .C (counter_val2[8]), .D
+       (n_1), .Y (n_214));
+  AOI22X1 g6012(.A (sampleOut[9]), .B (n_134), .C (counter_val1[9]), .D
+       (n_110), .Y (n_213));
+  AOI22X1 g6013(.A (sampleOut[0]), .B (n_134), .C (counter_val1[0]), .D
+       (n_5), .Y (n_212));
+  AOI22X1 g6014(.A (sampleOut[10]), .B (n_134), .C (counter_val1[10]),
+       .D (n_5), .Y (n_211));
+  AOI22X1 g6015(.A (sampleOut[11]), .B (n_134), .C (counter_val1[11]),
+       .D (n_5), .Y (n_210));
+  AOI22X1 g6016(.A (sampleOut[13]), .B (n_134), .C (counter_val2[13]),
+       .D (n_119), .Y (n_209));
+  OAI21X1 g6017(.A (n_68), .B (n_62), .C (n_203), .Y (n_208));
+  OR2X1 g6021(.A (n_106), .B (n_126), .Y (n_207));
+  NAND3X1 g6023(.A (n_108), .B (n_90), .C (n_91), .Y (n_205));
+  NAND2X1 g6024(.A (n_107), .B (n_124), .Y (n_204));
+  OAI21X1 g6025(.A (n_67), .B (n_109), .C (samp_track[2]), .Y (n_203));
+  OAI21X1 g6026(.A (n_71), .B (n_113), .C (loadedVal), .Y (n_202));
+  OAI21X1 g6027(.A (1'b0), .B (n_85), .C (n_128), .Y (n_201));
+  AOI22X1 g6028(.A (counter_val4[14]), .B (n_7), .C (counter_val5[14]),
+       .D (n_8), .Y (n_200));
+  AOI22X1 g6029(.A (counter_val2[14]), .B (n_119), .C
+       (counter_val3[14]), .D (n_3), .Y (n_199));
+  AOI22X1 g6030(.A (counter_val1[15]), .B (n_5), .C (counter_val5[15]),
+       .D (n_8), .Y (n_198));
+  AOI22X1 g6031(.A (counter_val3[15]), .B (n_111), .C
+       (counter_val4[15]), .D (n_120), .Y (n_197));
+  AOI22X1 g6032(.A (counter_val2[16]), .B (n_1), .C (counter_val5[16]),
+       .D (n_8), .Y (n_196));
+  AOI22X1 g6033(.A (counter_val3[16]), .B (n_3), .C (counter_val4[16]),
+       .D (n_120), .Y (n_195));
+  AOI22X1 g6034(.A (counter_val4[17]), .B (n_120), .C
+       (counter_val5[17]), .D (n_8), .Y (n_194));
+  AOI22X1 g6035(.A (counter_val2[17]), .B (n_1), .C (counter_val3[17]),
+       .D (n_3), .Y (n_193));
+  AOI22X1 g6036(.A (counter_val3[18]), .B (n_3), .C (counter_val5[18]),
+       .D (n_8), .Y (n_192));
+  AOI22X1 g6037(.A (counter_val2[18]), .B (n_119), .C
+       (counter_val4[18]), .D (n_7), .Y (n_191));
+  AOI22X1 g6038(.A (counter_val2[19]), .B (n_119), .C
+       (counter_val4[19]), .D (n_120), .Y (n_190));
+  AOI22X1 g6039(.A (counter_val3[19]), .B (n_3), .C (counter_val5[19]),
+       .D (n_8), .Y (n_189));
+  AOI22X1 g6040(.A (counter_val2[1]), .B (n_119), .C (counter_val5[1]),
+       .D (n_8), .Y (n_188));
+  AOI22X1 g6041(.A (counter_val3[1]), .B (n_111), .C (counter_val4[1]),
+       .D (n_120), .Y (n_187));
+  AOI22X1 g6042(.A (counter_val2[20]), .B (n_1), .C (counter_val4[20]),
+       .D (n_7), .Y (n_186));
+  AOI22X1 g6043(.A (counter_val1[20]), .B (n_110), .C
+       (counter_val5[20]), .D (n_8), .Y (n_185));
+  AOI22X1 g6044(.A (counter_val4[21]), .B (n_7), .C (counter_val5[21]),
+       .D (n_8), .Y (n_184));
+  AOI22X1 g6045(.A (counter_val2[21]), .B (n_1), .C (counter_val3[21]),
+       .D (n_111), .Y (n_183));
+  AOI22X1 g6046(.A (counter_val1[22]), .B (n_5), .C (counter_val3[22]),
+       .D (n_3), .Y (n_182));
+  AOI22X1 g6047(.A (counter_val4[22]), .B (n_7), .C (counter_val5[22]),
+       .D (n_8), .Y (n_181));
+  AOI22X1 g6048(.A (counter_val1[23]), .B (n_110), .C
+       (counter_val5[23]), .D (n_8), .Y (n_180));
+  AOI22X1 g6049(.A (counter_val3[23]), .B (n_111), .C
+       (counter_val4[23]), .D (n_120), .Y (n_179));
+  AOI22X1 g6050(.A (counter_val3[24]), .B (n_3), .C (counter_val5[24]),
+       .D (n_8), .Y (n_178));
+  AOI22X1 g6051(.A (counter_val2[24]), .B (n_119), .C
+       (counter_val4[24]), .D (n_7), .Y (n_177));
+  AOI22X1 g6052(.A (counter_val1[25]), .B (n_110), .C
+       (counter_val5[25]), .D (n_8), .Y (n_176));
+  AOI22X1 g6053(.A (counter_val3[25]), .B (n_3), .C (counter_val4[25]),
+       .D (n_7), .Y (n_175));
+  AOI22X1 g6054(.A (counter_val3[26]), .B (n_111), .C
+       (counter_val5[26]), .D (n_8), .Y (n_174));
+  AOI22X1 g6055(.A (counter_val2[26]), .B (n_119), .C
+       (counter_val4[26]), .D (n_120), .Y (n_173));
+  AOI22X1 g6056(.A (counter_val1[27]), .B (n_110), .C
+       (counter_val3[27]), .D (n_111), .Y (n_172));
+  AOI22X1 g6057(.A (counter_val4[27]), .B (n_120), .C
+       (counter_val5[27]), .D (n_8), .Y (n_171));
+  AOI22X1 g6058(.A (counter_val2[28]), .B (n_119), .C
+       (counter_val3[28]), .D (n_3), .Y (n_170));
+  AOI22X1 g6059(.A (counter_val1[28]), .B (n_5), .C (counter_val5[28]),
+       .D (n_8), .Y (n_169));
+  AOI22X1 g6060(.A (counter_val4[29]), .B (n_120), .C
+       (counter_val5[29]), .D (n_8), .Y (n_168));
+  AOI22X1 g6061(.A (counter_val2[29]), .B (n_119), .C
+       (counter_val3[29]), .D (n_111), .Y (n_167));
+  AOI22X1 g6062(.A (counter_val2[2]), .B (n_119), .C (counter_val5[2]),
+       .D (n_8), .Y (n_166));
+  AOI22X1 g6063(.A (counter_val3[2]), .B (n_111), .C (counter_val4[2]),
+       .D (n_7), .Y (n_165));
+  AOI22X1 g6064(.A (counter_val2[30]), .B (n_119), .C
+       (counter_val5[30]), .D (n_8), .Y (n_164));
+  AOI22X1 g6065(.A (counter_val3[30]), .B (n_111), .C
+       (counter_val4[30]), .D (n_120), .Y (n_163));
+  AOI22X1 g6066(.A (counter_val3[31]), .B (n_111), .C
+       (counter_val4[31]), .D (n_120), .Y (n_162));
+  AOI22X1 g6067(.A (counter_val2[31]), .B (n_1), .C (counter_val5[31]),
+       .D (n_8), .Y (n_161));
+  AOI22X1 g6068(.A (counter_val2[3]), .B (n_1), .C (counter_val5[3]),
+       .D (n_8), .Y (n_160));
+  AOI22X1 g6069(.A (counter_val3[3]), .B (n_3), .C (counter_val4[3]),
+       .D (n_7), .Y (n_159));
+  AOI22X1 g6070(.A (counter_val2[4]), .B (n_1), .C (counter_val3[4]),
+       .D (n_111), .Y (n_158));
+  AOI22X1 g6071(.A (counter_val1[4]), .B (n_110), .C (counter_val5[4]),
+       .D (n_8), .Y (n_157));
+  AOI22X1 g6072(.A (counter_val2[5]), .B (n_1), .C (counter_val5[5]),
+       .D (n_8), .Y (n_156));
+  AOI22X1 g6073(.A (counter_val3[5]), .B (n_111), .C (counter_val4[5]),
+       .D (n_120), .Y (n_155));
+  AOI22X1 g6074(.A (counter_val4[6]), .B (n_7), .C (counter_val5[6]),
+       .D (n_8), .Y (n_154));
+  AOI22X1 g6075(.A (counter_val2[6]), .B (n_1), .C (counter_val3[6]),
+       .D (n_111), .Y (n_153));
+  AOI22X1 g6076(.A (counter_val2[7]), .B (n_1), .C (counter_val5[7]),
+       .D (n_8), .Y (n_152));
+  AOI22X1 g6077(.A (counter_val3[7]), .B (n_3), .C (counter_val4[7]),
+       .D (n_7), .Y (n_151));
+  AOI22X1 g6078(.A (counter_val1[8]), .B (n_5), .C (counter_val4[8]),
+       .D (n_7), .Y (n_150));
+  AOI22X1 g6079(.A (counter_val3[8]), .B (n_3), .C (counter_val5[8]),
+       .D (n_8), .Y (n_149));
+  AOI22X1 g6080(.A (counter_val4[9]), .B (n_7), .C (counter_val5[9]),
+       .D (n_8), .Y (n_148));
+  AOI22X1 g6081(.A (counter_val2[9]), .B (n_119), .C (counter_val3[9]),
+       .D (n_111), .Y (n_147));
+  AOI22X1 g6082(.A (counter_val2[0]), .B (n_119), .C (counter_val5[0]),
+       .D (n_8), .Y (n_146));
+  AOI22X1 g6083(.A (counter_val3[0]), .B (n_111), .C (counter_val4[0]),
+       .D (n_7), .Y (n_145));
+  AOI22X1 g6084(.A (counter_val4[10]), .B (n_7), .C (counter_val5[10]),
+       .D (n_8), .Y (n_144));
+  AOI22X1 g6085(.A (counter_val2[10]), .B (n_1), .C (counter_val3[10]),
+       .D (n_3), .Y (n_143));
+  AOI22X1 g6086(.A (counter_val3[11]), .B (n_3), .C (counter_val5[11]),
+       .D (n_8), .Y (n_142));
+  AOI22X1 g6087(.A (counter_val2[11]), .B (n_1), .C (counter_val4[11]),
+       .D (n_7), .Y (n_141));
+  AOI22X1 g6088(.A (counter_val2[12]), .B (n_1), .C (counter_val4[12]),
+       .D (n_120), .Y (n_140));
+  AOI22X1 g6089(.A (counter_val1[12]), .B (n_5), .C (counter_val5[12]),
+       .D (n_8), .Y (n_139));
+  AOI22X1 g6090(.A (counter_val1[13]), .B (n_5), .C (counter_val5[13]),
+       .D (n_8), .Y (n_138));
+  AOI22X1 g6091(.A (counter_val3[13]), .B (n_3), .C (counter_val4[13]),
+       .D (n_120), .Y (n_137));
+  OAI21X1 g6092(.A (n_34), .B (n_41), .C (n_131), .Y (n_136));
+  OAI21X1 g6093(.A (n_47), .B (n_62), .C (n_132), .Y (n_135));
+  NAND2X1 g6095(.A (samp_track[1]), .B (n_109), .Y (n_132));
+  OR2X2 g6096(.A (n_350), .B (n_112), .Y (n_134));
+  NOR2X1 g6097(.A (n_74), .B (n_105), .Y (n_133));
+  OAI21X1 g6098(.A (n_73), .B (n_86), .C (clr_counter_reg), .Y (n_131));
+  NAND2X1 g6100(.A (n_104), .B (n_116), .Y (n_129));
+  OAI21X1 g6101(.A (n_80), .B (n_89), .C (px_addr[1]), .Y (n_128));
+  OAI21X1 g6102(.A (n_22), .B (n_100), .C (n_64), .Y (n_127));
+  OAI21X1 g6103(.A (current_state[3]), .B (n_44), .C (n_114), .Y
+       (n_126));
+  OAI21X1 g6104(.A (n_36), .B (n_99), .C (current_state[1]), .Y
+       (n_125));
+  AOI21X1 g6105(.A (n_79), .B (n_77), .C (n_102), .Y (n_124));
+  OAI21X1 g6107(.A (n_64), .B (n_27), .C (n_117), .Y (n_122));
+  INVX4 g6109(.A (n_121), .Y (n_8));
+  NAND2X1 g6111(.A (px_addr[0]), .B (n_89), .Y (n_117));
+  OAI21X1 g6112(.A (n_52), .B (n_66), .C (en_osc_out), .Y (n_116));
+  NAND2X1 g6113(.A (samp_track[2]), .B (n_98), .Y (n_121));
+  AND2X2 g6114(.A (n_98), .B (n_49), .Y (n_120));
+  NAND3X1 g6116(.A (doneAccumulatingReg[1]), .B
+       (doneAccumulatingReg[0]), .C (n_30), .Y (n_114));
+  AND2X2 g6117(.A (n_98), .B (n_46), .Y (n_119));
+  OAI21X1 g6118(.A (current_state[0]), .B (n_58), .C (n_39), .Y
+       (n_113));
+  NAND2X1 g6119(.A (n_63), .B (n_82), .Y (n_112));
+  OAI21X1 g6120(.A (n_60), .B (n_54), .C (drdy), .Y (n_108));
+  NAND3X1 g6121(.A (current_state[0]), .B (n_71), .C (n_51), .Y
+       (n_107));
+  AND2X2 g6122(.A (n_98), .B (n_26), .Y (n_111));
+  AND2X2 g6123(.A (n_98), .B (n_69), .Y (n_110));
+  OAI21X1 g6124(.A (n_45), .B (n_35), .C (n_88), .Y (n_106));
+  OAI21X1 g6125(.A (samp_track[0]), .B (n_34), .C (n_95), .Y (n_109));
+  OAI21X1 g6126(.A (n_14), .B (n_38), .C (n_92), .Y (n_105));
+  AOI21X1 g6127(.A (n_23), .B (n_76), .C (n_77), .Y (n_104));
+  OAI21X1 g6128(.A (n_44), .B (n_35), .C (n_94), .Y (n_103));
+  OAI21X1 g6129(.A (n_56), .B (n_35), .C (n_93), .Y (n_102));
+  AOI22X1 g6130(.A (n_59), .B (n_36), .C (n_22), .D (n_71), .Y (n_101));
+  INVX2 g6131(.A (n_99), .Y (n_100));
+  NAND2X1 g6133(.A (sentAddr), .B (n_63), .Y (n_94));
+  NOR2X1 g6134(.A (n_41), .B (n_79), .Y (n_99));
+  OAI21X1 g6135(.A (n_31), .B (n_36), .C (n_43), .Y (n_93));
+  AND2X2 g6136(.A (n_71), .B (n_50), .Y (n_98));
+  NAND3X1 g6137(.A (n_14), .B (n_21), .C (n_65), .Y (n_97));
+  NOR2X1 g6138(.A (n_53), .B (n_40), .Y (n_92));
+  NOR2X1 g6139(.A (current_state[2]), .B (n_61), .Y (n_95));
+  NOR2X1 g6140(.A (n_76), .B (n_77), .Y (n_91));
+  INVX2 g6141(.A (n_83), .Y (n_87));
+  OR2X2 g6142(.A (n_63), .B (current_state[1]), .Y (n_90));
+  NAND3X1 g6143(.A (n_38), .B (n_23), .C (n_44), .Y (n_86));
+  OR2X2 g6144(.A (n_61), .B (n_39), .Y (n_89));
+  NAND3X1 g6145(.A (n_29), .B (n_28), .C (n_42), .Y (n_88));
+  NAND3X1 g6146(.A (current_state[1]), .B (n_32), .C (n_65), .Y (n_85));
+  OAI21X1 g6148(.A (n_34), .B (current_state[3]), .C (n_55), .Y (n_83));
+  AOI21X1 g6149(.A (loadedVal), .B (n_40), .C (n_57), .Y (n_82));
+  INVX2 g6151(.A (n_78), .Y (n_79));
+  INVX2 g6154(.A (n_71), .Y (n_70));
+  NAND2X1 g6157(.A (doneAccumulatingRegAddr[1]), .B
+       (doneAccumulatingRegAddr[0]), .Y (n_78));
+  NOR2X1 g6158(.A (samp_track[2]), .B (n_48), .Y (n_69));
+  NAND2X1 g6159(.A (n_13), .B (n_49), .Y (n_68));
+  AND2X2 g6160(.A (n_42), .B (n_45), .Y (n_77));
+  NOR2X1 g6161(.A (samp_track[1]), .B (n_34), .Y (n_67));
+  NOR2X1 g6162(.A (current_state[2]), .B (n_34), .Y (n_76));
+  NOR2X1 g6163(.A (n_24), .B (n_34), .Y (n_74));
+  NOR2X1 g6164(.A (n_21), .B (n_39), .Y (n_73));
+  NOR2X1 g6165(.A (current_state[3]), .B (n_38), .Y (n_71));
+  NOR2X1 g6166(.A (current_state[0]), .B (n_36), .Y (n_66));
+  INVX2 g6167(.A (n_65), .Y (n_64));
+  NOR2X1 g6168(.A (n_23), .B (n_39), .Y (n_65));
+  NAND2X1 g6169(.A (n_23), .B (n_40), .Y (n_63));
+  OAI21X1 g6170(.A (current_state[2]), .B (current_state[0]), .C
+       (n_21), .Y (n_60));
+  NOR2X1 g6171(.A (current_state[1]), .B (n_50), .Y (n_59));
+  NOR2X1 g6172(.A (n_37), .B (n_42), .Y (n_58));
+  NAND2X1 g6173(.A (n_33), .B (n_36), .Y (n_62));
+  NOR2X1 g6174(.A (n_38), .B (n_50), .Y (n_57));
+  NAND3X1 g6175(.A (samp_track[2]), .B (n_48), .C (n_22), .Y (n_56));
+  NAND3X1 g6176(.A (n_37), .B (n_22), .C (current_state[3]), .Y (n_55));
+  AOI21X1 g6177(.A (n_22), .B (n_23), .C (n_24), .Y (n_54));
+  OAI21X1 g6178(.A (current_state[1]), .B (n_22), .C (n_23), .Y (n_53));
+  OAI21X1 g6179(.A (n_22), .B (n_23), .C (n_34), .Y (n_52));
+  OAI22X1 g6180(.A (n_21), .B (current_state[3]), .C
+       (current_state[1]), .D (n_23), .Y (n_61));
+  INVX1 g6204(.A (n_46), .Y (n_47));
+  INVX1 g6205(.A (n_44), .Y (n_43));
+  INVX2 g6206(.A (n_42), .Y (n_41));
+  INVX2 g6207(.A (n_40), .Y (n_39));
+  INVX2 g6208(.A (n_38), .Y (n_37));
+  INVX2 g6209(.A (n_36), .Y (n_35));
+  INVX2 g6210(.A (n_33), .Y (n_34));
+  NOR2X1 g6215(.A (n_10), .B (ack_received2), .Y (n_51));
+  NOR2X1 g6216(.A (px_addr[1]), .B (n_18), .Y (n_32));
+  NOR2X1 g6217(.A (sentAddr), .B (n_23), .Y (n_31));
+  NOR2X1 g6218(.A (current_state[2]), .B (current_state[0]), .Y (n_30));
+  NOR2X1 g6219(.A (px_addr[1]), .B (sentAddr), .Y (n_29));
+  NOR2X1 g6220(.A (px_addr[0]), .B (current_state[0]), .Y (n_28));
+  NOR2X1 g6221(.A (loadedVal), .B (current_state[0]), .Y (n_50));
+  AND2X2 g6222(.A (samp_track[1]), .B (samp_track[0]), .Y (n_49));
+  OR2X1 g6223(.A (n_21), .B (px_addr[0]), .Y (n_27));
+  OR2X2 g6224(.A (samp_track[0]), .B (samp_track[1]), .Y (n_48));
+  NOR2X1 g6225(.A (samp_track[1]), .B (n_19), .Y (n_46));
+  NOR2X1 g6226(.A (samp_track[0]), .B (n_15), .Y (n_26));
+  NOR2X1 g6227(.A (n_21), .B (n_22), .Y (n_45));
+  NAND2X1 g6228(.A (n_21), .B (n_22), .Y (n_44));
+  NOR2X1 g6229(.A (n_24), .B (current_state[3]), .Y (n_42));
+  NOR2X1 g6230(.A (current_state[2]), .B (n_22), .Y (n_40));
+  NAND2X1 g6231(.A (current_state[2]), .B (n_21), .Y (n_38));
+  NOR2X1 g6232(.A (current_state[2]), .B (n_23), .Y (n_36));
+  NOR2X1 g6233(.A (n_21), .B (current_state[0]), .Y (n_33));
+  INVX1 g6234(.A (counterAccumulation_n_166), .Y (n_25));
+  INVX2 g6235(.A (current_state[2]), .Y (n_24));
+  INVX2 g6236(.A (current_state[3]), .Y (n_23));
+  INVX2 g6237(.A (current_state[0]), .Y (n_22));
+  INVX2 g6238(.A (current_state[1]), .Y (n_21));
+  INVX1 g6239(.A (sampleOut[4]), .Y (n_20));
+  INVX1 g6240(.A (samp_track[0]), .Y (n_19));
+  INVX2 g6244(.A (px_addr[0]), .Y (n_18));
+  INVX1 g6246(.A (sampleOut[28]), .Y (n_17));
+  INVX1 g6247(.A (sampleOut[12]), .Y (n_16));
+  INVX1 g6248(.A (samp_track[1]), .Y (n_15));
+  INVX2 g6249(.A (loadedVal), .Y (n_14));
+  INVX1 g6250(.A (samp_track[2]), .Y (n_13));
+  INVX1 g6251(.A (sampleOut[20]), .Y (n_12));
+  INVX2 g6253(.A (ack_received), .Y (n_10));
+  INVX2 drc_bufs6259(.A (n_6), .Y (n_7));
+  INVX2 drc_bufs6260(.A (n_120), .Y (n_6));
+  INVX2 drc_bufs6266(.A (n_4), .Y (n_5));
+  INVX2 drc_bufs6267(.A (n_110), .Y (n_4));
+  INVX2 drc_bufs6273(.A (n_2), .Y (n_3));
+  INVX2 drc_bufs6274(.A (n_111), .Y (n_2));
+  INVX2 drc_bufs6280(.A (n_0), .Y (n_1));
+  INVX2 drc_bufs6281(.A (n_119), .Y (n_0));
+  INVX1 g6282(.A (n_27), .Y (n_80));
+  MUX2X1 g2(.A (n_95), .B (n_62), .S (samp_track[0]), .Y (n_346));
+  NAND3X1 g6283(.A (n_347), .B (n_70), .C (n_88), .Y (n_348));
+  NOR2X1 g3(.A (n_73), .B (n_127), .Y (n_347));
+  OAI21X1 g6284(.A (n_23), .B (n_40), .C (n_349), .Y (n_350));
+  NOR2X1 g6285(.A (n_73), .B (n_74), .Y (n_349));
 endmodule
 
 module serialInterface_v2(clearStartStopDet, clk, dataIn, dataOut,
@@ -1542,294 +1501,342 @@ module serialInterface_v2(clearStartStopDet, clk, dataIn, dataOut,
   wire [7:0] rxData;
   wire [1:0] streamSt;
   wire [7:0] txData;
-  wire n_0, n_1, n_2, n_3, n_4, n_6, n_7, n_8;
-  wire n_9, n_10, n_11, n_12, n_13, n_14, n_15, n_16;
-  wire n_18, n_19, n_20, n_21, n_22, n_23, n_24, n_25;
-  wire n_26, n_27, n_28, n_29, n_30, n_31, n_32, n_33;
-  wire n_34, n_35, n_36, n_37, n_38, n_39, n_40, n_41;
-  wire n_42, n_43, n_44, n_46, n_47, n_48, n_49, n_50;
-  wire n_51, n_52, n_53, n_54, n_55, n_56, n_57, n_58;
-  wire n_59, n_60, n_61, n_62, n_63, n_64, n_65, n_66;
-  wire n_68, n_69, n_70, n_71, n_72, n_73, n_74, n_75;
-  wire n_76, n_77, n_78, n_79, n_80, n_82, n_83, n_84;
-  wire n_85, n_86, n_87, n_88, n_90, n_92, n_94, n_96;
+  wire n_0, n_1, n_2, n_3, n_4, n_5, n_6, n_7;
+  wire n_8, n_9, n_10, n_11, n_12, n_13, n_14, n_15;
+  wire n_16, n_17, n_18, n_19, n_20, n_21, n_22, n_23;
+  wire n_24, n_25, n_26, n_27, n_28, n_29, n_30, n_31;
+  wire n_32, n_33, n_34, n_35, n_36, n_37, n_38, n_39;
+  wire n_40, n_41, n_42, n_43, n_44, n_45, n_46, n_47;
+  wire n_48, n_49, n_50, n_51, n_52, n_53, n_54, n_55;
+  wire n_56, n_57, n_58, n_59, n_60, n_61, n_62, n_63;
+  wire n_64, n_65, n_66, n_67, n_68, n_69, n_70, n_71;
+  wire n_72, n_73, n_74, n_75, n_76, n_77, n_78, n_79;
+  wire n_80, n_81, n_82, n_83, n_84, n_85, n_86, n_87;
+  wire n_88, n_89, n_91, n_92, n_93, n_94, n_95, n_96;
   wire n_97, n_98, n_99, n_100, n_101, n_102, n_103, n_104;
   wire n_105, n_106, n_107, n_108, n_109, n_110, n_111, n_112;
   wire n_113, n_114, n_115, n_116, n_117, n_118, n_119, n_120;
-  wire n_121, n_122, n_123, n_124, n_125, n_126, n_127, n_128;
-  wire n_130, n_132, n_133, n_134, n_135, n_136, n_137, n_138;
-  wire n_139, n_140, n_141, n_142, n_143, n_144, n_145, n_147;
-  wire n_148, n_149, n_150, n_151, n_152, n_153, n_154, n_155;
-  wire n_156, n_157, n_158, n_159, n_160, n_161, n_162, n_163;
-  wire n_164, n_165, n_166, n_167, n_168, n_169, n_170, n_171;
-  wire n_174, n_175, n_176, n_177, n_178, n_179, n_180, n_181;
-  wire n_182, n_183, n_184, n_185, n_186, n_187, n_188, n_189;
-  wire n_190, n_191, n_192, n_193, n_194, n_195, n_196, n_197;
-  wire n_198, n_199, n_200, n_201, n_202, n_203, n_204, n_205;
-  wire n_206, n_207, n_208, n_228, n_229, n_230, n_231, n_232;
-  wire n_233, n_234, n_235, n_236;
-  DFFPOSX1 \CurrState_SISt_reg[0] (.CLK (clk), .D (n_207), .Q
+  wire n_121, n_122, n_123, n_124, n_125, n_126, n_127, n_129;
+  wire n_130, n_131, n_132, n_134, n_135, n_136, n_137, n_139;
+  wire n_140, n_141, n_142, n_145, n_146, n_147, n_148, n_150;
+  wire n_151, n_152, n_153, n_154, n_155, n_156, n_157, n_158;
+  wire n_159, n_160, n_161, n_162, n_163, n_164, n_165, n_166;
+  wire n_167, n_168, n_169, n_170, n_171, n_172, n_173, n_176;
+  wire n_177, n_178, n_179, n_180, n_181, n_182, n_183, n_184;
+  wire n_185, n_186, n_187, n_188, n_189, n_190, n_191, n_192;
+  wire n_193, n_194, n_195, n_196, n_197, n_198, n_199, n_200;
+  wire n_201, n_202, n_203, n_204, n_205, n_206, n_207, n_208;
+  wire n_209, n_210, n_211, n_212, n_213, n_214, n_215, n_216;
+  wire n_217, n_218, n_219, n_220, n_221, n_222, n_223, n_224;
+  wire n_225, n_226, n_227, n_228, n_229, n_230, n_231, n_232;
+  wire n_233, n_234, n_254, n_255, n_256, n_257, n_258, n_259;
+  DFFPOSX1 \CurrState_SISt_reg[0] (.CLK (clk), .D (n_227), .Q
        (CurrState_SISt[0]));
-  DFFPOSX1 \CurrState_SISt_reg[1] (.CLK (clk), .D (n_208), .Q
+  DFFPOSX1 \CurrState_SISt_reg[1] (.CLK (clk), .D (n_199), .Q
        (CurrState_SISt[1]));
-  DFFPOSX1 \CurrState_SISt_reg[2] (.CLK (clk), .D (n_201), .Q
+  DFFPOSX1 \CurrState_SISt_reg[2] (.CLK (clk), .D (n_230), .Q
        (CurrState_SISt[2]));
-  DFFPOSX1 \CurrState_SISt_reg[3] (.CLK (clk), .D (n_177), .Q
+  DFFPOSX1 \CurrState_SISt_reg[3] (.CLK (clk), .D (n_186), .Q
        (CurrState_SISt[3]));
-  DFFPOSX1 \bitCnt_reg[0] (.CLK (clk), .D (n_206), .Q (bitCnt[0]));
-  DFFPOSX1 \bitCnt_reg[1] (.CLK (clk), .D (n_185), .Q (bitCnt[1]));
-  DFFPOSX1 \bitCnt_reg[2] (.CLK (clk), .D (n_184), .Q (bitCnt[2]));
-  DFFPOSX1 clearStartStopDet_reg(.CLK (clk), .D (n_163), .Q
+  DFFPOSX1 \bitCnt_reg[0] (.CLK (clk), .D (n_232), .Q (bitCnt[0]));
+  DFFPOSX1 \bitCnt_reg[1] (.CLK (clk), .D (n_234), .Q (bitCnt[1]));
+  DFFPOSX1 \bitCnt_reg[2] (.CLK (clk), .D (n_208), .Q (bitCnt[2]));
+  DFFPOSX1 clearStartStopDet_reg(.CLK (clk), .D (n_204), .Q
        (clearStartStopDet));
-  DFFPOSX1 \regAddr_reg[0] (.CLK (clk), .D (n_151), .Q (regAddr[0]));
-  DFFPOSX1 \regAddr_reg[1] (.CLK (clk), .D (n_149), .Q (regAddr[1]));
-  DFFPOSX1 \rxData_reg[0] (.CLK (clk), .D (n_205), .Q (rxData[0]));
-  DFFPOSX1 \rxData_reg[1] (.CLK (clk), .D (n_199), .Q (rxData[1]));
-  DFFPOSX1 \rxData_reg[2] (.CLK (clk), .D (n_198), .Q (rxData[2]));
-  DFFPOSX1 \rxData_reg[3] (.CLK (clk), .D (n_197), .Q (rxData[3]));
-  DFFPOSX1 \rxData_reg[4] (.CLK (clk), .D (n_196), .Q (rxData[4]));
-  DFFPOSX1 \rxData_reg[5] (.CLK (clk), .D (n_195), .Q (rxData[5]));
-  DFFPOSX1 \rxData_reg[6] (.CLK (clk), .D (n_194), .Q (rxData[6]));
-  DFFPOSX1 \rxData_reg[7] (.CLK (clk), .D (n_193), .Q (rxData[7]));
-  DFFPOSX1 sdaOut_reg(.CLK (clk), .D (n_183), .Q (sdaOut));
-  DFFPOSX1 \streamSt_reg[0] (.CLK (clk), .D (n_175), .Q (streamSt[0]));
-  DFFPOSX1 \txData_reg[0] (.CLK (clk), .D (n_150), .Q (txData[0]));
-  DFFPOSX1 \txData_reg[1] (.CLK (clk), .D (n_161), .Q (txData[1]));
-  DFFPOSX1 \txData_reg[2] (.CLK (clk), .D (n_160), .Q (txData[2]));
-  DFFPOSX1 \txData_reg[3] (.CLK (clk), .D (n_158), .Q (txData[3]));
-  DFFPOSX1 \txData_reg[4] (.CLK (clk), .D (n_157), .Q (txData[4]));
-  DFFPOSX1 \txData_reg[5] (.CLK (clk), .D (n_156), .Q (txData[5]));
-  DFFPOSX1 \txData_reg[6] (.CLK (clk), .D (n_155), .Q (txData[6]));
-  DFFPOSX1 \txData_reg[7] (.CLK (clk), .D (n_154), .Q (txData[7]));
-  OAI21X1 g6895(.A (n_11), .B (n_169), .C (n_203), .Y (n_208));
-  OAI21X1 g6896(.A (n_12), .B (n_169), .C (n_204), .Y (n_207));
-  INVX2 g6897(.A (n_202), .Y (n_206));
-  INVX2 g6898(.A (n_200), .Y (n_205));
-  NAND2X1 g6902(.A (n_180), .B (n_169), .Y (n_204));
-  NOR2X1 g6903(.A (n_142), .B (n_179), .Y (n_203));
-  AOI21X1 g6904(.A (bitCnt[0]), .B (n_232), .C (n_176), .Y (n_202));
-  OAI21X1 g6905(.A (n_14), .B (n_169), .C (n_178), .Y (n_201));
-  AOI22X1 g6906(.A (rxData[0]), .B (n_174), .C (sdaIn), .D (n_110), .Y
-       (n_200));
-  INVX2 g6907(.A (n_192), .Y (n_199));
-  INVX2 g6908(.A (n_191), .Y (n_198));
-  INVX2 g6909(.A (n_190), .Y (n_197));
-  INVX2 g6910(.A (n_189), .Y (n_196));
-  INVX2 g6911(.A (n_188), .Y (n_195));
-  INVX2 g6912(.A (n_187), .Y (n_194));
-  INVX2 g6913(.A (n_186), .Y (n_193));
-  AOI22X1 g6914(.A (rxData[1]), .B (n_174), .C (rxData[0]), .D (n_110),
-       .Y (n_192));
-  AOI22X1 g6915(.A (rxData[2]), .B (n_174), .C (rxData[1]), .D (n_110),
-       .Y (n_191));
-  AOI22X1 g6916(.A (rxData[3]), .B (n_174), .C (rxData[2]), .D (n_110),
-       .Y (n_190));
-  AOI22X1 g6917(.A (rxData[4]), .B (n_174), .C (rxData[3]), .D (n_110),
-       .Y (n_189));
-  AOI22X1 g6918(.A (rxData[5]), .B (n_174), .C (rxData[4]), .D (n_110),
-       .Y (n_188));
-  AOI22X1 g6919(.A (rxData[6]), .B (n_174), .C (rxData[5]), .D (n_110),
-       .Y (n_187));
-  AOI22X1 g6920(.A (rxData[7]), .B (n_174), .C (rxData[6]), .D (n_110),
-       .Y (n_186));
-  OAI21X1 g6921(.A (n_37), .B (n_159), .C (n_182), .Y (n_185));
-  OAI21X1 g6922(.A (n_102), .B (n_159), .C (n_181), .Y (n_184));
-  NAND3X1 g6923(.A (n_153), .B (n_162), .C (n_164), .Y (n_183));
-  NAND2X1 g6924(.A (bitCnt[1]), .B (n_232), .Y (n_182));
-  NAND2X1 g6925(.A (bitCnt[2]), .B (n_232), .Y (n_181));
-  NOR2X1 g6926(.A (n_100), .B (n_230), .Y (n_180));
-  NAND3X1 g6927(.A (n_105), .B (n_96), .C (n_168), .Y (n_179));
-  NOR2X1 g6928(.A (n_171), .B (n_165), .Y (n_178));
-  OAI21X1 g6929(.A (n_15), .B (n_169), .C (n_167), .Y (n_177));
-  OAI21X1 g6930(.A (bitCnt[0]), .B (n_159), .C (n_96), .Y (n_176));
-  OAI21X1 g6931(.A (n_236), .B (n_141), .C (n_170), .Y (n_175));
-  NAND2X1 g6944(.A (n_120), .B (n_152), .Y (n_174));
-  NAND3X1 g6946(.A (n_98), .B (n_138), .C (n_86), .Y (n_171));
-  OAI21X1 g6947(.A (n_135), .B (n_145), .C (streamSt[0]), .Y (n_170));
-  NOR2X1 g6948(.A (n_64), .B (n_148), .Y (n_168));
-  NOR2X1 g6949(.A (n_121), .B (n_136), .Y (n_169));
-  NOR2X1 g6950(.A (n_142), .B (n_126), .Y (n_167));
-  NOR2X1 g6951(.A (n_124), .B (n_140), .Y (n_166));
-  NAND2X1 g6952(.A (n_105), .B (n_141), .Y (n_165));
-  NAND3X1 g6953(.A (n_10), .B (n_236), .C (n_140), .Y (n_164));
-  NAND3X1 g6954(.A (n_62), .B (n_98), .C (n_139), .Y (n_163));
-  NAND3X1 g6955(.A (sdaOut), .B (n_63), .C (n_141), .Y (n_162));
-  OAI21X1 g6956(.A (n_13), .B (n_133), .C (n_118), .Y (n_161));
-  OAI21X1 g6957(.A (n_7), .B (n_133), .C (n_117), .Y (n_160));
-  OAI21X1 g6958(.A (n_6), .B (n_133), .C (n_116), .Y (n_158));
-  OAI21X1 g6959(.A (n_16), .B (n_133), .C (n_115), .Y (n_157));
-  OAI21X1 g6960(.A (n_4), .B (n_133), .C (n_114), .Y (n_156));
-  OAI21X1 g6961(.A (n_8), .B (n_133), .C (n_113), .Y (n_155));
-  OAI21X1 g6962(.A (n_9), .B (n_133), .C (n_112), .Y (n_154));
-  AOI21X1 g6963(.A (n_33), .B (n_122), .C (n_148), .Y (n_159));
-  AOI21X1 g6964(.A (txData[7]), .B (n_64), .C (n_137), .Y (n_153));
-  AOI21X1 g6965(.A (n_34), .B (n_122), .C (n_127), .Y (n_152));
-  OAI21X1 g6966(.A (regAddr[0]), .B (n_96), .C (n_143), .Y (n_151));
-  OAI21X1 g6967(.A (n_3), .B (n_96), .C (n_144), .Y (n_150));
-  OAI21X1 g6968(.A (n_36), .B (n_96), .C (n_147), .Y (n_149));
-  OAI21X1 g6969(.A (n_61), .B (n_104), .C (regAddr[1]), .Y (n_147));
-  NAND2X1 g6971(.A (n_130), .B (n_78), .Y (n_148));
-  OR2X1 g6972(.A (n_125), .B (n_119), .Y (n_145));
-  NAND2X1 g6973(.A (txData[0]), .B (n_132), .Y (n_144));
-  OAI21X1 g6974(.A (n_61), .B (n_104), .C (regAddr[0]), .Y (n_143));
-  INVX2 g6975(.A (n_141), .Y (n_140));
-  OR2X2 g6976(.A (n_122), .B (n_72), .Y (n_142));
-  NAND3X1 g6977(.A (bitCnt[2]), .B (n_18), .C (n_79), .Y (n_141));
-  NAND3X1 g6978(.A (clearStartStopDet), .B (n_2), .C (n_123), .Y
-       (n_139));
-  AOI21X1 g6979(.A (n_108), .B (n_51), .C (n_92), .Y (n_138));
-  OAI21X1 g6980(.A (CurrState_SISt[1]), .B (n_99), .C (n_2), .Y
+  DFFPOSX1 \regAddr_reg[0] (.CLK (clk), .D (n_181), .Q (regAddr[0]));
+  DFFPOSX1 \regAddr_reg[1] (.CLK (clk), .D (n_201), .Q (regAddr[1]));
+  DFFPOSX1 \rxData_reg[0] (.CLK (clk), .D (n_220), .Q (rxData[0]));
+  DFFPOSX1 \rxData_reg[1] (.CLK (clk), .D (n_219), .Q (rxData[1]));
+  DFFPOSX1 \rxData_reg[2] (.CLK (clk), .D (n_218), .Q (rxData[2]));
+  DFFPOSX1 \rxData_reg[3] (.CLK (clk), .D (n_217), .Q (rxData[3]));
+  DFFPOSX1 \rxData_reg[4] (.CLK (clk), .D (n_216), .Q (rxData[4]));
+  DFFPOSX1 \rxData_reg[5] (.CLK (clk), .D (n_229), .Q (rxData[5]));
+  DFFPOSX1 \rxData_reg[6] (.CLK (clk), .D (n_222), .Q (rxData[6]));
+  DFFPOSX1 \rxData_reg[7] (.CLK (clk), .D (n_221), .Q (rxData[7]));
+  DFFPOSX1 sdaOut_reg(.CLK (clk), .D (n_231), .Q (sdaOut));
+  DFFPOSX1 \streamSt_reg[0] (.CLK (clk), .D (n_233), .Q (streamSt[0]));
+  DFFPOSX1 \txData_reg[0] (.CLK (clk), .D (n_169), .Q (txData[0]));
+  DFFPOSX1 \txData_reg[1] (.CLK (clk), .D (n_197), .Q (txData[1]));
+  DFFPOSX1 \txData_reg[2] (.CLK (clk), .D (n_196), .Q (txData[2]));
+  DFFPOSX1 \txData_reg[3] (.CLK (clk), .D (n_195), .Q (txData[3]));
+  DFFPOSX1 \txData_reg[4] (.CLK (clk), .D (n_194), .Q (txData[4]));
+  DFFPOSX1 \txData_reg[5] (.CLK (clk), .D (n_193), .Q (txData[5]));
+  DFFPOSX1 \txData_reg[6] (.CLK (clk), .D (n_192), .Q (txData[6]));
+  DFFPOSX1 \txData_reg[7] (.CLK (clk), .D (n_190), .Q (txData[7]));
+  NAND2X1 g5532(.A (n_187), .B (n_225), .Y (n_234));
+  NAND3X1 g5533(.A (n_142), .B (n_140), .C (n_203), .Y (n_233));
+  OAI21X1 g5534(.A (n_13), .B (n_202), .C (n_226), .Y (n_232));
+  OAI21X1 g5535(.A (n_157), .B (n_148), .C (n_228), .Y (n_231));
+  OAI21X1 g5536(.A (n_12), .B (n_134), .C (n_224), .Y (n_230));
+  INVX2 g5537(.A (n_223), .Y (n_229));
+  AND2X1 g5540(.A (n_206), .B (n_9), .Y (n_228));
+  NAND3X1 g5541(.A (n_124), .B (n_185), .C (n_184), .Y (n_227));
+  AOI21X1 g5542(.A (n_13), .B (n_189), .C (n_159), .Y (n_226));
+  OAI21X1 g5543(.A (n_257), .B (n_191), .C (bitCnt[1]), .Y (n_225));
+  AOI21X1 g5544(.A (CurrState_SISt[0]), .B (n_122), .C (n_207), .Y
+       (n_224));
+  AOI22X1 g5545(.A (rxData[5]), .B (n_200), .C (rxData[4]), .D (n_145),
+       .Y (n_223));
+  INVX2 g5546(.A (n_215), .Y (n_222));
+  INVX2 g5547(.A (n_214), .Y (n_221));
+  INVX2 g5548(.A (n_213), .Y (n_220));
+  INVX2 g5549(.A (n_212), .Y (n_219));
+  INVX2 g5550(.A (n_211), .Y (n_218));
+  INVX2 g5551(.A (n_210), .Y (n_217));
+  INVX2 g5552(.A (n_209), .Y (n_216));
+  AOI22X1 g5553(.A (rxData[6]), .B (n_200), .C (rxData[5]), .D (n_145),
+       .Y (n_215));
+  AOI22X1 g5554(.A (rxData[7]), .B (n_200), .C (rxData[6]), .D (n_145),
+       .Y (n_214));
+  AOI22X1 g5555(.A (rxData[0]), .B (n_200), .C (sdaIn), .D (n_145), .Y
+       (n_213));
+  AOI22X1 g5556(.A (rxData[1]), .B (n_200), .C (rxData[0]), .D (n_145),
+       .Y (n_212));
+  AOI22X1 g5557(.A (rxData[2]), .B (n_200), .C (rxData[1]), .D (n_145),
+       .Y (n_211));
+  AOI22X1 g5558(.A (rxData[3]), .B (n_200), .C (rxData[2]), .D (n_145),
+       .Y (n_210));
+  AOI22X1 g5559(.A (rxData[4]), .B (n_200), .C (rxData[3]), .D (n_145),
+       .Y (n_209));
+  OAI21X1 g5560(.A (n_46), .B (n_182), .C (n_205), .Y (n_208));
+  NAND2X1 g5571(.A (n_137), .B (n_183), .Y (n_207));
+  AOI21X1 g5572(.A (sdaOut), .B (n_168), .C (n_172), .Y (n_206));
+  OAI21X1 g5573(.A (n_147), .B (n_180), .C (bitCnt[2]), .Y (n_205));
+  OAI21X1 g5574(.A (n_36), .B (n_134), .C (n_188), .Y (n_204));
+  AOI22X1 g5575(.A (n_79), .B (n_177), .C (streamSt[0]), .D (n_99), .Y
+       (n_203));
+  AOI21X1 g5576(.A (n_11), .B (n_63), .C (n_191), .Y (n_202));
+  OAI21X1 g5577(.A (n_42), .B (n_131), .C (n_198), .Y (n_201));
+  OR2X1 g5579(.A (n_170), .B (n_151), .Y (n_199));
+  OAI21X1 g5580(.A (n_37), .B (n_146), .C (regAddr[1]), .Y (n_198));
+  OR2X2 g5581(.A (n_171), .B (n_122), .Y (n_200));
+  OAI21X1 g5582(.A (n_8), .B (n_131), .C (n_166), .Y (n_197));
+  OAI21X1 g5583(.A (n_5), .B (n_131), .C (n_165), .Y (n_196));
+  OAI21X1 g5584(.A (n_7), .B (n_131), .C (n_164), .Y (n_195));
+  OAI21X1 g5585(.A (n_1), .B (n_131), .C (n_163), .Y (n_194));
+  OAI21X1 g5586(.A (n_2), .B (n_131), .C (n_162), .Y (n_193));
+  OAI21X1 g5587(.A (n_4), .B (n_131), .C (n_161), .Y (n_192));
+  OAI21X1 g5588(.A (n_6), .B (n_131), .C (n_160), .Y (n_190));
+  OAI21X1 g5589(.A (n_48), .B (n_110), .C (n_259), .Y (n_189));
+  AOI22X1 g5590(.A (clearStartStopDet), .B (n_153), .C (n_20), .D
+       (n_64), .Y (n_188));
+  OAI21X1 g5591(.A (n_33), .B (n_29), .C (n_179), .Y (n_191));
+  OAI21X1 g5592(.A (n_112), .B (n_155), .C (n_41), .Y (n_187));
+  OAI21X1 g5593(.A (n_36), .B (n_106), .C (n_178), .Y (n_186));
+  AOI21X1 g5594(.A (n_10), .B (n_60), .C (n_158), .Y (n_185));
+  AOI22X1 g5595(.A (n_10), .B (n_118), .C (scl), .D (n_154), .Y
+       (n_184));
+  AOI21X1 g5596(.A (n_32), .B (n_58), .C (n_173), .Y (n_183));
+  AOI21X1 g5597(.A (n_17), .B (n_155), .C (n_112), .Y (n_182));
+  OAI21X1 g5598(.A (regAddr[0]), .B (n_131), .C (n_176), .Y (n_181));
+  INVX1 g5599(.A (n_179), .Y (n_180));
+  NOR2X1 g5600(.A (n_116), .B (n_139), .Y (n_178));
+  NOR2X1 g5601(.A (n_103), .B (n_156), .Y (n_177));
+  NAND2X1 g5602(.A (regAddr[0]), .B (n_146), .Y (n_176));
+  OAI21X1 g5605(.A (n_27), .B (n_126), .C (n_111), .Y (n_173));
+  AOI21X1 g5606(.A (CurrState_SISt[0]), .B (n_72), .C (n_136), .Y
+       (n_179));
+  OAI21X1 g5607(.A (CurrState_SISt[3]), .B (n_82), .C (n_255), .Y
+       (n_172));
+  OAI21X1 g5608(.A (CurrState_SISt[1]), .B (n_94), .C (n_141), .Y
+       (n_171));
+  OAI21X1 g5609(.A (n_77), .B (n_110), .C (n_152), .Y (n_170));
+  INVX2 g5610(.A (n_167), .Y (n_169));
+  OAI21X1 g5611(.A (CurrState_SISt[1]), .B (n_129), .C (n_117), .Y
+       (n_168));
+  AOI22X1 g5612(.A (txData[0]), .B (n_123), .C (dataIn[0]), .D (n_130),
+       .Y (n_167));
+  AOI22X1 g5613(.A (txData[1]), .B (n_123), .C (txData[0]), .D (n_97),
+       .Y (n_166));
+  AOI22X1 g5614(.A (txData[2]), .B (n_123), .C (txData[1]), .D (n_97),
+       .Y (n_165));
+  AOI22X1 g5615(.A (txData[3]), .B (n_123), .C (txData[2]), .D (n_97),
+       .Y (n_164));
+  AOI22X1 g5616(.A (txData[4]), .B (n_123), .C (txData[3]), .D (n_97),
+       .Y (n_163));
+  AOI22X1 g5617(.A (txData[5]), .B (n_123), .C (txData[4]), .D (n_97),
+       .Y (n_162));
+  AOI22X1 g5618(.A (txData[6]), .B (n_123), .C (txData[5]), .D (n_97),
+       .Y (n_161));
+  AOI22X1 g5619(.A (txData[7]), .B (n_123), .C (txData[6]), .D (n_97),
+       .Y (n_160));
+  OAI21X1 g5620(.A (n_75), .B (n_71), .C (n_150), .Y (n_159));
+  OAI22X1 g5621(.A (n_44), .B (n_115), .C (rst), .D (n_108), .Y
+       (n_158));
+  INVX1 g5622(.A (n_156), .Y (n_157));
+  NAND3X1 g5623(.A (startStopDetState[0]), .B (n_3), .C (n_101), .Y
+       (n_156));
+  OAI21X1 g5624(.A (n_12), .B (n_26), .C (n_120), .Y (n_154));
+  NAND2X1 g5625(.A (n_132), .B (n_110), .Y (n_155));
+  NAND3X1 g5626(.A (n_54), .B (n_86), .C (n_95), .Y (n_153));
+  NOR2X1 g5627(.A (n_114), .B (n_105), .Y (n_152));
+  OAI21X1 g5628(.A (CurrState_SISt[2]), .B (n_91), .C (n_121), .Y
+       (n_151));
+  NAND2X1 g5629(.A (n_9), .B (n_125), .Y (n_150));
+  NAND3X1 g5631(.A (n_45), .B (n_14), .C (n_129), .Y (n_148));
+  NAND3X1 g5632(.A (n_62), .B (n_85), .C (n_109), .Y (n_147));
+  NAND3X1 g5635(.A (n_26), .B (n_24), .C (n_98), .Y (n_146));
+  OAI21X1 g5636(.A (n_102), .B (n_89), .C (n_68), .Y (n_142));
+  OAI21X1 g5637(.A (CurrState_SISt[2]), .B (n_111), .C (n_92), .Y
+       (n_145));
+  AOI21X1 g5638(.A (n_10), .B (n_65), .C (n_127), .Y (n_141));
+  OAI21X1 g5639(.A (n_72), .B (n_96), .C (streamSt[0]), .Y (n_140));
+  OAI21X1 g5640(.A (n_31), .B (n_73), .C (n_119), .Y (n_139));
+  AOI22X1 g5642(.A (n_100), .B (n_72), .C (n_34), .D (n_64), .Y
        (n_137));
-  OAI21X1 g6981(.A (scl), .B (n_77), .C (n_128), .Y (n_136));
-  INVX1 g6982(.A (n_134), .Y (n_135));
-  INVX1 g6983(.A (n_133), .Y (n_132));
-  NOR2X1 g6986(.A (n_107), .B (n_101), .Y (n_128));
-  NOR2X1 g6987(.A (n_50), .B (n_111), .Y (n_134));
-  NAND2X1 g6988(.A (n_106), .B (n_96), .Y (n_127));
-  NAND3X1 g6989(.A (n_84), .B (n_86), .C (n_94), .Y (n_126));
-  NAND3X1 g6990(.A (n_52), .B (n_82), .C (n_78), .Y (n_125));
-  NOR2X1 g6991(.A (n_109), .B (n_104), .Y (n_133));
-  NAND3X1 g6992(.A (n_25), .B (n_234), .C (n_51), .Y (n_130));
-  AOI21X1 g6993(.A (n_87), .B (n_98), .C (n_33), .Y (n_124));
-  OAI21X1 g6994(.A (n_83), .B (n_76), .C (n_60), .Y (n_123));
-  INVX1 g6995(.A (n_120), .Y (n_121));
-  OAI21X1 g6996(.A (n_35), .B (n_87), .C (n_228), .Y (n_119));
-  OAI21X1 g6997(.A (scl), .B (n_87), .C (n_98), .Y (n_122));
-  AOI21X1 g6998(.A (n_1), .B (n_88), .C (n_111), .Y (n_120));
-  AOI22X1 g6999(.A (txData[0]), .B (n_64), .C (dataIn[1]), .D (n_97),
-       .Y (n_118));
-  AOI22X1 g7000(.A (txData[1]), .B (n_64), .C (dataIn[2]), .D (n_97),
-       .Y (n_117));
-  AOI22X1 g7001(.A (txData[2]), .B (n_64), .C (dataIn[3]), .D (n_97),
-       .Y (n_116));
-  AOI22X1 g7002(.A (txData[3]), .B (n_64), .C (dataIn[4]), .D (n_97),
-       .Y (n_115));
-  AOI22X1 g7003(.A (txData[4]), .B (n_64), .C (dataIn[5]), .D (n_97),
-       .Y (n_114));
-  AOI22X1 g7004(.A (txData[5]), .B (n_64), .C (dataIn[6]), .D (n_97),
-       .Y (n_113));
-  AOI22X1 g7005(.A (txData[6]), .B (n_64), .C (dataIn[7]), .D (n_97),
-       .Y (n_112));
-  NOR2X1 g7006(.A (n_1), .B (n_87), .Y (n_111));
-  NAND2X1 g7007(.A (n_75), .B (n_80), .Y (n_109));
-  AND2X2 g7008(.A (n_88), .B (scl), .Y (n_110));
-  NOR2X1 g7009(.A (n_26), .B (n_234), .Y (n_108));
-  OAI21X1 g7010(.A (CurrState_SISt[0]), .B (n_75), .C (n_59), .Y
-       (n_107));
-  AOI21X1 g7011(.A (n_15), .B (n_50), .C (n_90), .Y (n_106));
-  OAI21X1 g7012(.A (scl), .B (n_65), .C (n_85), .Y (n_103));
-  AOI21X1 g7013(.A (scl), .B (n_66), .C (n_74), .Y (n_105));
-  OAI21X1 g7014(.A (n_14), .B (rst), .C (n_94), .Y (n_104));
-  XNOR2X1 g7015(.A (n_18), .B (bitCnt[2]), .Y (n_102));
-  OAI21X1 g7016(.A (n_56), .B (n_52), .C (n_68), .Y (n_101));
-  AOI22X1 g7017(.A (n_32), .B (n_73), .C (n_24), .D (n_52), .Y (n_100));
-  AOI22X1 g7018(.A (CurrState_SISt[2]), .B (n_57), .C (n_25), .D
-       (n_14), .Y (n_99));
-  INVX2 g7019(.A (n_97), .Y (n_96));
-  OAI21X1 g7021(.A (n_39), .B (rst), .C (n_58), .Y (n_90));
-  NAND2X1 g7022(.A (n_69), .B (n_48), .Y (n_98));
-  NOR2X1 g7023(.A (n_10), .B (n_70), .Y (n_97));
-  NAND2X1 g7025(.A (n_10), .B (n_71), .Y (n_94));
-  NOR2X1 g7026(.A (n_22), .B (n_75), .Y (n_92));
-  OR2X2 g7029(.A (n_66), .B (n_72), .Y (n_88));
-  NAND3X1 g7030(.A (n_21), .B (n_41), .C (n_48), .Y (n_87));
-  AND2X2 g7031(.A (n_77), .B (n_62), .Y (n_86));
-  AOI22X1 g7032(.A (n_40), .B (n_2), .C (CurrState_SISt[0]), .D (n_51),
-       .Y (n_85));
-  AOI21X1 g7033(.A (n_19), .B (n_50), .C (n_79), .Y (n_84));
-  OAI21X1 g7034(.A (n_21), .B (n_47), .C (n_26), .Y (n_83));
-  AOI21X1 g7035(.A (n_21), .B (n_30), .C (n_54), .Y (n_82));
-  AOI22X1 g7037(.A (CurrState_SISt[0]), .B (n_50), .C
-       (CurrState_SISt[3]), .D (n_2), .Y (n_80));
-  INVX2 g7038(.A (n_79), .Y (n_78));
-  INVX2 g7039(.A (n_76), .Y (n_77));
-  INVX1 g7040(.A (n_73), .Y (n_74));
-  INVX2 g7041(.A (n_71), .Y (n_70));
-  NOR2X1 g7042(.A (n_22), .B (n_41), .Y (n_69));
-  NOR2X1 g7043(.A (n_32), .B (n_53), .Y (n_79));
-  NOR2X1 g7044(.A (n_32), .B (n_52), .Y (n_76));
-  NAND2X1 g7045(.A (scl), .B (n_50), .Y (n_75));
-  NAND2X1 g7046(.A (n_44), .B (n_50), .Y (n_68));
-  NAND2X1 g7047(.A (n_44), .B (n_51), .Y (n_73));
-  NOR2X1 g7048(.A (n_32), .B (n_49), .Y (n_72));
-  NOR2X1 g7050(.A (n_22), .B (n_53), .Y (n_71));
-  INVX1 g7051(.A (n_66), .Y (n_65));
-  INVX2 g7052(.A (n_63), .Y (n_64));
-  INVX1 g7053(.A (n_55), .Y (n_60));
-  NOR2X1 g7054(.A (n_20), .B (n_53), .Y (n_66));
-  NAND2X1 g7055(.A (n_42), .B (n_50), .Y (n_63));
-  NAND2X1 g7056(.A (n_42), .B (n_48), .Y (n_59));
-  NAND2X1 g7057(.A (n_19), .B (n_48), .Y (n_62));
-  OAI21X1 g7058(.A (CurrState_SISt[2]), .B (n_31), .C (n_30), .Y
-       (n_58));
-  OAI21X1 g7059(.A (n_21), .B (rst), .C (n_23), .Y (n_61));
-  OAI21X1 g7060(.A (scl), .B (n_20), .C (n_43), .Y (n_57));
-  OAI21X1 g7061(.A (n_19), .B (n_21), .C (scl), .Y (n_56));
-  OAI21X1 g7062(.A (n_26), .B (n_14), .C (n_24), .Y (n_55));
-  OAI22X1 g7063(.A (n_20), .B (rst), .C (n_15), .D (n_23), .Y (n_54));
-  INVX2 g7064(.A (n_52), .Y (n_51));
-  INVX2 g7065(.A (n_50), .Y (n_49));
-  INVX1 g7066(.A (n_48), .Y (n_47));
-  NOR2X1 g7067(.A (n_26), .B (sdaIn), .Y (n_46));
-  NAND2X1 g7069(.A (n_14), .B (n_30), .Y (n_53));
-  NAND2X1 g7070(.A (CurrState_SISt[2]), .B (n_30), .Y (n_52));
-  NOR2X1 g7071(.A (n_24), .B (rst), .Y (n_50));
-  NOR2X1 g7072(.A (n_14), .B (n_23), .Y (n_48));
-  INVX1 g7073(.A (n_44), .Y (n_43));
-  INVX1 g7074(.A (n_39), .Y (n_40));
-  NOR2X1 g7075(.A (scl), .B (n_22), .Y (n_44));
-  NOR2X1 g7076(.A (scl), .B (n_26), .Y (n_42));
-  NAND3X1 g7077(.A (rxData[3]), .B (rxData[2]), .C (n_28), .Y (n_38));
-  OAI21X1 g7078(.A (n_10), .B (startStopDetState[1]), .C (n_29), .Y
-       (n_41));
-  AOI22X1 g7079(.A (n_12), .B (CurrState_SISt[1]), .C
-       (CurrState_SISt[3]), .D (CurrState_SISt[2]), .Y (n_39));
-  XNOR2X1 g7080(.A (bitCnt[0]), .B (bitCnt[1]), .Y (n_37));
-  XNOR2X1 g7081(.A (regAddr[1]), .B (regAddr[0]), .Y (n_36));
-  INVX2 g7082(.A (n_34), .Y (n_35));
-  INVX2 g7083(.A (n_31), .Y (n_32));
-  NAND2X1 g7084(.A (startStopDetState[0]), .B (n_0), .Y (n_34));
-  NOR2X1 g7085(.A (startStopDetState[0]), .B (startStopDetState[1]), .Y
-       (n_33));
-  NOR2X1 g7086(.A (scl), .B (startStopDetState[0]), .Y (n_29));
-  NOR2X1 g7087(.A (n_15), .B (n_12), .Y (n_31));
-  NOR2X1 g7088(.A (CurrState_SISt[1]), .B (rst), .Y (n_30));
-  NOR2X1 g7089(.A (rxData[4]), .B (rxData[5]), .Y (n_28));
-  NOR2X1 g7090(.A (rxData[1]), .B (rxData[7]), .Y (n_27));
-  INVX2 g7091(.A (n_26), .Y (n_25));
-  INVX2 g7092(.A (n_22), .Y (n_21));
-  INVX2 g7093(.A (n_20), .Y (n_19));
-  NAND2X1 g7094(.A (n_12), .B (n_15), .Y (n_26));
-  NAND2X1 g7096(.A (CurrState_SISt[1]), .B (n_14), .Y (n_24));
-  NAND2X1 g7097(.A (CurrState_SISt[1]), .B (n_2), .Y (n_23));
-  NAND2X1 g7098(.A (CurrState_SISt[0]), .B (n_15), .Y (n_22));
-  NAND2X1 g7099(.A (CurrState_SISt[3]), .B (n_12), .Y (n_20));
-  AND2X2 g7100(.A (bitCnt[0]), .B (bitCnt[1]), .Y (n_18));
-  INVX1 g7101(.A (txData[4]), .Y (n_16));
-  INVX2 g7102(.A (CurrState_SISt[3]), .Y (n_15));
-  INVX2 g7103(.A (CurrState_SISt[2]), .Y (n_14));
-  INVX1 g7104(.A (txData[1]), .Y (n_13));
-  INVX2 g7105(.A (CurrState_SISt[0]), .Y (n_12));
-  INVX1 g7106(.A (CurrState_SISt[1]), .Y (n_11));
-  INVX2 g7107(.A (streamSt[0]), .Y (n_10));
-  INVX1 g7109(.A (txData[7]), .Y (n_9));
-  INVX1 g7110(.A (txData[6]), .Y (n_8));
-  INVX1 g7111(.A (txData[2]), .Y (n_7));
-  INVX1 g7112(.A (txData[3]), .Y (n_6));
-  INVX1 g7118(.A (txData[5]), .Y (n_4));
-  INVX2 g7119(.A (dataIn[0]), .Y (n_3));
-  INVX2 g7120(.A (rst), .Y (n_2));
-  INVX2 g7121(.A (scl), .Y (n_1));
-  INVX1 g7122(.A (startStopDetState[1]), .Y (n_0));
-  OAI21X1 g2(.A (n_42), .B (n_46), .C (n_48), .Y (n_228));
-  NAND3X1 g7123(.A (n_229), .B (n_130), .C (n_141), .Y (n_230));
-  NOR3X1 g3(.A (rst), .B (n_71), .C (n_92), .Y (n_229));
-  OR2X1 g7124(.A (n_231), .B (n_103), .Y (n_232));
-  NAND3X1 g7125(.A (n_94), .B (n_166), .C (n_134), .Y (n_231));
-  OR2X1 g7126(.A (n_233), .B (bitCnt[1]), .Y (n_234));
-  OR2X1 g7127(.A (bitCnt[2]), .B (bitCnt[0]), .Y (n_233));
-  OR2X1 g7128(.A (n_235), .B (n_38), .Y (n_236));
-  NAND3X1 g7129(.A (n_35), .B (rxData[6]), .C (n_27), .Y (n_235));
+  OAI21X1 g5643(.A (n_26), .B (n_104), .C (n_59), .Y (n_136));
+  OAI22X1 g5644(.A (CurrState_SISt[3]), .B (n_109), .C (n_17), .D
+       (n_62), .Y (n_135));
+  INVX2 g5646(.A (n_131), .Y (n_130));
+  OR2X2 g5647(.A (n_106), .B (n_49), .Y (n_134));
+  OR2X1 g5649(.A (n_88), .B (n_87), .Y (n_127));
+  OR2X1 g5650(.A (n_103), .B (CurrState_SISt[1]), .Y (n_126));
+  NOR2X1 g5651(.A (scl), .B (n_103), .Y (n_125));
+  NAND2X1 g5652(.A (n_51), .B (n_104), .Y (n_132));
+  NAND2X1 g5653(.A (n_11), .B (n_113), .Y (n_131));
+  NOR2X1 g5654(.A (n_15), .B (n_103), .Y (n_129));
+  NAND3X1 g5655(.A (n_34), .B (n_77), .C (n_72), .Y (n_124));
+  NAND3X1 g5656(.A (n_29), .B (n_24), .C (n_81), .Y (n_123));
+  AOI21X1 g5657(.A (n_19), .B (n_65), .C (n_113), .Y (n_121));
+  OAI21X1 g5658(.A (CurrState_SISt[0]), .B (n_77), .C (n_53), .Y
+       (n_120));
+  AOI22X1 g5659(.A (n_69), .B (n_25), .C (n_12), .D (n_57), .Y (n_119));
+  OAI21X1 g5660(.A (n_76), .B (n_62), .C (n_83), .Y (n_118));
+  OAI21X1 g5661(.A (n_10), .B (n_52), .C (n_73), .Y (n_122));
+  AOI21X1 g5662(.A (CurrState_SISt[1]), .B (n_55), .C
+       (CurrState_SISt[2]), .Y (n_117));
+  OAI22X1 g5663(.A (streamSt[0]), .B (n_80), .C (CurrState_SISt[1]), .D
+       (n_62), .Y (n_116));
+  AOI22X1 g5664(.A (n_75), .B (n_74), .C (scl), .D (n_43), .Y (n_115));
+  OAI21X1 g5665(.A (n_36), .B (n_52), .C (n_93), .Y (n_114));
+  INVX1 g5666(.A (n_107), .Y (n_108));
+  INVX2 g5667(.A (n_105), .Y (n_106));
+  NOR2X1 g5668(.A (n_14), .B (n_80), .Y (n_113));
+  NOR2X1 g5669(.A (n_11), .B (n_80), .Y (n_112));
+  NAND3X1 g5670(.A (n_16), .B (n_32), .C (n_43), .Y (n_111));
+  NAND3X1 g5671(.A (n_15), .B (n_11), .C (n_72), .Y (n_110));
+  NAND2X1 g5672(.A (n_14), .B (n_63), .Y (n_109));
+  OAI21X1 g5673(.A (n_0), .B (n_40), .C (n_33), .Y (n_102));
+  NOR2X1 g5674(.A (n_70), .B (n_67), .Y (n_101));
+  AND2X1 g5675(.A (n_77), .B (n_11), .Y (n_100));
+  NAND2X1 g5676(.A (n_29), .B (n_71), .Y (n_99));
+  NOR2X1 g5677(.A (CurrState_SISt[2]), .B (n_55), .Y (n_107));
+  NOR2X1 g5678(.A (scl), .B (n_52), .Y (n_105));
+  NOR2X1 g5679(.A (n_36), .B (n_78), .Y (n_104));
+  NAND2X1 g5680(.A (CurrState_SISt[3]), .B (n_76), .Y (n_103));
+  AOI21X1 g5681(.A (n_21), .B (n_9), .C (n_43), .Y (n_98));
+  INVX1 g5682(.A (n_95), .Y (n_96));
+  INVX2 g5683(.A (n_84), .Y (n_94));
+  NOR2X1 g5684(.A (n_50), .B (n_52), .Y (n_97));
+  NAND3X1 g5685(.A (n_10), .B (CurrState_SISt[0]), .C (n_53), .Y
+       (n_93));
+  NAND3X1 g5686(.A (CurrState_SISt[0]), .B (n_32), .C (n_65), .Y
+       (n_92));
+  NOR2X1 g5687(.A (n_74), .B (n_61), .Y (n_91));
+  NOR2X1 g5689(.A (n_63), .B (n_65), .Y (n_95));
+  OAI21X1 g5690(.A (n_10), .B (sdaIn), .C (n_78), .Y (n_89));
+  AOI21X1 g5691(.A (startStopDetState[0]), .B (n_47), .C (n_24), .Y
+       (n_88));
+  OAI21X1 g5692(.A (CurrState_SISt[0]), .B (n_26), .C (n_56), .Y
+       (n_87));
+  AOI21X1 g5693(.A (n_12), .B (n_30), .C (n_58), .Y (n_86));
+  AOI21X1 g5694(.A (n_46), .B (n_23), .C (n_57), .Y (n_85));
+  OAI21X1 g5695(.A (n_14), .B (n_27), .C (n_62), .Y (n_84));
+  AOI21X1 g5696(.A (CurrState_SISt[0]), .B (n_25), .C (n_65), .Y
+       (n_83));
+  AOI22X1 g5697(.A (n_22), .B (n_35), .C (n_15), .D (n_45), .Y (n_82));
+  AOI22X1 g5698(.A (n_33), .B (n_25), .C (n_14), .D (n_28), .Y (n_81));
+  INVX1 g5699(.A (n_80), .Y (n_79));
+  INVX2 g5700(.A (n_76), .Y (n_75));
+  INVX2 g5701(.A (n_73), .Y (n_72));
+  NAND2X1 g5702(.A (n_45), .B (n_28), .Y (n_80));
+  NAND2X1 g5703(.A (rxData[6]), .B (n_39), .Y (n_70));
+  NAND2X1 g5704(.A (n_0), .B (n_47), .Y (n_78));
+  AND2X2 g5705(.A (n_48), .B (n_13), .Y (n_77));
+  NOR2X1 g5706(.A (n_17), .B (n_46), .Y (n_76));
+  NOR2X1 g5707(.A (rst), .B (n_31), .Y (n_74));
+  NOR2X1 g5708(.A (n_35), .B (n_11), .Y (n_69));
+  NOR2X1 g5709(.A (n_14), .B (n_24), .Y (n_68));
+  NAND2X1 g5710(.A (n_16), .B (n_23), .Y (n_73));
+  NAND3X1 g5711(.A (rxData[3]), .B (rxData[2]), .C (n_38), .Y (n_67));
+  NAND3X1 g5712(.A (n_16), .B (CurrState_SISt[2]), .C
+       (CurrState_SISt[3]), .Y (n_66));
+  NAND2X1 g5713(.A (scl), .B (n_28), .Y (n_71));
+  INVX1 g5714(.A (n_62), .Y (n_61));
+  INVX1 g5715(.A (n_59), .Y (n_60));
+  INVX2 g5716(.A (n_56), .Y (n_57));
+  INVX1 g5717(.A (n_53), .Y (n_54));
+  INVX1 g5718(.A (n_52), .Y (n_51));
+  NAND2X1 g5719(.A (n_12), .B (n_34), .Y (n_50));
+  NOR2X1 g5720(.A (CurrState_SISt[2]), .B (n_26), .Y (n_65));
+  NOR2X1 g5721(.A (n_12), .B (n_26), .Y (n_64));
+  NOR2X1 g5722(.A (CurrState_SISt[2]), .B (n_27), .Y (n_63));
+  NAND2X1 g5723(.A (CurrState_SISt[3]), .B (n_28), .Y (n_62));
+  NAND2X1 g5724(.A (CurrState_SISt[3]), .B (n_23), .Y (n_59));
+  NOR2X1 g5725(.A (CurrState_SISt[0]), .B (n_24), .Y (n_58));
+  NAND2X1 g5726(.A (n_10), .B (n_30), .Y (n_56));
+  NAND2X1 g5727(.A (n_11), .B (n_34), .Y (n_55));
+  NOR2X1 g5728(.A (CurrState_SISt[3]), .B (n_24), .Y (n_53));
+  NAND2X1 g5729(.A (n_11), .B (n_25), .Y (n_52));
+  OAI21X1 g5730(.A (startStopDetState[1]), .B (n_14), .C (n_0), .Y
+       (n_49));
+  INVX1 g5731(.A (n_45), .Y (n_44));
+  OR2X1 g5732(.A (n_18), .B (regAddr[1]), .Y (n_42));
+  NOR2X1 g5733(.A (bitCnt[1]), .B (n_13), .Y (n_41));
+  NAND2X1 g5734(.A (n_10), .B (startStopDetState[1]), .Y (n_40));
+  NOR2X1 g5735(.A (bitCnt[1]), .B (bitCnt[2]), .Y (n_48));
+  NOR2X1 g5736(.A (rxData[1]), .B (rxData[7]), .Y (n_39));
+  NOR2X1 g5737(.A (rxData[4]), .B (rxData[5]), .Y (n_38));
+  NOR2X1 g5738(.A (scl), .B (startStopDetState[1]), .Y (n_47));
+  NAND2X1 g5739(.A (bitCnt[1]), .B (bitCnt[0]), .Y (n_46));
+  NOR2X1 g5740(.A (regAddr[0]), .B (rst), .Y (n_37));
+  NOR2X1 g5741(.A (CurrState_SISt[1]), .B (CurrState_SISt[2]), .Y
+       (n_45));
+  NOR2X1 g5742(.A (CurrState_SISt[0]), .B (rst), .Y (n_43));
+  INVX2 g5743(.A (n_36), .Y (n_35));
+  INVX2 g5744(.A (n_34), .Y (n_33));
+  INVX2 g5745(.A (n_32), .Y (n_31));
+  INVX2 g5746(.A (n_30), .Y (n_29));
+  INVX2 g5747(.A (n_28), .Y (n_27));
+  INVX2 g5748(.A (n_26), .Y (n_25));
+  INVX2 g5749(.A (n_24), .Y (n_23));
+  NOR2X1 g5750(.A (scl), .B (CurrState_SISt[1]), .Y (n_22));
+  NAND2X1 g5751(.A (CurrState_SISt[0]), .B (CurrState_SISt[2]), .Y
+       (n_36));
+  NOR2X1 g5752(.A (scl), .B (CurrState_SISt[0]), .Y (n_34));
+  NOR2X1 g5753(.A (n_10), .B (n_11), .Y (n_32));
+  NOR2X1 g5754(.A (n_11), .B (rst), .Y (n_30));
+  NOR2X1 g5755(.A (n_15), .B (rst), .Y (n_28));
+  NAND2X1 g5756(.A (CurrState_SISt[1]), .B (n_9), .Y (n_26));
+  NAND2X1 g5757(.A (n_11), .B (streamSt[0]), .Y (n_21));
+  NAND2X1 g5758(.A (CurrState_SISt[2]), .B (n_9), .Y (n_24));
+  NOR2X1 g5759(.A (CurrState_SISt[0]), .B (n_11), .Y (n_20));
+  NOR2X1 g5760(.A (n_10), .B (CurrState_SISt[0]), .Y (n_19));
+  INVX1 g5761(.A (regAddr[0]), .Y (n_18));
+  INVX2 g5766(.A (bitCnt[2]), .Y (n_17));
+  INVX2 g5767(.A (CurrState_SISt[1]), .Y (n_16));
+  INVX2 g5768(.A (CurrState_SISt[0]), .Y (n_15));
+  INVX2 g5769(.A (streamSt[0]), .Y (n_14));
+  INVX2 g5770(.A (bitCnt[0]), .Y (n_13));
+  INVX2 g5771(.A (CurrState_SISt[2]), .Y (n_12));
+  INVX2 g5772(.A (CurrState_SISt[3]), .Y (n_11));
+  INVX2 g5773(.A (scl), .Y (n_10));
+  INVX2 g5774(.A (rst), .Y (n_9));
+  INVX2 g5775(.A (dataIn[1]), .Y (n_8));
+  INVX2 g5776(.A (dataIn[3]), .Y (n_7));
+  INVX2 g5777(.A (dataIn[7]), .Y (n_6));
+  INVX2 g5778(.A (dataIn[2]), .Y (n_5));
+  INVX2 g5779(.A (dataIn[6]), .Y (n_4));
+  INVX1 g5780(.A (startStopDetState[1]), .Y (n_3));
+  INVX2 g5781(.A (dataIn[5]), .Y (n_2));
+  INVX2 g5782(.A (dataIn[4]), .Y (n_1));
+  INVX2 g5783(.A (startStopDetState[0]), .Y (n_0));
+  AOI21X1 g2(.A (txData[7]), .B (n_107), .C (n_254), .Y (n_255));
+  NOR2X1 g3(.A (n_33), .B (n_66), .Y (n_254));
+  OR2X1 g5784(.A (n_256), .B (n_135), .Y (n_257));
+  AOI21X1 g5785(.A (n_62), .B (n_24), .C (bitCnt[0]), .Y (n_256));
+  AND2X1 g5786(.A (n_258), .B (n_132), .Y (n_259));
+  NOR2X1 g5787(.A (n_112), .B (n_113), .Y (n_258));
 endmodule
 
 module chip_v2(clk, rst, sda, scl, testSig, drdy);
@@ -1859,341 +1866,339 @@ module chip_v2(clk, rst, sda, scl, testSig, drdy);
   wire n_17, n_18, n_19, n_20, n_21, n_22, n_23, n_24;
   wire n_25, n_26, n_27, n_28, n_29, n_30, n_31, n_32;
   wire n_33, n_34, n_35, n_36, n_37, n_38, n_39, n_40;
-  wire n_41, n_42, n_43, n_44, n_45, n_46, n_47, n_48;
-  wire n_49, n_50, n_51, n_52, n_53, n_54, n_55, n_57;
-  wire n_58, n_59, n_60, n_61, n_62, n_63, n_64, n_65;
-  wire n_66, n_67, n_68, n_69, n_70, n_71, n_72, n_73;
-  wire n_74, n_76, n_81, n_87, n_88, n_90, n_91, n_92;
-  wire n_93, n_94, n_95, n_96, n_97, n_98, n_99, n_100;
-  wire n_101, n_102, n_103, n_104, n_105, n_106, n_107, n_108;
-  wire n_109, n_110, n_111, n_112, n_113, n_114, n_115, n_116;
-  wire n_117, n_118, n_119, n_139, n_140, n_141, n_142, n_143;
-  wire theDigitalBlock_ack_received, theDigitalBlock_clr_counter,
-       theDigitalBlock_counterChip1_n_39,
+  wire n_41, n_42, n_43, n_44, n_45, n_46, n_48, n_49;
+  wire n_50, n_51, n_52, n_53, n_54, n_55, n_56, n_57;
+  wire n_58, n_59, n_62, n_63, n_64, n_65, n_66, n_67;
+  wire n_70, n_71, n_72, n_73, n_74, n_75, n_76, n_78;
+  wire n_79, n_80, n_81, n_82, n_83, n_84, n_85, n_86;
+  wire n_87, n_88, n_89, n_90, n_91, n_92, n_93, n_94;
+  wire n_95, n_96, n_97, n_98, n_99, n_100, n_101, n_102;
+  wire n_103, n_104, n_105, n_106, n_107, n_115, n_116, n_117;
+  wire n_118, n_119, theDigitalBlock_ack_received,
+       theDigitalBlock_clr_counter, theDigitalBlock_counterChip1_n_39,
        theDigitalBlock_counterChip1_n_41,
        theDigitalBlock_counterChip1_n_43,
-       theDigitalBlock_counterChip1_n_45,
-       theDigitalBlock_counterChip1_n_47,
-       theDigitalBlock_counterChip1_n_49;
-  wire theDigitalBlock_counterChip1_n_51,
+       theDigitalBlock_counterChip1_n_45;
+  wire theDigitalBlock_counterChip1_n_47,
+       theDigitalBlock_counterChip1_n_49,
+       theDigitalBlock_counterChip1_n_51,
        theDigitalBlock_counterChip1_n_53,
        theDigitalBlock_counterChip1_n_55,
        theDigitalBlock_counterChip1_n_57,
        theDigitalBlock_counterChip1_n_59,
-       theDigitalBlock_counterChip1_n_61,
-       theDigitalBlock_counterChip1_n_63,
-       theDigitalBlock_counterChip1_n_65;
-  wire theDigitalBlock_counterChip1_n_67,
+       theDigitalBlock_counterChip1_n_61;
+  wire theDigitalBlock_counterChip1_n_63,
+       theDigitalBlock_counterChip1_n_65,
+       theDigitalBlock_counterChip1_n_67,
        theDigitalBlock_counterChip1_n_69,
        theDigitalBlock_counterChip1_n_71,
        theDigitalBlock_counterChip1_n_73,
        theDigitalBlock_counterChip1_n_75,
-       theDigitalBlock_counterChip1_n_77,
-       theDigitalBlock_counterChip1_n_79,
-       theDigitalBlock_counterChip1_n_81;
-  wire theDigitalBlock_counterChip1_n_83,
+       theDigitalBlock_counterChip1_n_77;
+  wire theDigitalBlock_counterChip1_n_79,
+       theDigitalBlock_counterChip1_n_81,
+       theDigitalBlock_counterChip1_n_83,
        theDigitalBlock_counterChip1_n_85,
        theDigitalBlock_counterChip1_n_87,
        theDigitalBlock_counterChip1_n_89,
        theDigitalBlock_counterChip1_n_91,
-       theDigitalBlock_counterChip1_n_93,
-       theDigitalBlock_counterChip1_n_95,
-       theDigitalBlock_counterChip1_n_97;
-  wire theDigitalBlock_counterChip1_n_99,
+       theDigitalBlock_counterChip1_n_93;
+  wire theDigitalBlock_counterChip1_n_95,
+       theDigitalBlock_counterChip1_n_97,
+       theDigitalBlock_counterChip1_n_99,
        theDigitalBlock_counterChip2_n_39,
        theDigitalBlock_counterChip2_n_41,
        theDigitalBlock_counterChip2_n_43,
        theDigitalBlock_counterChip2_n_45,
-       theDigitalBlock_counterChip2_n_47,
-       theDigitalBlock_counterChip2_n_49,
-       theDigitalBlock_counterChip2_n_51;
-  wire theDigitalBlock_counterChip2_n_53,
+       theDigitalBlock_counterChip2_n_47;
+  wire theDigitalBlock_counterChip2_n_49,
+       theDigitalBlock_counterChip2_n_51,
+       theDigitalBlock_counterChip2_n_53,
        theDigitalBlock_counterChip2_n_55,
        theDigitalBlock_counterChip2_n_57,
        theDigitalBlock_counterChip2_n_59,
        theDigitalBlock_counterChip2_n_61,
-       theDigitalBlock_counterChip2_n_63,
-       theDigitalBlock_counterChip2_n_65,
-       theDigitalBlock_counterChip2_n_67;
-  wire theDigitalBlock_counterChip2_n_69,
+       theDigitalBlock_counterChip2_n_63;
+  wire theDigitalBlock_counterChip2_n_65,
+       theDigitalBlock_counterChip2_n_67,
+       theDigitalBlock_counterChip2_n_69,
        theDigitalBlock_counterChip2_n_71,
        theDigitalBlock_counterChip2_n_73,
        theDigitalBlock_counterChip2_n_75,
        theDigitalBlock_counterChip2_n_77,
-       theDigitalBlock_counterChip2_n_79,
-       theDigitalBlock_counterChip2_n_81,
-       theDigitalBlock_counterChip2_n_83;
-  wire theDigitalBlock_counterChip2_n_85,
+       theDigitalBlock_counterChip2_n_79;
+  wire theDigitalBlock_counterChip2_n_81,
+       theDigitalBlock_counterChip2_n_83,
+       theDigitalBlock_counterChip2_n_85,
        theDigitalBlock_counterChip2_n_87,
        theDigitalBlock_counterChip2_n_89,
        theDigitalBlock_counterChip2_n_91,
        theDigitalBlock_counterChip2_n_93,
-       theDigitalBlock_counterChip2_n_95,
-       theDigitalBlock_counterChip2_n_97,
-       theDigitalBlock_counterChip2_n_99;
-  wire theDigitalBlock_counterChip3_n_39,
+       theDigitalBlock_counterChip2_n_95;
+  wire theDigitalBlock_counterChip2_n_97,
+       theDigitalBlock_counterChip2_n_99,
+       theDigitalBlock_counterChip3_n_39,
        theDigitalBlock_counterChip3_n_41,
        theDigitalBlock_counterChip3_n_43,
        theDigitalBlock_counterChip3_n_45,
        theDigitalBlock_counterChip3_n_47,
-       theDigitalBlock_counterChip3_n_49,
-       theDigitalBlock_counterChip3_n_51,
-       theDigitalBlock_counterChip3_n_53;
-  wire theDigitalBlock_counterChip3_n_55,
+       theDigitalBlock_counterChip3_n_49;
+  wire theDigitalBlock_counterChip3_n_51,
+       theDigitalBlock_counterChip3_n_53,
+       theDigitalBlock_counterChip3_n_55,
        theDigitalBlock_counterChip3_n_57,
        theDigitalBlock_counterChip3_n_59,
        theDigitalBlock_counterChip3_n_61,
        theDigitalBlock_counterChip3_n_63,
-       theDigitalBlock_counterChip3_n_65,
-       theDigitalBlock_counterChip3_n_67,
-       theDigitalBlock_counterChip3_n_69;
-  wire theDigitalBlock_counterChip3_n_71,
+       theDigitalBlock_counterChip3_n_65;
+  wire theDigitalBlock_counterChip3_n_67,
+       theDigitalBlock_counterChip3_n_69,
+       theDigitalBlock_counterChip3_n_71,
        theDigitalBlock_counterChip3_n_73,
        theDigitalBlock_counterChip3_n_75,
        theDigitalBlock_counterChip3_n_77,
        theDigitalBlock_counterChip3_n_79,
-       theDigitalBlock_counterChip3_n_81,
-       theDigitalBlock_counterChip3_n_83,
-       theDigitalBlock_counterChip3_n_85;
-  wire theDigitalBlock_counterChip3_n_87,
+       theDigitalBlock_counterChip3_n_81;
+  wire theDigitalBlock_counterChip3_n_83,
+       theDigitalBlock_counterChip3_n_85,
+       theDigitalBlock_counterChip3_n_87,
        theDigitalBlock_counterChip3_n_89,
        theDigitalBlock_counterChip3_n_91,
        theDigitalBlock_counterChip3_n_93,
        theDigitalBlock_counterChip3_n_95,
-       theDigitalBlock_counterChip3_n_97,
-       theDigitalBlock_counterChip3_n_99,
-       theDigitalBlock_counterChip4_n_39;
-  wire theDigitalBlock_counterChip4_n_41,
+       theDigitalBlock_counterChip3_n_97;
+  wire theDigitalBlock_counterChip3_n_99,
+       theDigitalBlock_counterChip4_n_39,
+       theDigitalBlock_counterChip4_n_41,
        theDigitalBlock_counterChip4_n_43,
        theDigitalBlock_counterChip4_n_45,
        theDigitalBlock_counterChip4_n_47,
        theDigitalBlock_counterChip4_n_49,
-       theDigitalBlock_counterChip4_n_51,
-       theDigitalBlock_counterChip4_n_53,
-       theDigitalBlock_counterChip4_n_55;
-  wire theDigitalBlock_counterChip4_n_57,
+       theDigitalBlock_counterChip4_n_51;
+  wire theDigitalBlock_counterChip4_n_53,
+       theDigitalBlock_counterChip4_n_55,
+       theDigitalBlock_counterChip4_n_57,
        theDigitalBlock_counterChip4_n_59,
        theDigitalBlock_counterChip4_n_61,
        theDigitalBlock_counterChip4_n_63,
        theDigitalBlock_counterChip4_n_65,
-       theDigitalBlock_counterChip4_n_67,
-       theDigitalBlock_counterChip4_n_69,
-       theDigitalBlock_counterChip4_n_71;
-  wire theDigitalBlock_counterChip4_n_73,
+       theDigitalBlock_counterChip4_n_67;
+  wire theDigitalBlock_counterChip4_n_69,
+       theDigitalBlock_counterChip4_n_71,
+       theDigitalBlock_counterChip4_n_73,
        theDigitalBlock_counterChip4_n_75,
        theDigitalBlock_counterChip4_n_77,
        theDigitalBlock_counterChip4_n_79,
        theDigitalBlock_counterChip4_n_81,
-       theDigitalBlock_counterChip4_n_83,
-       theDigitalBlock_counterChip4_n_85,
-       theDigitalBlock_counterChip4_n_87;
-  wire theDigitalBlock_counterChip4_n_89,
+       theDigitalBlock_counterChip4_n_83;
+  wire theDigitalBlock_counterChip4_n_85,
+       theDigitalBlock_counterChip4_n_87,
+       theDigitalBlock_counterChip4_n_89,
        theDigitalBlock_counterChip4_n_91,
        theDigitalBlock_counterChip4_n_93,
        theDigitalBlock_counterChip4_n_95,
        theDigitalBlock_counterChip4_n_97,
-       theDigitalBlock_counterChip4_n_99,
-       theDigitalBlock_counterChip5_n_39,
-       theDigitalBlock_counterChip5_n_41;
-  wire theDigitalBlock_counterChip5_n_43,
+       theDigitalBlock_counterChip4_n_99;
+  wire theDigitalBlock_counterChip5_n_39,
+       theDigitalBlock_counterChip5_n_41,
+       theDigitalBlock_counterChip5_n_43,
        theDigitalBlock_counterChip5_n_45,
        theDigitalBlock_counterChip5_n_47,
        theDigitalBlock_counterChip5_n_49,
        theDigitalBlock_counterChip5_n_51,
-       theDigitalBlock_counterChip5_n_53,
-       theDigitalBlock_counterChip5_n_55,
-       theDigitalBlock_counterChip5_n_57;
-  wire theDigitalBlock_counterChip5_n_59,
+       theDigitalBlock_counterChip5_n_53;
+  wire theDigitalBlock_counterChip5_n_55,
+       theDigitalBlock_counterChip5_n_57,
+       theDigitalBlock_counterChip5_n_59,
        theDigitalBlock_counterChip5_n_61,
        theDigitalBlock_counterChip5_n_63,
        theDigitalBlock_counterChip5_n_65,
        theDigitalBlock_counterChip5_n_67,
-       theDigitalBlock_counterChip5_n_69,
-       theDigitalBlock_counterChip5_n_71,
-       theDigitalBlock_counterChip5_n_73;
-  wire theDigitalBlock_counterChip5_n_75,
+       theDigitalBlock_counterChip5_n_69;
+  wire theDigitalBlock_counterChip5_n_71,
+       theDigitalBlock_counterChip5_n_73,
+       theDigitalBlock_counterChip5_n_75,
        theDigitalBlock_counterChip5_n_77,
        theDigitalBlock_counterChip5_n_79,
        theDigitalBlock_counterChip5_n_81,
        theDigitalBlock_counterChip5_n_83,
-       theDigitalBlock_counterChip5_n_85,
-       theDigitalBlock_counterChip5_n_87,
-       theDigitalBlock_counterChip5_n_89;
-  wire theDigitalBlock_counterChip5_n_91,
+       theDigitalBlock_counterChip5_n_85;
+  wire theDigitalBlock_counterChip5_n_87,
+       theDigitalBlock_counterChip5_n_89,
+       theDigitalBlock_counterChip5_n_91,
        theDigitalBlock_counterChip5_n_93,
        theDigitalBlock_counterChip5_n_95,
        theDigitalBlock_counterChip5_n_97,
        theDigitalBlock_counterChip5_n_99,
-       \theDigitalBlock_counter_val[0][0] ,
-       \theDigitalBlock_counter_val[0][1] ,
-       \theDigitalBlock_counter_val[0][2] ;
-  wire \theDigitalBlock_counter_val[0][3] ,
+       \theDigitalBlock_counter_val[0][0] ;
+  wire \theDigitalBlock_counter_val[0][1] ,
+       \theDigitalBlock_counter_val[0][2] ,
+       \theDigitalBlock_counter_val[0][3] ,
        \theDigitalBlock_counter_val[0][4] ,
        \theDigitalBlock_counter_val[0][5] ,
        \theDigitalBlock_counter_val[0][6] ,
        \theDigitalBlock_counter_val[0][7] ,
-       \theDigitalBlock_counter_val[0][8] ,
-       \theDigitalBlock_counter_val[0][9] ,
-       \theDigitalBlock_counter_val[0][10] ;
-  wire \theDigitalBlock_counter_val[0][11] ,
+       \theDigitalBlock_counter_val[0][8] ;
+  wire \theDigitalBlock_counter_val[0][9] ,
+       \theDigitalBlock_counter_val[0][10] ,
+       \theDigitalBlock_counter_val[0][11] ,
        \theDigitalBlock_counter_val[0][12] ,
        \theDigitalBlock_counter_val[0][13] ,
        \theDigitalBlock_counter_val[0][14] ,
        \theDigitalBlock_counter_val[0][15] ,
-       \theDigitalBlock_counter_val[0][16] ,
-       \theDigitalBlock_counter_val[0][17] ,
-       \theDigitalBlock_counter_val[0][18] ;
-  wire \theDigitalBlock_counter_val[0][19] ,
+       \theDigitalBlock_counter_val[0][16] ;
+  wire \theDigitalBlock_counter_val[0][17] ,
+       \theDigitalBlock_counter_val[0][18] ,
+       \theDigitalBlock_counter_val[0][19] ,
        \theDigitalBlock_counter_val[0][20] ,
        \theDigitalBlock_counter_val[0][21] ,
        \theDigitalBlock_counter_val[0][22] ,
        \theDigitalBlock_counter_val[0][23] ,
-       \theDigitalBlock_counter_val[0][24] ,
-       \theDigitalBlock_counter_val[0][25] ,
-       \theDigitalBlock_counter_val[0][26] ;
-  wire \theDigitalBlock_counter_val[0][27] ,
+       \theDigitalBlock_counter_val[0][24] ;
+  wire \theDigitalBlock_counter_val[0][25] ,
+       \theDigitalBlock_counter_val[0][26] ,
+       \theDigitalBlock_counter_val[0][27] ,
        \theDigitalBlock_counter_val[0][28] ,
        \theDigitalBlock_counter_val[0][29] ,
        \theDigitalBlock_counter_val[0][30] ,
        \theDigitalBlock_counter_val[0][31] ,
-       \theDigitalBlock_counter_val[1][0] ,
-       \theDigitalBlock_counter_val[1][1] ,
-       \theDigitalBlock_counter_val[1][2] ;
-  wire \theDigitalBlock_counter_val[1][3] ,
+       \theDigitalBlock_counter_val[1][0] ;
+  wire \theDigitalBlock_counter_val[1][1] ,
+       \theDigitalBlock_counter_val[1][2] ,
+       \theDigitalBlock_counter_val[1][3] ,
        \theDigitalBlock_counter_val[1][4] ,
        \theDigitalBlock_counter_val[1][5] ,
        \theDigitalBlock_counter_val[1][6] ,
        \theDigitalBlock_counter_val[1][7] ,
-       \theDigitalBlock_counter_val[1][8] ,
-       \theDigitalBlock_counter_val[1][9] ,
-       \theDigitalBlock_counter_val[1][10] ;
-  wire \theDigitalBlock_counter_val[1][11] ,
+       \theDigitalBlock_counter_val[1][8] ;
+  wire \theDigitalBlock_counter_val[1][9] ,
+       \theDigitalBlock_counter_val[1][10] ,
+       \theDigitalBlock_counter_val[1][11] ,
        \theDigitalBlock_counter_val[1][12] ,
        \theDigitalBlock_counter_val[1][13] ,
        \theDigitalBlock_counter_val[1][14] ,
        \theDigitalBlock_counter_val[1][15] ,
-       \theDigitalBlock_counter_val[1][16] ,
-       \theDigitalBlock_counter_val[1][17] ,
-       \theDigitalBlock_counter_val[1][18] ;
-  wire \theDigitalBlock_counter_val[1][19] ,
+       \theDigitalBlock_counter_val[1][16] ;
+  wire \theDigitalBlock_counter_val[1][17] ,
+       \theDigitalBlock_counter_val[1][18] ,
+       \theDigitalBlock_counter_val[1][19] ,
        \theDigitalBlock_counter_val[1][20] ,
        \theDigitalBlock_counter_val[1][21] ,
        \theDigitalBlock_counter_val[1][22] ,
        \theDigitalBlock_counter_val[1][23] ,
-       \theDigitalBlock_counter_val[1][24] ,
-       \theDigitalBlock_counter_val[1][25] ,
-       \theDigitalBlock_counter_val[1][26] ;
-  wire \theDigitalBlock_counter_val[1][27] ,
+       \theDigitalBlock_counter_val[1][24] ;
+  wire \theDigitalBlock_counter_val[1][25] ,
+       \theDigitalBlock_counter_val[1][26] ,
+       \theDigitalBlock_counter_val[1][27] ,
        \theDigitalBlock_counter_val[1][28] ,
        \theDigitalBlock_counter_val[1][29] ,
        \theDigitalBlock_counter_val[1][30] ,
        \theDigitalBlock_counter_val[1][31] ,
-       \theDigitalBlock_counter_val[2][0] ,
-       \theDigitalBlock_counter_val[2][1] ,
-       \theDigitalBlock_counter_val[2][2] ;
-  wire \theDigitalBlock_counter_val[2][3] ,
+       \theDigitalBlock_counter_val[2][0] ;
+  wire \theDigitalBlock_counter_val[2][1] ,
+       \theDigitalBlock_counter_val[2][2] ,
+       \theDigitalBlock_counter_val[2][3] ,
        \theDigitalBlock_counter_val[2][4] ,
        \theDigitalBlock_counter_val[2][5] ,
        \theDigitalBlock_counter_val[2][6] ,
        \theDigitalBlock_counter_val[2][7] ,
-       \theDigitalBlock_counter_val[2][8] ,
-       \theDigitalBlock_counter_val[2][9] ,
-       \theDigitalBlock_counter_val[2][10] ;
-  wire \theDigitalBlock_counter_val[2][11] ,
+       \theDigitalBlock_counter_val[2][8] ;
+  wire \theDigitalBlock_counter_val[2][9] ,
+       \theDigitalBlock_counter_val[2][10] ,
+       \theDigitalBlock_counter_val[2][11] ,
        \theDigitalBlock_counter_val[2][12] ,
        \theDigitalBlock_counter_val[2][13] ,
        \theDigitalBlock_counter_val[2][14] ,
        \theDigitalBlock_counter_val[2][15] ,
-       \theDigitalBlock_counter_val[2][16] ,
-       \theDigitalBlock_counter_val[2][17] ,
-       \theDigitalBlock_counter_val[2][18] ;
-  wire \theDigitalBlock_counter_val[2][19] ,
+       \theDigitalBlock_counter_val[2][16] ;
+  wire \theDigitalBlock_counter_val[2][17] ,
+       \theDigitalBlock_counter_val[2][18] ,
+       \theDigitalBlock_counter_val[2][19] ,
        \theDigitalBlock_counter_val[2][20] ,
        \theDigitalBlock_counter_val[2][21] ,
        \theDigitalBlock_counter_val[2][22] ,
        \theDigitalBlock_counter_val[2][23] ,
-       \theDigitalBlock_counter_val[2][24] ,
-       \theDigitalBlock_counter_val[2][25] ,
-       \theDigitalBlock_counter_val[2][26] ;
-  wire \theDigitalBlock_counter_val[2][27] ,
+       \theDigitalBlock_counter_val[2][24] ;
+  wire \theDigitalBlock_counter_val[2][25] ,
+       \theDigitalBlock_counter_val[2][26] ,
+       \theDigitalBlock_counter_val[2][27] ,
        \theDigitalBlock_counter_val[2][28] ,
        \theDigitalBlock_counter_val[2][29] ,
        \theDigitalBlock_counter_val[2][30] ,
        \theDigitalBlock_counter_val[2][31] ,
-       \theDigitalBlock_counter_val[3][0] ,
-       \theDigitalBlock_counter_val[3][1] ,
-       \theDigitalBlock_counter_val[3][2] ;
-  wire \theDigitalBlock_counter_val[3][3] ,
+       \theDigitalBlock_counter_val[3][0] ;
+  wire \theDigitalBlock_counter_val[3][1] ,
+       \theDigitalBlock_counter_val[3][2] ,
+       \theDigitalBlock_counter_val[3][3] ,
        \theDigitalBlock_counter_val[3][4] ,
        \theDigitalBlock_counter_val[3][5] ,
        \theDigitalBlock_counter_val[3][6] ,
        \theDigitalBlock_counter_val[3][7] ,
-       \theDigitalBlock_counter_val[3][8] ,
-       \theDigitalBlock_counter_val[3][9] ,
-       \theDigitalBlock_counter_val[3][10] ;
-  wire \theDigitalBlock_counter_val[3][11] ,
+       \theDigitalBlock_counter_val[3][8] ;
+  wire \theDigitalBlock_counter_val[3][9] ,
+       \theDigitalBlock_counter_val[3][10] ,
+       \theDigitalBlock_counter_val[3][11] ,
        \theDigitalBlock_counter_val[3][12] ,
        \theDigitalBlock_counter_val[3][13] ,
        \theDigitalBlock_counter_val[3][14] ,
        \theDigitalBlock_counter_val[3][15] ,
-       \theDigitalBlock_counter_val[3][16] ,
-       \theDigitalBlock_counter_val[3][17] ,
-       \theDigitalBlock_counter_val[3][18] ;
-  wire \theDigitalBlock_counter_val[3][19] ,
+       \theDigitalBlock_counter_val[3][16] ;
+  wire \theDigitalBlock_counter_val[3][17] ,
+       \theDigitalBlock_counter_val[3][18] ,
+       \theDigitalBlock_counter_val[3][19] ,
        \theDigitalBlock_counter_val[3][20] ,
        \theDigitalBlock_counter_val[3][21] ,
        \theDigitalBlock_counter_val[3][22] ,
        \theDigitalBlock_counter_val[3][23] ,
-       \theDigitalBlock_counter_val[3][24] ,
-       \theDigitalBlock_counter_val[3][25] ,
-       \theDigitalBlock_counter_val[3][26] ;
-  wire \theDigitalBlock_counter_val[3][27] ,
+       \theDigitalBlock_counter_val[3][24] ;
+  wire \theDigitalBlock_counter_val[3][25] ,
+       \theDigitalBlock_counter_val[3][26] ,
+       \theDigitalBlock_counter_val[3][27] ,
        \theDigitalBlock_counter_val[3][28] ,
        \theDigitalBlock_counter_val[3][29] ,
        \theDigitalBlock_counter_val[3][30] ,
        \theDigitalBlock_counter_val[3][31] ,
-       \theDigitalBlock_counter_val[4][0] ,
-       \theDigitalBlock_counter_val[4][1] ,
-       \theDigitalBlock_counter_val[4][2] ;
-  wire \theDigitalBlock_counter_val[4][3] ,
+       \theDigitalBlock_counter_val[4][0] ;
+  wire \theDigitalBlock_counter_val[4][1] ,
+       \theDigitalBlock_counter_val[4][2] ,
+       \theDigitalBlock_counter_val[4][3] ,
        \theDigitalBlock_counter_val[4][4] ,
        \theDigitalBlock_counter_val[4][5] ,
        \theDigitalBlock_counter_val[4][6] ,
        \theDigitalBlock_counter_val[4][7] ,
-       \theDigitalBlock_counter_val[4][8] ,
-       \theDigitalBlock_counter_val[4][9] ,
-       \theDigitalBlock_counter_val[4][10] ;
-  wire \theDigitalBlock_counter_val[4][11] ,
+       \theDigitalBlock_counter_val[4][8] ;
+  wire \theDigitalBlock_counter_val[4][9] ,
+       \theDigitalBlock_counter_val[4][10] ,
+       \theDigitalBlock_counter_val[4][11] ,
        \theDigitalBlock_counter_val[4][12] ,
        \theDigitalBlock_counter_val[4][13] ,
        \theDigitalBlock_counter_val[4][14] ,
        \theDigitalBlock_counter_val[4][15] ,
-       \theDigitalBlock_counter_val[4][16] ,
-       \theDigitalBlock_counter_val[4][17] ,
-       \theDigitalBlock_counter_val[4][18] ;
-  wire \theDigitalBlock_counter_val[4][19] ,
+       \theDigitalBlock_counter_val[4][16] ;
+  wire \theDigitalBlock_counter_val[4][17] ,
+       \theDigitalBlock_counter_val[4][18] ,
+       \theDigitalBlock_counter_val[4][19] ,
        \theDigitalBlock_counter_val[4][20] ,
        \theDigitalBlock_counter_val[4][21] ,
        \theDigitalBlock_counter_val[4][22] ,
        \theDigitalBlock_counter_val[4][23] ,
-       \theDigitalBlock_counter_val[4][24] ,
-       \theDigitalBlock_counter_val[4][25] ,
-       \theDigitalBlock_counter_val[4][26] ;
-  wire \theDigitalBlock_counter_val[4][27] ,
+       \theDigitalBlock_counter_val[4][24] ;
+  wire \theDigitalBlock_counter_val[4][25] ,
+       \theDigitalBlock_counter_val[4][26] ,
+       \theDigitalBlock_counter_val[4][27] ,
        \theDigitalBlock_counter_val[4][28] ,
        \theDigitalBlock_counter_val[4][29] ,
        \theDigitalBlock_counter_val[4][30] ,
-       \theDigitalBlock_counter_val[4][31] ,
-       theDigitalBlock_en_osc_out, theDigitalBlock_n_5,
-       theDigitalBlock_n_6;
-  wire theDigitalBlock_u_i2cSlave_clearStartStopDet,
+       \theDigitalBlock_counter_val[4][31] , theDigitalBlock_en_osc_out;
+  wire theDigitalBlock_n_5, theDigitalBlock_n_6,
+       theDigitalBlock_u_i2cSlave_clearStartStopDet,
        theDigitalBlock_u_i2cSlave_n_144,
        theDigitalBlock_u_i2cSlave_n_259,
        theDigitalBlock_u_i2cSlave_sclDeb,
        theDigitalBlock_u_i2cSlave_sdaDeb,
-       theDigitalBlock_u_i2cSlave_sdaOut,
-       theDigitalBlock_u_i2cSlave_startEdgeDet;
-  analogPxArray theAnalogBlock(.clk_px (clk_px[15:0]), .stop_osc
+       theDigitalBlock_u_i2cSlave_sdaOut;
+  wire theDigitalBlock_u_i2cSlave_startEdgeDet;
+  analogPxArray theAnalogBlock(.clk_px (clk_px[18:0]), .stop_osc
        ({1'b1, stop_osc[3:0]}));
   increment_unsigned_53_54_442
        theDigitalBlock_counterChip1_inc_add_34_11_2(.A
@@ -2702,756 +2707,746 @@ module chip_v2(clk, rst, sda, scl, testSig, drdy);
        theDigitalBlock_u_i2cSlave_startStopDetState[0]}), .writeEn
        (UNCONNECTED14), .ack_received (UNCONNECTED15), .statusLED
        (theDigitalBlock_u_i2cSlave_n_259));
-  INVX1 g374(.A (theDigitalBlock_clr_counter), .Y (n_119));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[0] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (n_92), .Q (\theDigitalBlock_counter_val[0][0]
+  INVX1 g372(.A (theDigitalBlock_clr_counter), .Y (n_107));
+  DFFSR \theDigitalBlock_counterChip1_q_reg[0] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (n_80), .Q (\theDigitalBlock_counter_val[0][0]
        ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[10] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_57), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[10] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_57), .Q
        (\theDigitalBlock_counter_val[0][10] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[11] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_59), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[11] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_59), .Q
        (\theDigitalBlock_counter_val[0][11] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[12] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_61), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[12] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_61), .Q
        (\theDigitalBlock_counter_val[0][12] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[13] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_63), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[13] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_63), .Q
        (\theDigitalBlock_counter_val[0][13] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[14] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_65), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[14] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_65), .Q
        (\theDigitalBlock_counter_val[0][14] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[15] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_67), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[15] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_67), .Q
        (\theDigitalBlock_counter_val[0][15] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[16] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_69), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[16] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_69), .Q
        (\theDigitalBlock_counter_val[0][16] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[17] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_71), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[17] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_71), .Q
        (\theDigitalBlock_counter_val[0][17] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[18] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_73), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[18] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_73), .Q
        (\theDigitalBlock_counter_val[0][18] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[19] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_75), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[19] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_75), .Q
        (\theDigitalBlock_counter_val[0][19] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[1] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_39), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[1] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_39), .Q
        (\theDigitalBlock_counter_val[0][1] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[20] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_77), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[20] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_77), .Q
        (\theDigitalBlock_counter_val[0][20] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[21] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_79), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[21] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_79), .Q
        (\theDigitalBlock_counter_val[0][21] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[22] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_81), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[22] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_81), .Q
        (\theDigitalBlock_counter_val[0][22] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[23] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_83), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[23] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_83), .Q
        (\theDigitalBlock_counter_val[0][23] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[24] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_85), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[24] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_85), .Q
        (\theDigitalBlock_counter_val[0][24] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[25] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_87), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[25] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_87), .Q
        (\theDigitalBlock_counter_val[0][25] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[26] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_89), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[26] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_89), .Q
        (\theDigitalBlock_counter_val[0][26] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[27] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_91), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[27] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_91), .Q
        (\theDigitalBlock_counter_val[0][27] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[28] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_93), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[28] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_93), .Q
        (\theDigitalBlock_counter_val[0][28] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[29] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_95), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[29] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_95), .Q
        (\theDigitalBlock_counter_val[0][29] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[2] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_41), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[2] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_41), .Q
        (\theDigitalBlock_counter_val[0][2] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[30] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_97), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[30] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_97), .Q
        (\theDigitalBlock_counter_val[0][30] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[31] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_99), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[31] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_99), .Q
        (\theDigitalBlock_counter_val[0][31] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[3] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_43), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[3] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_43), .Q
        (\theDigitalBlock_counter_val[0][3] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[4] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_45), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[4] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_45), .Q
        (\theDigitalBlock_counter_val[0][4] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[5] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_47), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[5] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_47), .Q
        (\theDigitalBlock_counter_val[0][5] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[6] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_49), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[6] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_49), .Q
        (\theDigitalBlock_counter_val[0][6] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[7] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_51), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[7] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_51), .Q
        (\theDigitalBlock_counter_val[0][7] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[8] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_53), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[8] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_53), .Q
        (\theDigitalBlock_counter_val[0][8] ));
-  DFFSR \theDigitalBlock_counterChip1_q_reg[9] (.R (n_119), .S (1'b1),
-       .CLK (n_118), .D (theDigitalBlock_counterChip1_n_55), .Q
+  DFFSR \theDigitalBlock_counterChip1_q_reg[9] (.R (n_107), .S (1'b1),
+       .CLK (n_106), .D (theDigitalBlock_counterChip1_n_55), .Q
        (\theDigitalBlock_counter_val[0][9] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[0] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (n_94), .Q (\theDigitalBlock_counter_val[1][0]
+  DFFSR \theDigitalBlock_counterChip2_q_reg[0] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (n_82), .Q (\theDigitalBlock_counter_val[1][0]
        ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[10] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_57), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[10] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_57), .Q
        (\theDigitalBlock_counter_val[1][10] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[11] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_59), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[11] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_59), .Q
        (\theDigitalBlock_counter_val[1][11] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[12] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_61), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[12] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_61), .Q
        (\theDigitalBlock_counter_val[1][12] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[13] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_63), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[13] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_63), .Q
        (\theDigitalBlock_counter_val[1][13] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[14] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_65), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[14] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_65), .Q
        (\theDigitalBlock_counter_val[1][14] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[15] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_67), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[15] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_67), .Q
        (\theDigitalBlock_counter_val[1][15] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[16] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_69), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[16] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_69), .Q
        (\theDigitalBlock_counter_val[1][16] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[17] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_71), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[17] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_71), .Q
        (\theDigitalBlock_counter_val[1][17] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[18] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_73), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[18] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_73), .Q
        (\theDigitalBlock_counter_val[1][18] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[19] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_75), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[19] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_75), .Q
        (\theDigitalBlock_counter_val[1][19] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[1] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_39), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[1] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_39), .Q
        (\theDigitalBlock_counter_val[1][1] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[20] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_77), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[20] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_77), .Q
        (\theDigitalBlock_counter_val[1][20] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[21] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_79), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[21] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_79), .Q
        (\theDigitalBlock_counter_val[1][21] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[22] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_81), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[22] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_81), .Q
        (\theDigitalBlock_counter_val[1][22] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[23] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_83), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[23] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_83), .Q
        (\theDigitalBlock_counter_val[1][23] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[24] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_85), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[24] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_85), .Q
        (\theDigitalBlock_counter_val[1][24] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[25] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_87), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[25] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_87), .Q
        (\theDigitalBlock_counter_val[1][25] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[26] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_89), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[26] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_89), .Q
        (\theDigitalBlock_counter_val[1][26] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[27] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_91), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[27] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_91), .Q
        (\theDigitalBlock_counter_val[1][27] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[28] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_93), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[28] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_93), .Q
        (\theDigitalBlock_counter_val[1][28] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[29] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_95), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[29] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_95), .Q
        (\theDigitalBlock_counter_val[1][29] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[2] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_41), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[2] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_41), .Q
        (\theDigitalBlock_counter_val[1][2] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[30] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_97), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[30] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_97), .Q
        (\theDigitalBlock_counter_val[1][30] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[31] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_99), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[31] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_99), .Q
        (\theDigitalBlock_counter_val[1][31] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[3] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_43), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[3] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_43), .Q
        (\theDigitalBlock_counter_val[1][3] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[4] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_45), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[4] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_45), .Q
        (\theDigitalBlock_counter_val[1][4] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[5] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_47), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[5] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_47), .Q
        (\theDigitalBlock_counter_val[1][5] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[6] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_49), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[6] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_49), .Q
        (\theDigitalBlock_counter_val[1][6] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[7] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_51), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[7] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_51), .Q
        (\theDigitalBlock_counter_val[1][7] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[8] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_53), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[8] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_53), .Q
        (\theDigitalBlock_counter_val[1][8] ));
-  DFFSR \theDigitalBlock_counterChip2_q_reg[9] (.R (n_119), .S (1'b1),
-       .CLK (n_115), .D (theDigitalBlock_counterChip2_n_55), .Q
+  DFFSR \theDigitalBlock_counterChip2_q_reg[9] (.R (n_107), .S (1'b1),
+       .CLK (n_103), .D (theDigitalBlock_counterChip2_n_55), .Q
        (\theDigitalBlock_counter_val[1][9] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[0] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (n_91), .Q (\theDigitalBlock_counter_val[2][0]
+  DFFSR \theDigitalBlock_counterChip3_q_reg[0] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (n_79), .Q (\theDigitalBlock_counter_val[2][0]
        ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[10] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_57), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[10] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_57), .Q
        (\theDigitalBlock_counter_val[2][10] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[11] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_59), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[11] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_59), .Q
        (\theDigitalBlock_counter_val[2][11] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[12] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_61), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[12] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_61), .Q
        (\theDigitalBlock_counter_val[2][12] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[13] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_63), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[13] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_63), .Q
        (\theDigitalBlock_counter_val[2][13] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[14] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_65), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[14] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_65), .Q
        (\theDigitalBlock_counter_val[2][14] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[15] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_67), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[15] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_67), .Q
        (\theDigitalBlock_counter_val[2][15] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[16] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_69), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[16] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_69), .Q
        (\theDigitalBlock_counter_val[2][16] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[17] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_71), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[17] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_71), .Q
        (\theDigitalBlock_counter_val[2][17] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[18] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_73), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[18] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_73), .Q
        (\theDigitalBlock_counter_val[2][18] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[19] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_75), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[19] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_75), .Q
        (\theDigitalBlock_counter_val[2][19] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[1] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_39), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[1] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_39), .Q
        (\theDigitalBlock_counter_val[2][1] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[20] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_77), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[20] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_77), .Q
        (\theDigitalBlock_counter_val[2][20] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[21] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_79), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[21] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_79), .Q
        (\theDigitalBlock_counter_val[2][21] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[22] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_81), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[22] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_81), .Q
        (\theDigitalBlock_counter_val[2][22] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[23] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_83), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[23] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_83), .Q
        (\theDigitalBlock_counter_val[2][23] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[24] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_85), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[24] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_85), .Q
        (\theDigitalBlock_counter_val[2][24] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[25] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_87), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[25] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_87), .Q
        (\theDigitalBlock_counter_val[2][25] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[26] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_89), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[26] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_89), .Q
        (\theDigitalBlock_counter_val[2][26] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[27] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_91), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[27] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_91), .Q
        (\theDigitalBlock_counter_val[2][27] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[28] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_93), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[28] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_93), .Q
        (\theDigitalBlock_counter_val[2][28] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[29] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_95), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[29] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_95), .Q
        (\theDigitalBlock_counter_val[2][29] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[2] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_41), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[2] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_41), .Q
        (\theDigitalBlock_counter_val[2][2] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[30] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_97), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[30] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_97), .Q
        (\theDigitalBlock_counter_val[2][30] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[31] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_99), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[31] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_99), .Q
        (\theDigitalBlock_counter_val[2][31] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[3] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_43), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[3] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_43), .Q
        (\theDigitalBlock_counter_val[2][3] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[4] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_45), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[4] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_45), .Q
        (\theDigitalBlock_counter_val[2][4] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[5] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_47), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[5] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_47), .Q
        (\theDigitalBlock_counter_val[2][5] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[6] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_49), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[6] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_49), .Q
        (\theDigitalBlock_counter_val[2][6] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[7] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_51), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[7] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_51), .Q
        (\theDigitalBlock_counter_val[2][7] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[8] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_53), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[8] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_53), .Q
        (\theDigitalBlock_counter_val[2][8] ));
-  DFFSR \theDigitalBlock_counterChip3_q_reg[9] (.R (n_119), .S (1'b1),
-       .CLK (n_114), .D (theDigitalBlock_counterChip3_n_55), .Q
+  DFFSR \theDigitalBlock_counterChip3_q_reg[9] (.R (n_107), .S (1'b1),
+       .CLK (n_102), .D (theDigitalBlock_counterChip3_n_55), .Q
        (\theDigitalBlock_counter_val[2][9] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[0] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (n_95), .Q (\theDigitalBlock_counter_val[3][0]
+  DFFSR \theDigitalBlock_counterChip4_q_reg[0] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (n_83), .Q (\theDigitalBlock_counter_val[3][0]
        ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[10] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_57), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[10] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_57), .Q
        (\theDigitalBlock_counter_val[3][10] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[11] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_59), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[11] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_59), .Q
        (\theDigitalBlock_counter_val[3][11] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[12] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_61), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[12] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_61), .Q
        (\theDigitalBlock_counter_val[3][12] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[13] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_63), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[13] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_63), .Q
        (\theDigitalBlock_counter_val[3][13] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[14] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_65), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[14] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_65), .Q
        (\theDigitalBlock_counter_val[3][14] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[15] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_67), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[15] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_67), .Q
        (\theDigitalBlock_counter_val[3][15] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[16] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_69), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[16] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_69), .Q
        (\theDigitalBlock_counter_val[3][16] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[17] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_71), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[17] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_71), .Q
        (\theDigitalBlock_counter_val[3][17] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[18] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_73), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[18] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_73), .Q
        (\theDigitalBlock_counter_val[3][18] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[19] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_75), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[19] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_75), .Q
        (\theDigitalBlock_counter_val[3][19] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[1] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_39), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[1] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_39), .Q
        (\theDigitalBlock_counter_val[3][1] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[20] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_77), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[20] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_77), .Q
        (\theDigitalBlock_counter_val[3][20] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[21] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_79), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[21] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_79), .Q
        (\theDigitalBlock_counter_val[3][21] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[22] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_81), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[22] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_81), .Q
        (\theDigitalBlock_counter_val[3][22] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[23] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_83), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[23] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_83), .Q
        (\theDigitalBlock_counter_val[3][23] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[24] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_85), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[24] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_85), .Q
        (\theDigitalBlock_counter_val[3][24] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[25] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_87), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[25] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_87), .Q
        (\theDigitalBlock_counter_val[3][25] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[26] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_89), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[26] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_89), .Q
        (\theDigitalBlock_counter_val[3][26] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[27] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_91), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[27] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_91), .Q
        (\theDigitalBlock_counter_val[3][27] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[28] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_93), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[28] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_93), .Q
        (\theDigitalBlock_counter_val[3][28] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[29] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_95), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[29] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_95), .Q
        (\theDigitalBlock_counter_val[3][29] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[2] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_41), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[2] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_41), .Q
        (\theDigitalBlock_counter_val[3][2] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[30] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_97), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[30] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_97), .Q
        (\theDigitalBlock_counter_val[3][30] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[31] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_99), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[31] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_99), .Q
        (\theDigitalBlock_counter_val[3][31] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[3] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_43), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[3] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_43), .Q
        (\theDigitalBlock_counter_val[3][3] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[4] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_45), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[4] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_45), .Q
        (\theDigitalBlock_counter_val[3][4] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[5] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_47), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[5] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_47), .Q
        (\theDigitalBlock_counter_val[3][5] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[6] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_49), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[6] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_49), .Q
        (\theDigitalBlock_counter_val[3][6] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[7] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_51), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[7] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_51), .Q
        (\theDigitalBlock_counter_val[3][7] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[8] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_53), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[8] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_53), .Q
        (\theDigitalBlock_counter_val[3][8] ));
-  DFFSR \theDigitalBlock_counterChip4_q_reg[9] (.R (n_119), .S (1'b1),
-       .CLK (n_116), .D (theDigitalBlock_counterChip4_n_55), .Q
+  DFFSR \theDigitalBlock_counterChip4_q_reg[9] (.R (n_107), .S (1'b1),
+       .CLK (n_104), .D (theDigitalBlock_counterChip4_n_55), .Q
        (\theDigitalBlock_counter_val[3][9] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[0] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (n_93), .Q (\theDigitalBlock_counter_val[4][0]
+  DFFSR \theDigitalBlock_counterChip5_q_reg[0] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (n_81), .Q (\theDigitalBlock_counter_val[4][0]
        ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[10] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_57), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[10] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_57), .Q
        (\theDigitalBlock_counter_val[4][10] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[11] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_59), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[11] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_59), .Q
        (\theDigitalBlock_counter_val[4][11] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[12] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_61), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[12] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_61), .Q
        (\theDigitalBlock_counter_val[4][12] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[13] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_63), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[13] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_63), .Q
        (\theDigitalBlock_counter_val[4][13] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[14] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_65), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[14] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_65), .Q
        (\theDigitalBlock_counter_val[4][14] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[15] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_67), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[15] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_67), .Q
        (\theDigitalBlock_counter_val[4][15] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[16] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_69), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[16] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_69), .Q
        (\theDigitalBlock_counter_val[4][16] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[17] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_71), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[17] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_71), .Q
        (\theDigitalBlock_counter_val[4][17] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[18] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_73), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[18] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_73), .Q
        (\theDigitalBlock_counter_val[4][18] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[19] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_75), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[19] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_75), .Q
        (\theDigitalBlock_counter_val[4][19] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[1] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_39), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[1] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_39), .Q
        (\theDigitalBlock_counter_val[4][1] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[20] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_77), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[20] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_77), .Q
        (\theDigitalBlock_counter_val[4][20] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[21] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_79), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[21] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_79), .Q
        (\theDigitalBlock_counter_val[4][21] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[22] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_81), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[22] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_81), .Q
        (\theDigitalBlock_counter_val[4][22] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[23] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_83), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[23] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_83), .Q
        (\theDigitalBlock_counter_val[4][23] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[24] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_85), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[24] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_85), .Q
        (\theDigitalBlock_counter_val[4][24] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[25] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_87), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[25] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_87), .Q
        (\theDigitalBlock_counter_val[4][25] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[26] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_89), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[26] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_89), .Q
        (\theDigitalBlock_counter_val[4][26] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[27] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_91), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[27] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_91), .Q
        (\theDigitalBlock_counter_val[4][27] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[28] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_93), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[28] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_93), .Q
        (\theDigitalBlock_counter_val[4][28] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[29] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_95), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[29] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_95), .Q
        (\theDigitalBlock_counter_val[4][29] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[2] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_41), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[2] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_41), .Q
        (\theDigitalBlock_counter_val[4][2] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[30] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_97), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[30] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_97), .Q
        (\theDigitalBlock_counter_val[4][30] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[31] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_99), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[31] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_99), .Q
        (\theDigitalBlock_counter_val[4][31] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[3] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_43), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[3] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_43), .Q
        (\theDigitalBlock_counter_val[4][3] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[4] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_45), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[4] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_45), .Q
        (\theDigitalBlock_counter_val[4][4] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[5] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_47), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[5] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_47), .Q
        (\theDigitalBlock_counter_val[4][5] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[6] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_49), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[6] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_49), .Q
        (\theDigitalBlock_counter_val[4][6] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[7] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_51), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[7] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_51), .Q
        (\theDigitalBlock_counter_val[4][7] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[8] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_53), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[8] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_53), .Q
        (\theDigitalBlock_counter_val[4][8] ));
-  DFFSR \theDigitalBlock_counterChip5_q_reg[9] (.R (n_119), .S (1'b1),
-       .CLK (n_117), .D (theDigitalBlock_counterChip5_n_55), .Q
+  DFFSR \theDigitalBlock_counterChip5_q_reg[9] (.R (n_107), .S (1'b1),
+       .CLK (n_105), .D (theDigitalBlock_counterChip5_n_55), .Q
        (\theDigitalBlock_counter_val[4][9] ));
-  NAND2X1 g824(.A (n_112), .B (n_113), .Y (n_118));
-  NAND2X1 g825(.A (n_104), .B (n_105), .Y (n_117));
-  NAND2X1 g826(.A (n_111), .B (n_110), .Y (n_115));
-  NAND2X1 g827(.A (n_108), .B (n_109), .Y (n_114));
-  NAND2X1 g828(.A (n_106), .B (n_107), .Y (n_116));
-  AOI22X1 g829(.A (clk_px[2]), .B (n_102), .C (clk_px[1]), .D (n_101),
-       .Y (n_113));
-  AOI22X1 g830(.A (clk_px[0]), .B (n_100), .C (clk_px[3]), .D (n_103),
-       .Y (n_112));
-  AOI22X1 g831(.A (clk_px[4]), .B (n_100), .C (clk_px[7]), .D (n_103),
-       .Y (n_111));
-  AOI22X1 g832(.A (clk_px[6]), .B (n_102), .C (clk_px[5]), .D (n_101),
-       .Y (n_110));
-  AOI22X1 g833(.A (clk_px[10]), .B (n_102), .C (clk_px[9]), .D (n_101),
-       .Y (n_109));
-  AOI22X1 g834(.A (clk_px[8]), .B (n_100), .C (clk_px[11]), .D (n_103),
-       .Y (n_108));
-  AOI22X1 g835(.A (clk_px[14]), .B (n_102), .C (clk_px[13]), .D
-       (n_101), .Y (n_107));
-  AOI22X1 g836(.A (clk_px[12]), .B (n_100), .C (clk_px[15]), .D
-       (n_103), .Y (n_106));
-  AOI22X1 g837(.A (testSig), .B (n_100), .C (clk_px[19]), .D (n_103),
-       .Y (n_105));
-  AOI22X1 g838(.A (clk_px[18]), .B (n_102), .C (clk_px[17]), .D
-       (n_101), .Y (n_104));
-  AND2X2 g839(.A (n_97), .B (theDigitalBlock_n_6), .Y (n_103));
-  AND2X2 g840(.A (n_98), .B (theDigitalBlock_n_6), .Y (n_102));
-  NOR2X1 g841(.A (theDigitalBlock_n_6), .B (n_96), .Y (n_101));
-  NOR2X1 g842(.A (theDigitalBlock_n_6), .B (n_99), .Y (n_100));
-  INVX2 g843(.A (n_98), .Y (n_99));
-  NOR2X1 g844(.A (theDigitalBlock_n_5), .B (n_90), .Y (n_98));
-  INVX1 g845(.A (n_96), .Y (n_97));
-  NAND2X1 g846(.A (theDigitalBlock_n_5), .B
-       (theDigitalBlock_en_osc_out), .Y (n_96));
-  INVX1 g847(.A (\theDigitalBlock_counter_val[3][0] ), .Y (n_95));
-  INVX1 g848(.A (\theDigitalBlock_counter_val[1][0] ), .Y (n_94));
-  INVX1 g849(.A (\theDigitalBlock_counter_val[4][0] ), .Y (n_93));
-  INVX1 g850(.A (\theDigitalBlock_counter_val[0][0] ), .Y (n_92));
-  INVX1 g851(.A (\theDigitalBlock_counter_val[2][0] ), .Y (n_91));
-  INVX2 g852(.A (theDigitalBlock_en_osc_out), .Y (n_90));
-  DFFPOSX1 theDigitalBlock_u_i2cSlave_sclDeb_reg(.CLK (clk), .D (n_87),
-       .Q (theDigitalBlock_u_i2cSlave_sclDeb));
-  DFFPOSX1 theDigitalBlock_u_i2cSlave_sdaDeb_reg(.CLK (clk), .D (n_88),
+  NAND2X1 g811(.A (n_100), .B (n_101), .Y (n_106));
+  NAND2X1 g812(.A (n_93), .B (n_92), .Y (n_105));
+  NAND2X1 g813(.A (n_99), .B (n_98), .Y (n_103));
+  NAND2X1 g814(.A (n_96), .B (n_97), .Y (n_102));
+  NAND2X1 g815(.A (n_94), .B (n_95), .Y (n_104));
+  AOI22X1 g816(.A (clk_px[2]), .B (n_90), .C (clk_px[3]), .D (n_91), .Y
+       (n_101));
+  AOI22X1 g817(.A (clk_px[0]), .B (n_88), .C (clk_px[1]), .D (n_89), .Y
+       (n_100));
+  AOI22X1 g818(.A (clk_px[4]), .B (n_88), .C (clk_px[6]), .D (n_90), .Y
+       (n_99));
+  AOI22X1 g819(.A (clk_px[5]), .B (n_89), .C (clk_px[7]), .D (n_91), .Y
+       (n_98));
+  AOI22X1 g820(.A (clk_px[10]), .B (n_90), .C (clk_px[11]), .D (n_91),
+       .Y (n_97));
+  AOI22X1 g821(.A (clk_px[8]), .B (n_88), .C (clk_px[9]), .D (n_89), .Y
+       (n_96));
+  AOI22X1 g822(.A (clk_px[13]), .B (n_89), .C (clk_px[14]), .D (n_90),
+       .Y (n_95));
+  AOI22X1 g823(.A (clk_px[12]), .B (n_88), .C (clk_px[15]), .D (n_91),
+       .Y (n_94));
+  AOI22X1 g824(.A (clk_px[16]), .B (n_88), .C (clk_px[18]), .D (n_90),
+       .Y (n_93));
+  AOI22X1 g825(.A (clk_px[17]), .B (n_89), .C (testSig), .D (n_91), .Y
+       (n_92));
+  AND2X2 g826(.A (n_85), .B (theDigitalBlock_n_5), .Y (n_91));
+  NOR2X1 g827(.A (theDigitalBlock_n_5), .B (n_84), .Y (n_90));
+  AND2X2 g828(.A (n_86), .B (theDigitalBlock_n_5), .Y (n_89));
+  NOR2X1 g829(.A (theDigitalBlock_n_5), .B (n_87), .Y (n_88));
+  INVX2 g830(.A (n_86), .Y (n_87));
+  NOR2X1 g831(.A (theDigitalBlock_n_6), .B (n_78), .Y (n_86));
+  INVX1 g832(.A (n_84), .Y (n_85));
+  NAND2X1 g833(.A (theDigitalBlock_n_6), .B
+       (theDigitalBlock_en_osc_out), .Y (n_84));
+  INVX1 g834(.A (\theDigitalBlock_counter_val[3][0] ), .Y (n_83));
+  INVX1 g835(.A (\theDigitalBlock_counter_val[1][0] ), .Y (n_82));
+  INVX1 g836(.A (\theDigitalBlock_counter_val[4][0] ), .Y (n_81));
+  INVX1 g837(.A (\theDigitalBlock_counter_val[0][0] ), .Y (n_80));
+  INVX1 g838(.A (\theDigitalBlock_counter_val[2][0] ), .Y (n_79));
+  INVX2 g839(.A (theDigitalBlock_en_osc_out), .Y (n_78));
+  DFFPOSX1 theDigitalBlock_u_i2cSlave_sdaDeb_reg(.CLK (clk), .D (n_75),
        .Q (theDigitalBlock_u_i2cSlave_sdaDeb));
-  OAI21X1 g490(.A (n_140), .B (n_1), .C (n_142), .Y (n_88));
-  OAI21X1 g489(.A (n_141), .B (n_30), .C (n_143), .Y (n_87));
-  NAND3X1 g515(.A (theDigitalBlock_u_i2cSlave_sclPipe[2]), .B
-       (theDigitalBlock_u_i2cSlave_sclPipe[1]), .C (n_73), .Y (n_76));
-  NAND3X1 g517(.A (theDigitalBlock_u_i2cSlave_sdaPipe[2]), .B
-       (theDigitalBlock_u_i2cSlave_sdaPipe[1]), .C (n_71), .Y (n_74));
-  AND2X2 g519(.A (theDigitalBlock_u_i2cSlave_sclPipe[3]), .B
-       (theDigitalBlock_u_i2cSlave_sclPipe[4]), .Y (n_73));
-  NOR2X1 g520(.A (theDigitalBlock_u_i2cSlave_sclPipe[4]), .B
-       (theDigitalBlock_u_i2cSlave_sclPipe[3]), .Y (n_72));
-  AND2X2 g523(.A (theDigitalBlock_u_i2cSlave_sdaPipe[3]), .B
-       (theDigitalBlock_u_i2cSlave_sdaPipe[4]), .Y (n_71));
-  NOR2X1 g524(.A (theDigitalBlock_u_i2cSlave_sdaPipe[4]), .B
-       (theDigitalBlock_u_i2cSlave_sdaPipe[3]), .Y (n_70));
-  DFFPOSX1 \theDigitalBlock_u_i2cSlave_sclDelayed_reg[4] (.CLK (clk),
-       .D (n_69), .Q (theDigitalBlock_u_i2cSlave_sclDelayed[4]));
-  DFFPOSX1 \theDigitalBlock_u_i2cSlave_sclPipe_reg[4] (.CLK (clk), .D
-       (n_67), .Q (theDigitalBlock_u_i2cSlave_sclPipe[4]));
-  DFFPOSX1 \theDigitalBlock_u_i2cSlave_sdaPipe_reg[4] (.CLK (clk), .D
-       (n_68), .Q (theDigitalBlock_u_i2cSlave_sdaPipe[4]));
-  OR2X1 g564(.A (theDigitalBlock_u_i2cSlave_rstPipe[1]), .B
-       (theDigitalBlock_u_i2cSlave_sclDelayed[3]), .Y (n_69));
-  OR2X1 g527(.A (theDigitalBlock_u_i2cSlave_rstPipe[1]), .B
-       (theDigitalBlock_u_i2cSlave_sdaPipe[3]), .Y (n_68));
-  OR2X1 g528(.A (theDigitalBlock_u_i2cSlave_rstPipe[1]), .B
+  DFFPOSX1 theDigitalBlock_u_i2cSlave_sclDeb_reg(.CLK (clk), .D (n_76),
+       .Q (theDigitalBlock_u_i2cSlave_sclDeb));
+  NAND3X1 g451(.A (n_73), .B (n_115), .C (n_117), .Y (n_76));
+  NAND3X1 g453(.A (n_74), .B (n_118), .C (n_116), .Y (n_75));
+  INVX2 g459(.A (n_72), .Y (n_74));
+  INVX2 g464(.A (n_71), .Y (n_73));
+  OAI21X1 g460(.A (n_66), .B (n_56), .C (n_70), .Y (n_72));
+  OAI21X1 g465(.A (n_67), .B (n_59), .C (n_70), .Y (n_71));
+  NAND2X1 g477(.A (theDigitalBlock_u_i2cSlave_sclPipe[4]), .B
        (theDigitalBlock_u_i2cSlave_sclPipe[3]), .Y (n_67));
+  NAND2X1 g472(.A (theDigitalBlock_u_i2cSlave_sdaPipe[4]), .B
+       (theDigitalBlock_u_i2cSlave_sdaPipe[3]), .Y (n_66));
+  DFFPOSX1 \theDigitalBlock_u_i2cSlave_sclDelayed_reg[4] (.CLK (clk),
+       .D (n_65), .Q (theDigitalBlock_u_i2cSlave_sclDelayed[4]));
+  DFFPOSX1 \theDigitalBlock_u_i2cSlave_sdaPipe_reg[4] (.CLK (clk), .D
+       (n_64), .Q (theDigitalBlock_u_i2cSlave_sdaPipe[4]));
+  DFFPOSX1 \theDigitalBlock_u_i2cSlave_sclPipe_reg[4] (.CLK (clk), .D
+       (n_63), .Q (theDigitalBlock_u_i2cSlave_sclPipe[4]));
+  OR2X1 g517(.A (theDigitalBlock_u_i2cSlave_rstPipe[1]), .B
+       (theDigitalBlock_u_i2cSlave_sclDelayed[3]), .Y (n_65));
+  OR2X1 g479(.A (theDigitalBlock_u_i2cSlave_rstPipe[1]), .B
+       (theDigitalBlock_u_i2cSlave_sdaPipe[3]), .Y (n_64));
+  OR2X1 g482(.A (theDigitalBlock_u_i2cSlave_rstPipe[1]), .B
+       (theDigitalBlock_u_i2cSlave_sclPipe[3]), .Y (n_63));
   DFFPOSX1 \theDigitalBlock_u_i2cSlave_sclDelayed_reg[3] (.CLK (clk),
-       .D (n_66), .Q (theDigitalBlock_u_i2cSlave_sclDelayed[3]));
-  DFFPOSX1 \theDigitalBlock_u_i2cSlave_sclPipe_reg[3] (.CLK (clk), .D
-       (n_62), .Q (theDigitalBlock_u_i2cSlave_sclPipe[3]));
+       .D (n_62), .Q (theDigitalBlock_u_i2cSlave_sclDelayed[3]));
   DFFPOSX1 \theDigitalBlock_u_i2cSlave_sdaPipe_reg[3] (.CLK (clk), .D
-       (n_63), .Q (theDigitalBlock_u_i2cSlave_sdaPipe[3]));
-  OR2X1 g582(.A (theDigitalBlock_u_i2cSlave_rstPipe[1]), .B
-       (theDigitalBlock_u_i2cSlave_sclDelayed[2]), .Y (n_66));
-  DFFPOSX1 \theDigitalBlock_u_i2cSlave_startStopDetState_reg[0] (.CLK
-       (clk), .D (n_61), .Q
-       (theDigitalBlock_u_i2cSlave_startStopDetState[0]));
-  NOR2X1 g521(.A (theDigitalBlock_u_i2cSlave_sclPipe[1]), .B
-       (theDigitalBlock_u_i2cSlave_sclPipe[2]), .Y (n_65));
-  NOR2X1 g522(.A (theDigitalBlock_u_i2cSlave_sdaPipe[1]), .B
-       (theDigitalBlock_u_i2cSlave_sdaPipe[2]), .Y (n_64));
-  OR2X1 g531(.A (theDigitalBlock_u_i2cSlave_rstPipe[1]), .B
-       (theDigitalBlock_u_i2cSlave_sdaPipe[2]), .Y (n_63));
-  OR2X1 g532(.A (theDigitalBlock_u_i2cSlave_rstPipe[1]), .B
-       (theDigitalBlock_u_i2cSlave_sclPipe[2]), .Y (n_62));
-  DFFPOSX1 \theDigitalBlock_u_i2cSlave_startStopDetState_reg[1] (.CLK
-       (clk), .D (n_60), .Q (theDigitalBlock_ack_received));
-  DFFPOSX1 \theDigitalBlock_u_i2cSlave_sclDelayed_reg[2] (.CLK (clk),
-       .D (n_59), .Q (theDigitalBlock_u_i2cSlave_sclDelayed[2]));
-  OAI21X1 g491(.A (theDigitalBlock_u_i2cSlave_sclDeb), .B (n_45), .C
-       (n_58), .Y (n_61));
-  DFFPOSX1 \theDigitalBlock_u_i2cSlave_sclPipe_reg[2] (.CLK (clk), .D
-       (n_57), .Q (theDigitalBlock_u_i2cSlave_sclPipe[2]));
-  DFFPOSX1 \theDigitalBlock_u_i2cSlave_sdaPipe_reg[2] (.CLK (clk), .D
-       (n_54), .Q (theDigitalBlock_u_i2cSlave_sdaPipe[2]));
-  DFFPOSX1 theDigitalBlock_u_i2cSlave_startEdgeDet_reg(.CLK (clk), .D
-       (n_139), .Q (theDigitalBlock_u_i2cSlave_startEdgeDet));
-  OAI21X1 g492(.A (theDigitalBlock_u_i2cSlave_sclDeb), .B (n_44), .C
-       (n_55), .Y (n_60));
-  OR2X1 g588(.A (theDigitalBlock_u_i2cSlave_rstPipe[1]), .B
-       (theDigitalBlock_u_i2cSlave_sclDelayed[1]), .Y (n_59));
-  NAND2X1 g493(.A (theDigitalBlock_u_i2cSlave_sclDeb), .B (n_53), .Y
-       (n_58));
-  OR2X1 g536(.A (theDigitalBlock_u_i2cSlave_rstPipe[1]), .B
-       (theDigitalBlock_u_i2cSlave_sclPipe[1]), .Y (n_57));
-  NAND2X1 g494(.A (theDigitalBlock_u_i2cSlave_sclDeb), .B (n_52), .Y
-       (n_55));
+       (n_58), .Q (theDigitalBlock_u_i2cSlave_sdaPipe[3]));
+  DFFPOSX1 \theDigitalBlock_u_i2cSlave_sclPipe_reg[3] (.CLK (clk), .D
+       (n_57), .Q (theDigitalBlock_u_i2cSlave_sclPipe[3]));
   OR2X1 g535(.A (theDigitalBlock_u_i2cSlave_rstPipe[1]), .B
-       (theDigitalBlock_u_i2cSlave_sdaPipe[1]), .Y (n_54));
+       (theDigitalBlock_u_i2cSlave_sclDelayed[2]), .Y (n_62));
+  DFFPOSX1 \theDigitalBlock_u_i2cSlave_startStopDetState_reg[0] (.CLK
+       (clk), .D (n_55), .Q
+       (theDigitalBlock_u_i2cSlave_startStopDetState[0]));
+  NAND2X1 g476(.A (theDigitalBlock_u_i2cSlave_sclPipe[2]), .B
+       (theDigitalBlock_u_i2cSlave_sclPipe[1]), .Y (n_59));
+  OR2X1 g484(.A (theDigitalBlock_u_i2cSlave_rstPipe[1]), .B
+       (theDigitalBlock_u_i2cSlave_sdaPipe[2]), .Y (n_58));
+  OR2X1 g486(.A (theDigitalBlock_u_i2cSlave_rstPipe[1]), .B
+       (theDigitalBlock_u_i2cSlave_sclPipe[2]), .Y (n_57));
+  DFFPOSX1 \theDigitalBlock_u_i2cSlave_startStopDetState_reg[1] (.CLK
+       (clk), .D (n_54), .Q (theDigitalBlock_ack_received));
+  NAND2X1 g471(.A (theDigitalBlock_u_i2cSlave_sdaPipe[2]), .B
+       (theDigitalBlock_u_i2cSlave_sdaPipe[1]), .Y (n_56));
+  DFFPOSX1 \theDigitalBlock_u_i2cSlave_sclDelayed_reg[2] (.CLK (clk),
+       .D (n_52), .Q (theDigitalBlock_u_i2cSlave_sclDelayed[2]));
+  OAI21X1 g455(.A (n_46), .B (n_53), .C (n_51), .Y (n_55));
+  DFFPOSX1 \theDigitalBlock_u_i2cSlave_sdaPipe_reg[2] (.CLK (clk), .D
+       (n_49), .Q (theDigitalBlock_u_i2cSlave_sdaPipe[2]));
+  DFFPOSX1 \theDigitalBlock_u_i2cSlave_sclPipe_reg[2] (.CLK (clk), .D
+       (n_48), .Q (theDigitalBlock_u_i2cSlave_sclPipe[2]));
+  DFFPOSX1 theDigitalBlock_u_i2cSlave_startEdgeDet_reg(.CLK (clk), .D
+       (n_119), .Q (theDigitalBlock_u_i2cSlave_startEdgeDet));
+  OAI21X1 g456(.A (n_50), .B (n_53), .C (n_45), .Y (n_54));
+  OR2X1 g541(.A (theDigitalBlock_u_i2cSlave_rstPipe[1]), .B
+       (theDigitalBlock_u_i2cSlave_sclDelayed[1]), .Y (n_52));
+  NAND3X1 g458(.A (theDigitalBlock_u_i2cSlave_startStopDetState[0]), .B
+       (n_50), .C (n_44), .Y (n_51));
+  OR2X1 g488(.A (theDigitalBlock_u_i2cSlave_rstPipe[1]), .B
+       (theDigitalBlock_u_i2cSlave_sdaPipe[1]), .Y (n_49));
+  OR2X1 g490(.A (theDigitalBlock_u_i2cSlave_rstPipe[1]), .B
+       (theDigitalBlock_u_i2cSlave_sclPipe[1]), .Y (n_48));
+  NAND3X1 g457(.A (theDigitalBlock_ack_received), .B (n_46), .C (n_44),
+       .Y (n_45));
   DFFPOSX1 \theDigitalBlock_u_i2cSlave_sclDelayed_reg[1] (.CLK (clk),
-       .D (n_51), .Q (theDigitalBlock_u_i2cSlave_sclDelayed[1]));
-  NOR2X1 g498(.A (n_49), .B (n_42), .Y (n_53));
-  DFFPOSX1 \theDigitalBlock_u_i2cSlave_sclPipe_reg[1] (.CLK (clk), .D
-       (n_46), .Q (theDigitalBlock_u_i2cSlave_sclPipe[1]));
+       .D (n_43), .Q (theDigitalBlock_u_i2cSlave_sclDelayed[1]));
   DFFPOSX1 \theDigitalBlock_u_i2cSlave_sdaPipe_reg[1] (.CLK (clk), .D
-       (n_47), .Q (theDigitalBlock_u_i2cSlave_sdaPipe[1]));
-  AOI21X1 g503(.A (theDigitalBlock_u_i2cSlave_sdaDelayed[1]), .B (n_2),
-       .C (n_41), .Y (n_52));
-  OR2X1 g592(.A (theDigitalBlock_u_i2cSlave_rstPipe[1]), .B
-       (theDigitalBlock_u_i2cSlave_sclDelayed[0]), .Y (n_51));
-  NAND3X1 g500(.A (theDigitalBlock_u_i2cSlave_sdaDelayed[1]), .B
-       (theDigitalBlock_u_i2cSlave_sclDeb), .C (n_48), .Y (n_50));
-  AOI21X1 g506(.A (theDigitalBlock_u_i2cSlave_startStopDetState[0]), .B
-       (n_48), .C (theDigitalBlock_u_i2cSlave_sdaDelayed[1]), .Y
-       (n_49));
-  OR2X1 g539(.A (theDigitalBlock_u_i2cSlave_rstPipe[1]), .B
-       (theDigitalBlock_u_i2cSlave_sdaPipe[0]), .Y (n_47));
-  OR2X1 g540(.A (theDigitalBlock_u_i2cSlave_rstPipe[1]), .B
-       (theDigitalBlock_u_i2cSlave_sclPipe[0]), .Y (n_46));
+       (n_41), .Q (theDigitalBlock_u_i2cSlave_sdaPipe[1]));
+  DFFPOSX1 \theDigitalBlock_u_i2cSlave_sclPipe_reg[1] (.CLK (clk), .D
+       (n_40), .Q (theDigitalBlock_u_i2cSlave_sclPipe[1]));
+  NAND3X1 g463(.A (n_42), .B (theDigitalBlock_u_i2cSlave_sclDeb), .C
+       (theDigitalBlock_u_i2cSlave_sdaDelayed[0]), .Y (n_50));
+  OR2X1 g545(.A (theDigitalBlock_u_i2cSlave_rstPipe[1]), .B
+       (theDigitalBlock_u_i2cSlave_sclDelayed[0]), .Y (n_43));
+  NAND3X1 g462(.A (theDigitalBlock_u_i2cSlave_sdaDelayed[1]), .B
+       (theDigitalBlock_u_i2cSlave_sclDeb), .C (n_38), .Y (n_46));
+  INVX1 g473(.A (theDigitalBlock_u_i2cSlave_sdaDelayed[1]), .Y (n_42));
+  OR2X1 g492(.A (theDigitalBlock_u_i2cSlave_rstPipe[1]), .B
+       (theDigitalBlock_u_i2cSlave_sdaPipe[0]), .Y (n_41));
+  OR2X1 g494(.A (theDigitalBlock_u_i2cSlave_rstPipe[1]), .B
+       (theDigitalBlock_u_i2cSlave_sclPipe[0]), .Y (n_40));
   DFFPOSX1 \theDigitalBlock_u_i2cSlave_sdaDelayed_reg[1] (.CLK (clk),
-       .D (n_40), .Q (theDigitalBlock_u_i2cSlave_sdaDelayed[1]));
+       .D (n_39), .Q (theDigitalBlock_u_i2cSlave_sdaDelayed[1]));
   DFFPOSX1 \theDigitalBlock_u_i2cSlave_sclDelayed_reg[0] (.CLK (clk),
-       .D (n_31), .Q (theDigitalBlock_u_i2cSlave_sclDelayed[0]));
-  DFFPOSX1
-       \theDigitalBlock_u_i2cSlave_u_registerInterface_dataOut_reg[0]
-       (.CLK (clk), .D (n_39), .Q
-       (theDigitalBlock_u_i2cSlave_dataFromRegIF[0]));
-  DFFPOSX1
-       \theDigitalBlock_u_i2cSlave_u_registerInterface_dataOut_reg[4]
-       (.CLK (clk), .D (n_35), .Q
-       (theDigitalBlock_u_i2cSlave_dataFromRegIF[4]));
-  DFFPOSX1
-       \theDigitalBlock_u_i2cSlave_u_registerInterface_dataOut_reg[6]
-       (.CLK (clk), .D (n_32), .Q
-       (theDigitalBlock_u_i2cSlave_dataFromRegIF[6]));
-  DFFPOSX1
-       \theDigitalBlock_u_i2cSlave_u_registerInterface_dataOut_reg[1]
-       (.CLK (clk), .D (n_38), .Q
-       (theDigitalBlock_u_i2cSlave_dataFromRegIF[1]));
+       .D (n_29), .Q (theDigitalBlock_u_i2cSlave_sclDelayed[0]));
   DFFPOSX1
        \theDigitalBlock_u_i2cSlave_u_registerInterface_dataOut_reg[5]
-       (.CLK (clk), .D (n_34), .Q
+       (.CLK (clk), .D (n_32), .Q
        (theDigitalBlock_u_i2cSlave_dataFromRegIF[5]));
   DFFPOSX1
-       \theDigitalBlock_u_i2cSlave_u_registerInterface_dataOut_reg[2]
+       \theDigitalBlock_u_i2cSlave_u_registerInterface_dataOut_reg[3]
+       (.CLK (clk), .D (n_34), .Q
+       (theDigitalBlock_u_i2cSlave_dataFromRegIF[3]));
+  DFFPOSX1
+       \theDigitalBlock_u_i2cSlave_u_registerInterface_dataOut_reg[0]
        (.CLK (clk), .D (n_37), .Q
-       (theDigitalBlock_u_i2cSlave_dataFromRegIF[2]));
+       (theDigitalBlock_u_i2cSlave_dataFromRegIF[0]));
+  DFFPOSX1
+       \theDigitalBlock_u_i2cSlave_u_registerInterface_dataOut_reg[6]
+       (.CLK (clk), .D (n_31), .Q
+       (theDigitalBlock_u_i2cSlave_dataFromRegIF[6]));
+  DFFPOSX1
+       \theDigitalBlock_u_i2cSlave_u_registerInterface_dataOut_reg[4]
+       (.CLK (clk), .D (n_33), .Q
+       (theDigitalBlock_u_i2cSlave_dataFromRegIF[4]));
   DFFPOSX1
        \theDigitalBlock_u_i2cSlave_u_registerInterface_dataOut_reg[7]
-       (.CLK (clk), .D (n_33), .Q
+       (.CLK (clk), .D (n_30), .Q
        (theDigitalBlock_u_i2cSlave_dataFromRegIF[7]));
   DFFPOSX1
-       \theDigitalBlock_u_i2cSlave_u_registerInterface_dataOut_reg[3]
+       \theDigitalBlock_u_i2cSlave_u_registerInterface_dataOut_reg[1]
        (.CLK (clk), .D (n_36), .Q
-       (theDigitalBlock_u_i2cSlave_dataFromRegIF[3]));
-  DFFPOSX1 \theDigitalBlock_u_i2cSlave_sdaPipe_reg[0] (.CLK (clk), .D
-       (n_29), .Q (theDigitalBlock_u_i2cSlave_sdaPipe[0]));
+       (theDigitalBlock_u_i2cSlave_dataFromRegIF[1]));
+  DFFPOSX1
+       \theDigitalBlock_u_i2cSlave_u_registerInterface_dataOut_reg[2]
+       (.CLK (clk), .D (n_35), .Q
+       (theDigitalBlock_u_i2cSlave_dataFromRegIF[2]));
   DFFPOSX1 \theDigitalBlock_u_i2cSlave_sclPipe_reg[0] (.CLK (clk), .D
-       (n_28), .Q (theDigitalBlock_u_i2cSlave_sclPipe[0]));
+       (n_27), .Q (theDigitalBlock_u_i2cSlave_sclPipe[0]));
   DFFPOSX1 \theDigitalBlock_u_i2cSlave_sdaDelayed_reg[0] (.CLK (clk),
-       .D (n_27), .Q (theDigitalBlock_u_i2cSlave_sdaDelayed[0]));
-  NAND2X1 g497(.A (theDigitalBlock_u_i2cSlave_startStopDetState[0]), .B
-       (n_43), .Y (n_45));
-  NAND2X1 g499(.A (theDigitalBlock_ack_received), .B (n_43), .Y (n_44));
-  OAI21X1 g507(.A (theDigitalBlock_u_i2cSlave_startStopDetState[0]), .B
-       (n_48), .C (n_43), .Y (n_42));
-  OAI21X1 g508(.A (theDigitalBlock_ack_received), .B
-       (theDigitalBlock_u_i2cSlave_sdaDelayed[0]), .C (n_43), .Y
-       (n_41));
-  NAND2X1 g518(.A (n_81), .B (n_48), .Y (n_40));
-  NAND2X1 g556(.A (n_25), .B (n_26), .Y (n_39));
-  NAND2X1 g557(.A (n_21), .B (n_24), .Y (n_38));
-  NAND2X1 g558(.A (n_17), .B (n_18), .Y (n_37));
-  NAND2X1 g559(.A (n_11), .B (n_16), .Y (n_36));
-  NAND2X1 g560(.A (n_14), .B (n_15), .Y (n_35));
-  NAND2X1 g561(.A (n_12), .B (n_13), .Y (n_34));
-  NAND2X1 g563(.A (n_7), .B (n_8), .Y (n_33));
-  NAND2X1 g562(.A (n_10), .B (n_9), .Y (n_32));
-  NAND2X1 g594(.A (n_81), .B (n_30), .Y (n_31));
-  NOR2X1 g512(.A (theDigitalBlock_u_i2cSlave_rstPipe[1]), .B
-       (theDigitalBlock_u_i2cSlave_clearStartStopDet), .Y (n_43));
-  OR2X1 g543(.A (sda), .B (theDigitalBlock_u_i2cSlave_rstPipe[1]), .Y
-       (n_29));
-  OR2X1 g544(.A (scl), .B (theDigitalBlock_u_i2cSlave_rstPipe[1]), .Y
+       .D (n_26), .Q (theDigitalBlock_u_i2cSlave_sdaDelayed[0]));
+  DFFPOSX1 \theDigitalBlock_u_i2cSlave_sdaPipe_reg[0] (.CLK (clk), .D
+       (n_28), .Q (theDigitalBlock_u_i2cSlave_sdaPipe[0]));
+  NAND2X1 g480(.A (n_70), .B (n_38), .Y (n_39));
+  NAND2X1 g509(.A (n_24), .B (n_25), .Y (n_37));
+  NAND2X1 g510(.A (n_9), .B (n_23), .Y (n_36));
+  NAND2X1 g511(.A (n_19), .B (n_20), .Y (n_35));
+  NAND2X1 g512(.A (n_15), .B (n_16), .Y (n_34));
+  NAND2X1 g513(.A (n_13), .B (n_14), .Y (n_33));
+  NAND2X1 g514(.A (n_11), .B (n_12), .Y (n_32));
+  NAND2X1 g515(.A (n_7), .B (n_8), .Y (n_31));
+  NAND2X1 g516(.A (n_6), .B (n_10), .Y (n_30));
+  NAND2X1 g547(.A (n_70), .B (n_1), .Y (n_29));
+  INVX2 g469(.A (n_44), .Y (n_53));
+  OR2X1 g496(.A (sda), .B (theDigitalBlock_u_i2cSlave_rstPipe[1]), .Y
        (n_28));
-  OR2X1 g487(.A (theDigitalBlock_u_i2cSlave_sdaDeb), .B
-       (theDigitalBlock_u_i2cSlave_rstPipe[1]), .Y (n_27));
-  OR2X2 g555(.A (theDigitalBlock_u_i2cSlave_startEdgeDet), .B
+  OR2X1 g497(.A (scl), .B (theDigitalBlock_u_i2cSlave_rstPipe[1]), .Y
+       (n_27));
+  OR2X1 g452(.A (theDigitalBlock_u_i2cSlave_sdaDeb), .B
+       (theDigitalBlock_u_i2cSlave_rstPipe[1]), .Y (n_26));
+  OR2X2 g508(.A (theDigitalBlock_u_i2cSlave_startEdgeDet), .B
        (theDigitalBlock_u_i2cSlave_rstPipe[1]), .Y
        (theDigitalBlock_u_i2cSlave_n_144));
-  AOI22X1 g566(.A (theDigitalBlock_sampleOut[8]), .B (n_23), .C
-       (theDigitalBlock_sampleOut[0]), .D (n_22), .Y (n_26));
-  AOI22X1 g567(.A (theDigitalBlock_sampleOut[24]), .B (n_20), .C
-       (theDigitalBlock_sampleOut[16]), .D (n_19), .Y (n_25));
-  AOI22X1 g568(.A (theDigitalBlock_sampleOut[9]), .B (n_23), .C
-       (theDigitalBlock_sampleOut[1]), .D (n_22), .Y (n_24));
-  AOI22X1 g569(.A (theDigitalBlock_sampleOut[25]), .B (n_20), .C
-       (theDigitalBlock_sampleOut[17]), .D (n_19), .Y (n_21));
-  AOI22X1 g570(.A (theDigitalBlock_sampleOut[10]), .B (n_23), .C
-       (theDigitalBlock_sampleOut[2]), .D (n_22), .Y (n_18));
-  AOI22X1 g571(.A (theDigitalBlock_sampleOut[26]), .B (n_20), .C
-       (theDigitalBlock_sampleOut[18]), .D (n_19), .Y (n_17));
-  AOI22X1 g572(.A (theDigitalBlock_sampleOut[11]), .B (n_23), .C
-       (theDigitalBlock_sampleOut[3]), .D (n_22), .Y (n_16));
-  AOI22X1 g574(.A (theDigitalBlock_sampleOut[12]), .B (n_23), .C
-       (theDigitalBlock_sampleOut[4]), .D (n_22), .Y (n_15));
-  AOI22X1 g575(.A (theDigitalBlock_sampleOut[28]), .B (n_20), .C
-       (theDigitalBlock_sampleOut[20]), .D (n_19), .Y (n_14));
-  AOI22X1 g576(.A (theDigitalBlock_sampleOut[13]), .B (n_23), .C
-       (theDigitalBlock_sampleOut[5]), .D (n_22), .Y (n_13));
-  AOI22X1 g577(.A (theDigitalBlock_sampleOut[29]), .B (n_20), .C
-       (theDigitalBlock_sampleOut[21]), .D (n_19), .Y (n_12));
-  AOI22X1 g573(.A (theDigitalBlock_sampleOut[27]), .B (n_20), .C
-       (theDigitalBlock_sampleOut[19]), .D (n_19), .Y (n_11));
-  AOI22X1 g579(.A (theDigitalBlock_sampleOut[30]), .B (n_20), .C
-       (theDigitalBlock_sampleOut[22]), .D (n_19), .Y (n_10));
-  AOI22X1 g578(.A (theDigitalBlock_sampleOut[14]), .B (n_23), .C
-       (theDigitalBlock_sampleOut[6]), .D (n_22), .Y (n_9));
-  AOI22X1 g580(.A (theDigitalBlock_sampleOut[15]), .B (n_23), .C
-       (theDigitalBlock_sampleOut[7]), .D (n_22), .Y (n_8));
-  AOI22X1 g581(.A (theDigitalBlock_sampleOut[31]), .B (n_20), .C
-       (theDigitalBlock_sampleOut[23]), .D (n_19), .Y (n_7));
-  INVX2 g595(.A (theDigitalBlock_u_i2cSlave_rstPipe[1]), .Y (n_81));
+  NOR2X1 g470(.A (theDigitalBlock_u_i2cSlave_rstPipe[1]), .B
+       (theDigitalBlock_u_i2cSlave_clearStartStopDet), .Y (n_44));
+  AOI22X1 g519(.A (theDigitalBlock_sampleOut[16]), .B (n_22), .C
+       (theDigitalBlock_sampleOut[0]), .D (n_21), .Y (n_25));
+  AOI22X1 g520(.A (theDigitalBlock_sampleOut[24]), .B (n_18), .C
+       (theDigitalBlock_sampleOut[8]), .D (n_17), .Y (n_24));
+  AOI22X1 g521(.A (theDigitalBlock_sampleOut[17]), .B (n_22), .C
+       (theDigitalBlock_sampleOut[1]), .D (n_21), .Y (n_23));
+  AOI22X1 g523(.A (theDigitalBlock_sampleOut[18]), .B (n_22), .C
+       (theDigitalBlock_sampleOut[2]), .D (n_21), .Y (n_20));
+  AOI22X1 g524(.A (theDigitalBlock_sampleOut[26]), .B (n_18), .C
+       (theDigitalBlock_sampleOut[10]), .D (n_17), .Y (n_19));
+  AOI22X1 g525(.A (theDigitalBlock_sampleOut[19]), .B (n_22), .C
+       (theDigitalBlock_sampleOut[3]), .D (n_21), .Y (n_16));
+  AOI22X1 g526(.A (theDigitalBlock_sampleOut[27]), .B (n_18), .C
+       (theDigitalBlock_sampleOut[11]), .D (n_17), .Y (n_15));
+  AOI22X1 g527(.A (theDigitalBlock_sampleOut[20]), .B (n_22), .C
+       (theDigitalBlock_sampleOut[4]), .D (n_21), .Y (n_14));
+  AOI22X1 g528(.A (theDigitalBlock_sampleOut[28]), .B (n_18), .C
+       (theDigitalBlock_sampleOut[12]), .D (n_17), .Y (n_13));
+  AOI22X1 g529(.A (theDigitalBlock_sampleOut[21]), .B (n_22), .C
+       (theDigitalBlock_sampleOut[5]), .D (n_21), .Y (n_12));
+  AOI22X1 g530(.A (theDigitalBlock_sampleOut[29]), .B (n_18), .C
+       (theDigitalBlock_sampleOut[13]), .D (n_17), .Y (n_11));
+  AOI22X1 g533(.A (theDigitalBlock_sampleOut[23]), .B (n_22), .C
+       (theDigitalBlock_sampleOut[7]), .D (n_21), .Y (n_10));
+  AOI22X1 g522(.A (theDigitalBlock_sampleOut[25]), .B (n_18), .C
+       (theDigitalBlock_sampleOut[9]), .D (n_17), .Y (n_9));
+  AOI22X1 g531(.A (theDigitalBlock_sampleOut[22]), .B (n_22), .C
+       (theDigitalBlock_sampleOut[6]), .D (n_21), .Y (n_8));
+  AOI22X1 g532(.A (theDigitalBlock_sampleOut[30]), .B (n_18), .C
+       (theDigitalBlock_sampleOut[14]), .D (n_17), .Y (n_7));
+  AOI22X1 g534(.A (theDigitalBlock_sampleOut[31]), .B (n_18), .C
+       (theDigitalBlock_sampleOut[15]), .D (n_17), .Y (n_6));
+  INVX2 g548(.A (theDigitalBlock_u_i2cSlave_rstPipe[1]), .Y (n_70));
   DFFPOSX1 \theDigitalBlock_u_i2cSlave_rstPipe_reg[1] (.CLK (clk), .D
-       (n_6), .Q (theDigitalBlock_u_i2cSlave_rstPipe[1]));
-  TBUFX2 theDigitalBlock_u_i2cSlave_g1A(.A (1'b1), .EN (n_5), .Y (sda));
-  TBUFX2 theDigitalBlock_u_i2cSlave_g1B(.A (1'b1), .EN (n_5), .Y (sda));
-  TBUFX2 theDigitalBlock_u_i2cSlave_g1C(.A (1'b1), .EN (n_5), .Y (sda));
-  TBUFX2 theDigitalBlock_u_i2cSlave_g1D(.A (1'b1), .EN (n_5), .Y (sda));
+       (n_5), .Q (theDigitalBlock_u_i2cSlave_rstPipe[1]));
+	   
+  TBUFX2 theDigitalBlock_u_i2cSlave_g1A(.A (1'b1), .EN (n_4), .Y (sda));
+  TBUFX2 theDigitalBlock_u_i2cSlave_g1B(.A (1'b1), .EN (n_4), .Y (sda));
+  TBUFX2 theDigitalBlock_u_i2cSlave_g1C(.A (1'b1), .EN (n_4), .Y (sda));
+  TBUFX2 theDigitalBlock_u_i2cSlave_g1D(.A (1'b1), .EN (n_4), .Y (sda));
   
-  NOR2X1 g584(.A (theDigitalBlock_u_i2cSlave_regAddr[0]), .B (n_4), .Y
-       (n_23));
-  NOR2X1 g585(.A (theDigitalBlock_u_i2cSlave_regAddr[1]), .B (n_3), .Y
-       (n_19));
-  OR2X1 g597(.A (rst), .B (theDigitalBlock_u_i2cSlave_rstPipe[0]), .Y
-       (n_6));
-  AND2X2 g586(.A (theDigitalBlock_u_i2cSlave_regAddr[0]), .B
-       (theDigitalBlock_u_i2cSlave_regAddr[1]), .Y (n_22));
-  NOR2X1 g587(.A (theDigitalBlock_u_i2cSlave_regAddr[1]), .B
-       (theDigitalBlock_u_i2cSlave_regAddr[0]), .Y (n_20));
-  INVX1 g545(.A (theDigitalBlock_u_i2cSlave_sdaOut), .Y (n_5));
-  INVX2 g589(.A (theDigitalBlock_u_i2cSlave_regAddr[1]), .Y (n_4));
-  INVX2 g590(.A (theDigitalBlock_u_i2cSlave_regAddr[0]), .Y (n_3));
+  NOR2X1 g538(.A (theDigitalBlock_u_i2cSlave_regAddr[0]), .B (n_3), .Y
+       (n_17));
+  NOR2X1 g537(.A (theDigitalBlock_u_i2cSlave_regAddr[1]), .B (n_2), .Y
+       (n_22));
+  OR2X1 g550(.A (rst), .B (theDigitalBlock_u_i2cSlave_rstPipe[0]), .Y
+       (n_5));
+  NOR2X1 g539(.A (theDigitalBlock_u_i2cSlave_regAddr[1]), .B
+       (theDigitalBlock_u_i2cSlave_regAddr[0]), .Y (n_18));
+  AND2X2 g540(.A (theDigitalBlock_u_i2cSlave_regAddr[0]), .B
+       (theDigitalBlock_u_i2cSlave_regAddr[1]), .Y (n_21));
+  INVX1 g498(.A (theDigitalBlock_u_i2cSlave_sdaOut), .Y (n_4));
+  INVX2 g542(.A (theDigitalBlock_u_i2cSlave_regAddr[1]), .Y (n_3));
+  INVX2 g543(.A (theDigitalBlock_u_i2cSlave_regAddr[0]), .Y (n_2));
   DFFPOSX1 \theDigitalBlock_u_i2cSlave_rstPipe_reg[0] (.CLK (clk), .D
        (rst), .Q (theDigitalBlock_u_i2cSlave_rstPipe[0]));
-  NAND2X1 g513(.A (theDigitalBlock_ack_received), .B
-       (theDigitalBlock_u_i2cSlave_sdaDelayed[0]), .Y (n_2));
-  INVX2 g601(.A (theDigitalBlock_u_i2cSlave_sclDeb), .Y (n_30));
-  INVX1 g600(.A (theDigitalBlock_u_i2cSlave_sdaDeb), .Y (n_1));
-  INVX2 g599(.A (theDigitalBlock_u_i2cSlave_sdaDelayed[0]), .Y (n_48));
-  NOR2X1 g858(.A (n_50), .B (theDigitalBlock_u_i2cSlave_rstPipe[1]), .Y
-       (n_139));
-  AND2X1 g859(.A (n_64), .B (n_70), .Y (n_140));
-  AND2X1 g860(.A (n_65), .B (n_72), .Y (n_141));
-  AND2X1 g2(.A (n_81), .B (n_74), .Y (n_142));
-  AND2X1 g861(.A (n_81), .B (n_76), .Y (n_143));
+  INVX1 g553(.A (theDigitalBlock_u_i2cSlave_sclDeb), .Y (n_1));
+  INVX2 g552(.A (theDigitalBlock_u_i2cSlave_sdaDelayed[0]), .Y (n_38));
+  OAI21X1 g2(.A (theDigitalBlock_u_i2cSlave_sclPipe[3]), .B
+       (theDigitalBlock_u_i2cSlave_sclPipe[4]), .C
+       (theDigitalBlock_u_i2cSlave_sclDeb), .Y (n_115));
+  OAI21X1 g840(.A (theDigitalBlock_u_i2cSlave_sdaPipe[3]), .B
+       (theDigitalBlock_u_i2cSlave_sdaPipe[4]), .C
+       (theDigitalBlock_u_i2cSlave_sdaDeb), .Y (n_116));
+  OAI21X1 g841(.A (theDigitalBlock_u_i2cSlave_sclPipe[1]), .B
+       (theDigitalBlock_u_i2cSlave_sclPipe[2]), .C
+       (theDigitalBlock_u_i2cSlave_sclDeb), .Y (n_117));
+  OAI21X1 g842(.A (theDigitalBlock_u_i2cSlave_sdaPipe[1]), .B
+       (theDigitalBlock_u_i2cSlave_sdaPipe[2]), .C
+       (theDigitalBlock_u_i2cSlave_sdaDeb), .Y (n_118));
+  NOR2X1 g843(.A (n_46), .B (theDigitalBlock_u_i2cSlave_rstPipe[1]), .Y
+       (n_119));
 endmodule
 
